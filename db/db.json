@@ -8,7 +8,8 @@
             "categoria": "+13",
             "publicada": "true",
             "año": 1999,
-            "imagen": "../img/sextoSentido.png"
+            "imagen": "https://i.pinimg.com/originals/f9/23/dc/f923dc00664a2d5241e5ef68387bb943.png",
+            "video": "https://www.youtube.com/embed/cqJFb5ggwjk" 
         },
         {
             "id": 2,
@@ -19,7 +20,8 @@
             "categoria": "+18",
             "publicada": "true",
             "año": 1994,
-            "imagen": "https://pics.filmaffinity.com/Tiempos_violentos-737413971-large.jpg"
+            "imagen": "https://c4.wallpaperflare.com/wallpaper/34/559/656/pulp-fiction-wallpaper-preview.jpg",
+            "video":"https://www.youtube.com/embed/tGpTpVyI_OQ"
         },
         {
             "id": 3,
@@ -30,7 +32,8 @@
             "categoria": "+18",
             "publicada": "true",
             "año": 1999,
-            "imagen": "https://4.bp.blogspot.com/-mCKscHMfpMA/WLvxw5G1h7I/AAAAAAAAEdU/5Qx-WKcMUkoEThjOn1tM2estemr0TonYwCLcB/s1600/Titulos%2Bde%2BCredito%2BTodo%2Bsobre%2Bmi%2Bmadre.jpg"
+            "imagen": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cecilia-roth-eloy-azorin-todo-sobre-mi-madre-1555343828.jpg",
+             "video": "https://www.youtube.com/embed/jzMRQQmHBq4"
         },
         {
             "id": 4,
@@ -41,7 +44,8 @@
             "categoria": "+18",
             "publicada": "true",
             "año": 2020,
-            "imagen": "https://paropua1973.files.wordpress.com/2020/02/pf5.jpg"
+            "imagen": "https://pics.filmaffinity.com/pacto_de_fuga-561399987-mmed.jpg",
+            "video": "https://www.youtube.com/embed/qPx074pFbW8"
         },
         {
             "id": 5,
@@ -52,7 +56,8 @@
             "categoria": "+13",
             "publicada": "true",
             "año": 2019,
-            "imagen": "https://cinemagavia.es/wp-content/uploads/2019/04/Compulsio%CC%81n-1.jpg"
+            "imagen": "https://i.pinimg.com/originals/1f/52/52/1f5252ea5033a4d21e7c944570569c97.jpg",
+            "video": "https://www.youtube.com/embed/0yH84LSkqyY"
         },
         {
             "id": 6,
@@ -63,7 +68,8 @@
             "categoria": "+13",
             "publicada": "true",
             "año": 2018,
-            "imagen": "https://i0.wp.com/teaser-trailer.com/wp-content/uploads/The-Music-Box.jpg?resize=600%2C385&ssl=1"
+            "imagen": "https://pics.filmaffinity.com/The_Music_Box-878913734-large.jpg",
+            "video":"https://www.youtube.com/embed/aBzNCEUgrt4"
         },
         {
             "id": 7,
@@ -74,7 +80,8 @@
             "categoria": "+18",
             "publicada": "true",
             "año": 2020,
-            "imagen": "https://theunfamiliarmovie.com/wp-content/uploads/2020/06/FilmHeroBanner.jpg"
+            "imagen": "https://miro.medium.com/max/2934/1*QIURFXvGPFWAv5W9FHQKpQ.jpeg",
+            "video": "https://www.youtube.com/embed/KD43OQnTMWU"
         },
         {
             "id": 8,
@@ -85,7 +92,8 @@
             "categoria": "+13",
             "publicada": "true",
             "año": 2020,
-            "imagen": "https://pm1.narvii.com/7258/f201ea32d68925eec94a5c882b6ae6d9344bbdf3r1-640-592v2_uhq.jpg"
+            "imagen": "https://talenthouse-res.cloudinary.com/image/upload/c_limit,f_auto,fl_progressive,h_1280,w_1280/v1551300994/user-983649/submissions/co3snwlxk70nvxvpnqpj.jpg",
+            "video": "https://www.youtube.com/embed/cW39B5rAFnc"
         },
         {
             "id": 9,
@@ -96,7 +104,8 @@
             "categoria": "ATP",
             "publicada": "true",
             "año": 2015,
-            "imagen": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/ted-2-2015-1597450017.jpg?crop=0.865xw:1.00xh;0.0692xw,0&resize=768:*"
+            "imagen": "https://i.pinimg.com/originals/05/5c/b9/055cb903958b05ecdc1d010a8333abf1.jpg",
+            "video": "https://www.youtube.com/embed/S3AVcCggRnU"
         },
         {
             "id": 10,
@@ -107,7 +116,8 @@
             "categoria": "ATP",
             "publicada": "true",
             "año": 2020,
-            "imagen": "https://www.prensa-latina.cu/images/2020/agosto/21/0-BodaRosa.jpg"
+            "imagen": "https://pics.filmaffinity.com/La_boda_de_Rosa-406236302-large.jpg",
+            "video": "https://www.youtube.com/embed/jrAML3wM1ug"
         },
         {
             "id": 11,
@@ -118,7 +128,8 @@
             "categoria": "ATP",
             "publicada": "true",
             "año": 2019,
-            "imagen": "https://cdn.cinenaxos.gr/cinema/media/pets-united-poster.jpg"
+            "imagen": "https://i.pinimg.com/originals/2e/98/87/2e98872d1141c2bc5bc7adebd492a2c0.png",
+            "video": "https://www.youtube.com/embed/4Yq15X_gj9A"
         },
         {
             "id": 12,
@@ -129,7 +140,8 @@
             "categoria": "ATP",
             "publicada": "true",
             "año": 2020,
-            "imagen": "https://media.metrolatam.com/2020/09/15/sebuscapapa-b08d7ebb68d3a5f8cd3cf666d778e2ff-1200x800.jpg"
+            "imagen": "https://miro.medium.com/max/713/1*CtmnkTAeEUekIWRHe0PaCA.jpeg",
+            "video": "https://www.youtube.com/embed/UcUwCFSgGVQ"
         },
         {
             "id": 13,
@@ -140,7 +152,8 @@
             "categoria": "ATP",
             "publicada": "true",
             "año": 2013,
-            "imagen": "https://i.pinimg.com/564x/33/7b/5a/337b5a044a54a7cc14d7162313d34cb0.jpg"
+            "imagen": "https://i.pinimg.com/564x/33/7b/5a/337b5a044a54a7cc14d7162313d34cb0.jpg",
+            "video": "https://www.youtube.com/embed/7axk1-oDckA"
         },
         {
             "id": 14,
@@ -151,7 +164,8 @@
             "categoria": "ATP",
             "publicada": "true",
             "año": 2003,
-            "imagen": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/matrix-4-1566468344.jpg?crop=0.8577777777777778xw:1xh;center,top&resize=980:*"
+            "imagen": "https://i.pinimg.com/originals/f6/96/0f/f6960f943173ad56be05100bc5c6a919.png",
+            "video":"https://www.youtube.com/embed/hMbexEPAOQI"
         },
         {
             "id": 15,
@@ -162,7 +176,8 @@
             "categoria": "ATP",
             "publicada": "true",
             "año": 2018,
-            "imagen": "https://3.bp.blogspot.com/-8VbOHT4JHeE/XLUQmNUHgRI/AAAAAAAAYkM/2XKbNXN0b587W2EqJKjKZ3Tid2tiw2euQCLcBGAs/s1600/airising.jpg"
+            "imagen": "https://images-na.ssl-images-amazon.com/images/I/81Qupmv594L._RI_.jpg",
+            "video": "https://www.youtube.com/embed/iDdYMOiIn3Q"
         }
     ]
 }
