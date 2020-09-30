@@ -1,5 +1,5 @@
 
-let container = document.getElementById("container");
+let container = document.getElementById("containerD");
 let video= document.getElementById("vid");
 const URL= "http://localhost:3000/peliculas";
 const id= window.location.hash.slice(1);
@@ -45,7 +45,7 @@ getmovie()
             año.innerHTML=`Año de Publicación: ${dato.año}`
             
             const imagen= document.createElement('img');
-            imagen.classList.add('img');
+            imagen.classList.add('imgD');
             imagen.src=`${dato.imagen}`
 
             const video= document.createElement('iframe');
