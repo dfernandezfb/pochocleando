@@ -2,25 +2,24 @@
 const containerCategories = document.getElementById("categories")
 const categories = document.createElement("h1");
 const URL = 'http://localhost:3000/peliculas/';
-categories.innerHTML="Categorias"
+categories.innerHTML = "Categorias"
 categories.classList.add("ml-2")
 containerCategories.appendChild(categories);
 
-let cats = ['Comedia','Terror','Drama','Acción','Ficción'];
-for(let i=0; i<cats.length;i++)
-{
+let cats = ['Comedia', 'Terror', 'Drama', 'Acción', 'Ficción'];
+for (let i = 0; i < cats.length; i++) {
     const cat = document.createElement('h2');
     const carrousel = document.createElement("div");
-    cat.innerHTML=cats[i]+'...';
-    cat.style.marginLeft="20px"
-    carrousel.id=cats[i];
-    carrousel.innerHTML=`
+    cat.innerHTML = cats[i] + '...';
+    cat.style.marginLeft = "20px"
+    carrousel.id = cats[i];
+    carrousel.innerHTML = `
     <button class="angle-left h-50"><i class="fas fa-angle-left fa-2x angle-left"></i></button>
     <div id="carrousel-${cats[i]}" class="d-flex p-5">
     </div>
     <button class="angle-right h-50"><i class="fas fa-angle-right fa-2x angle-right"></i></button>
     `
-    carrousel.classList.add("d-flex","my-5","align-items-center","mx-2","carrousel");
+    carrousel.classList.add("d-flex", "my-5", "align-items-center", "mx-2", "carrousel");
     containerCategories.appendChild(cat);
     containerCategories.appendChild(carrousel);
 }
@@ -31,15 +30,14 @@ async function getMovies() {
     return data;
 }
 
-function buildComedy(movies){
+function buildComedy(movies) {
     movies.map(movie => {
         const com = document.querySelector('#carrousel-Comedia');
         const ter = document.querySelector('#carrousel-Terror');
         const dra = document.querySelector('#carrousel-Drama');
         const acc = document.querySelector('#carrousel-Acción');
         const cie = document.querySelector('#carrousel-Ficción');
-        switch(movie.genero)
-        {
+        switch (movie.genero) {
             case 'Comedia':
                 const movieCardco = document.createElement("div");
                 movieCardco.classList.add("movie-card")
@@ -124,25 +122,23 @@ function buildComedy(movies){
                 </div>
                 `;
                 cie.appendChild(movieCardci);
-                break;        
-            }
-            com.scrollLeft=ter.scrollLeft=dra.scrollLeft=acc.scrollLeft=cie.scrollLeft=0;
-        })
+                break;
+        }
+        com.scrollLeft = ter.scrollLeft = dra.scrollLeft = acc.scrollLeft = cie.scrollLeft = 0;
+    })
 }
 
 getMovies()
-.then(movies => buildComedy(movies));
+    .then(movies => buildComedy(movies));
 
-containerCategories.addEventListener("click",(event)=>{
-    if(event.target.classList.contains("angle-right"))
-    {
+containerCategories.addEventListener("click", (event) => {
+    if (event.target.classList.contains("angle-right")) {
         console.log(event.target.parentElement)
-        com.scrollLeft+=260;
+        com.scrollLeft += 260;
     }
 })
-containerCategories.addEventListener("click",(event)=>{
-    if(event.target.classList.contains("angle-left"))
-    {
-        com.scrollLeft+=-260;
+containerCategories.addEventListener("click", (event) => {
+    if (event.target.classList.contains("angle-left")) {
+        com.scrollLeft += -260;
     }
 })
