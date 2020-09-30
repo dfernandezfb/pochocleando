@@ -9,3 +9,4 @@ hamburger.addEventListener("click", () => {
     link.classList.toggle("fade");
   });
 });
+  
