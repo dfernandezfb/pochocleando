@@ -148,3 +148,63 @@ button:active {
         transform: translate(0px, 0px) skew(0deg);
     }
 }
+
+
+.movie-card
+{
+    transition: transform 0.5 ease;
+}
+.movie-card:hover
+{
+    transform: scale(1.3);
+}
+.resume
+{
+    background-color:rgba(0,0,0,0.6);
+    width:13rem;
+    height:15rem;
+    opacity:0;
+    transition: opacity 0.5s ease;
+    cursor:default;
+}
+.resume:hover{
+    opacity:1;
+}
+.movie-title
+{
+    cursor: default;
+}
+.movie{
+    width: 13rem;
+    height:15rem;
+    margin:10px;
+    background-size:100% 100%;
+    box-shadow: -10px 10px rgba(0,0,0,0.1), 0 15px 30px rgba(0,0,0,.65);
+}
+.carrousel
+{
+    margin-left: 15px;
+    width: 90%;
+    height:auto;
+}
+.movie-resume{
+    height:8rem; 
+    overflow:scroll;
+}
+.movie-resume::-webkit-scrollbar 
+{
+    display: none;
+}
+.carrousel
+{
+    overflow:hidden;
+}
+#carrousel-Comedia , #carrousel-Terror , #carrousel-Drama , #carrousel-Acción , #carrousel-Ficción
+{
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+#carrousel-Comedia::-webkit-scrollbar , #carrousel-Terror::-webkit-scrollbar , #carrousel-Drama::-webkit-scrollbar , #carrousel-Acción::-webkit-scrollbar , #carrousel-Ficción::-webkit-scrollbar
+{
+    display:none;
+}
