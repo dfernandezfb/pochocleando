@@ -1,3 +1,52 @@
+/*PALETA DE COLORES */
+.color1
+{
+    color: #0c1113;
+}
+.bg-color1
+{
+    background-color: #0c1113;
+}
+.color2
+{
+    color: #c02020;
+}
+.bg-color2
+{
+    background-color: #c02020;
+}
+.color3
+{
+    color: #f0e0a0;
+}
+.bg-color3
+{
+    background-color: #f0e0a0;
+}
+.color4
+{
+    color: #b08070;
+}
+.bg-color4
+{
+    background-color: #b08070;
+}
+.color5
+{
+    color: #838486;
+}
+.bg-color5
+{
+    background-color: #838486;
+}
+.color6
+{
+    color: #f0f2f5;
+}
+.bg-color6
+{
+    background-color: #f0f2f5;
+}
 /*PAGE ERROR STYLE*/
 
 @keyframes noise {
@@ -149,8 +198,7 @@ button:active {
     }
 }
 
-<<<<<<< HEAD
-
+/*<------------------------INICIO CARRUSSEL-DIEGO --------------------->*/
 .movie-card
 {
     transition: transform 0.5 ease;
@@ -209,23 +257,24 @@ button:active {
 {
     display:none;
 }
-=======
+/*<------------------------FIN CARRUSSEL-DIEGO --------------------->*/
+
 /* Header y Navbar*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-  header {
-      background-color: #010f2b;
+header {
+    background-color: #010f2b;
       height: 15px;
       ;
   }
 
-#options {
-   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  #options {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     margin-left: 5px;
     color: #f0f2f5;
@@ -423,4 +472,3 @@ footer{
 .copyright-legal{
     background-color: #181a1d;
 }
->>>>>>> 1d328fa3666f6cb446e1bd2719641e851e26a477

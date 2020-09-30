@@ -1,9 +1,10 @@
 'use strict'
+const containerCategories = document.getElementById("categories")
 const categories = document.createElement("h1");
 const URL = 'http://localhost:3000/peliculas/';
 categories.innerHTML="Categorias"
 categories.classList.add("ml-2")
-document.body.appendChild(categories);
+containerCategories.appendChild(categories);
 
 let cats = ['Comedia','Terror','Drama','Acción','Ficción'];
 for(let i=0; i<cats.length;i++)
@@ -20,8 +21,8 @@ for(let i=0; i<cats.length;i++)
     <button class="angle-right h-50"><i class="fas fa-angle-right fa-2x angle-right"></i></button>
     `
     carrousel.classList.add("d-flex","my-5","align-items-center","mx-2","carrousel");
-    document.body.appendChild(cat);
-    document.body.appendChild(carrousel);
+    containerCategories.appendChild(cat);
+    containerCategories.appendChild(carrousel);
 }
 
 async function getMovies() {
@@ -132,15 +133,14 @@ function buildComedy(movies){
 getMovies()
 .then(movies => buildComedy(movies));
 
-document.body.addEventListener("click",(event)=>{
-    console.log(event.target);
+containerCategories.addEventListener("click",(event)=>{
     if(event.target.classList.contains("angle-right"))
     {
+        console.log(event.target.parentElement)
         com.scrollLeft+=260;
     }
 })
-document.body.addEventListener("click",(event)=>{
-    console.log(event.target);
+containerCategories.addEventListener("click",(event)=>{
     if(event.target.classList.contains("angle-left"))
     {
         com.scrollLeft+=-260;
