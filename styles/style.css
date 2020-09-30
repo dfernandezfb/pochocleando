@@ -316,3 +316,52 @@ a {
     width: 50%; 
     left: 23%; 
   }
+
+  /* ----------------------- NICO ------------------------------ */
+
+footer{
+    background-color: #343a40;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon{
+    margin: .5rem;
+}
+
+@media(min-width: 992px){
+    .social-icons{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icon{
+        margin: 1rem;
+    }
+
+    .center-lg{
+        text-align: center;
+    }
+}
+
+.icon{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: #f7b26a;
+    font-size: 2.5rem;
+}
+
+.social-icon:hover{
+    text-decoration: #f7b26a;
+    color: tomato;
+}
+
+.copyright-legal{
+    background-color: #181a1d;
+}
