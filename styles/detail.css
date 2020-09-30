@@ -1,0 +1,206 @@
+ :root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+/*---PODRIA AJUSTARSE------
+ * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} */
+
+body {
+    background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+}
+.video {
+	position: relative;
+	border: none;
+	min-width: 98%;
+	min-height: 100%;
+	height: 300px;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-20%);
+	 /* z-index: -1;   */
+}
+.container {
+	width: 98%;
+	margin: auto;
+}
+
+.img {
+transition: all 0.5s ease;
+cursor:zoom-in;
+float: left;
+margin-top: -440px;
+/*Podria modificarsew ---- */
+width: 280px;
+height: 420px;
+object-fit: cover;
+display: block;
+}
+.img:hover {
+	transform: scale(1.11);
+}
+
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.principalmovie
+ {
+color: #fff;
+margin-top: auto;
+height: 100%;
+width: 100%;
+background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(https://www.muycomputer.com/wp-content/uploads/2016/12/taquilleras_de_2016.jpg); 
+background-position: center center; 
+background-size: cover;
+/* margin-bottom: 3.12em; */
+display: flex;
+align-items: center;
+}
+
+.principalmovie
+ .container {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+	
+	/* -----------!! Parametro a modificar!! ----------- */
+	/* margin-top: 400px; */
+}
+
+
+.principalmovie
+ .title {
+	text-align: center;
+	font-size: 3em;
+	margin-bottom: 3em;
+    margin: auto;
+    color: lightsalmon;
+}
+
+
+.principalmovie
+ .description {
+	
+	text-align: initial;
+	color: whitesmoke;
+    margin-left: 300px;
+	font-size: 1.2em;
+	line-height: 1.75em;
+	max-width: 100%;
+	margin-bottom: 1.15em;
+	list-style: none;
+}
+
+ .boton {
+    margin: auto;
+    background: rgba(0,0,0, 0.5);
+	border: none;
+	transform: translateY(-750%);
+	border-radius: 0.31em;
+	padding: 0.8em 1em;
+	color: #fff;
+    margin-right: 0.5em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+ .boton:hover {
+	background: #fff;
+	color: #000; }
+
+ .boton i {
+	margin-right: 1.25em;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 1024px) {
+
+.principalmovie 
+.container, .main, 
+.description, .informacion, .video{
+	width: 100%;
+}
+.principalmovie 
+.description, .informacion {
+	text-align: initial;
+	width: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.img {
+	float: left;
+	height: 200px;
+	width: 200px;
+	margin-top: -250px;
+	margin-left: 30px;
+} 
+.boton {
+	margin: auto;
+font-size: 1.05em;
+}
+}
+
+@media screen and (max-width: 415px){
+	.body {
+		width: 100%;
+	}
+	.principalmovie 
+	.container, .main, 
+	.description, .video{
+		width: 100%;
+		
+	}
+	.principalmovie 
+	.description,  {
+		text-align: initial;
+		width: 100%;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.8em;
+	}
+	.img {
+		display: none;
+	} 
+	.boton {
+	margin: auto;
+	font-size: 0.85em;
+	transform: translateY(-1000%);
+	}
+}
+
+@media screen and (max-width: 350px){
+	.body {
+		width: 100%;
+	}
+	.principalmovie 
+	.container, .main, 
+	.description, .video{
+		width: 100%;
+		
+	}
+	.principalmovie 
+	.description,  {
+		text-align: initial;
+		width: 100%;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.1em;
+	}
+	.img {
+		display: none;
+	} 
+	.boton {
+	margin: auto;
+	font-size: 0.85em;
+	transform: translateY(-1000%);
+	}
+}
+

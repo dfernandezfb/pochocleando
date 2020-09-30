@@ -1,7 +1,11 @@
 // código de animación de navbar
+
+
+
+
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
-const links = document.querySelectorAll(".nav-links li");
+const links = document.querySelectorAll(".nav-links .link");
 
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("open");
@@ -9,6 +13,16 @@ hamburger.addEventListener("click", () => {
     link.classList.toggle("fade");
   });
 });
+
+const header = document.createElement ('header');
+header.innerHTML = `
   
+`
+  
+<<<<<<< HEAD
 // Código de página de Login
 
+=======
+
+// logIn
+>>>>>>> master
