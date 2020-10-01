@@ -1,7 +1,8 @@
 //!Funcion para renderizar formulario en el modal
 const formulario = document.getElementById("rootForm");
 const modalForm = document.getElementById('crearPeliModal');
-formulario.classList.add('styleForm');
+formulario.classList.add('bg-color1');
+formulario.classList.add('color3');
 
 function createForm() {
     const headerForm = document.createElement('div');
@@ -17,28 +18,30 @@ function createForm() {
     bodyForm.innerHTML = `
 <div class="modal-body">
 <label>Nombre:</label>
-<input type=text id=nombreInput class=campos required>
+<input type=text id=nombreInput class="campos inputEfect" required >
 <br>
 <label>Descripcion:</label><br>
-<textarea id=descripcionInput class=campos required></textarea>
+<textarea id=descripcionInput class="campos inputEfect" required></textarea>
 <br>
 <label>Genero:</label>
-<select id="generoInput" name="opciones" class=campos required>
+<select id="generoInput" name="opciones" class="campos inputEfect" required>
   <option value="1">Accion</option>
   <option value="2">Drama</option>
   <option value="3">Comedia</option>
   <option value="4">Ciencia ficcion</option>
+  <option value="4">Suspenso</option>
+  <option value="4">Terror</option>
 </select>
 <br>
 <br>
 <label class="mr-2">Director:</label>
-<input type=text id=directorInput class=campos required>
+<input type=text id=directorInput class="campos inputEfect" required>
 <br>
 <label>Categoria:</label>
-<input type="text" id=categoriaInput class=campos required>
+<input type="text" id=categoriaInput class="campos inputEfect" required>
 <br>
 <label>Año:</label>
-<input type="text" id=anioInput class=campos required>
+<input type="text" id=anioInput class="campos inputEfect" required>
 <br>
 <div class="custom-control custom-switch form-group form-check">
   <input type="checkbox" class="custom-control-input" id="publicadaInput" required>
@@ -48,7 +51,7 @@ function createForm() {
 `
     const footerForm = document.createElement('div');
     footerForm.innerHTML = `<div class="modal-footer">
- <button  type="submit" class="btn btn-primary colorButton">Crear</button>
+ <button  type="submit" class="btn bg-color2 color3 buttonCM">Crear</button>
 </div>
 `
     formulario.appendChild(headerForm);
@@ -56,7 +59,6 @@ function createForm() {
     formulario.appendChild(footerForm);
 
 }
-
 
 createForm();
 

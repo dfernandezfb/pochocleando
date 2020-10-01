@@ -485,3 +485,24 @@ footer {
 .copyright-legal {
     background-color: #181a1d;
 }
+
+
+/****************************************************************************+/
+/*! INICIO : ESTILO MODAL CREAR NUEVA PELICULA */
+
+.inputEfect:focus {
+    border: 6px solid #f0e0a0;
+    color: black;
+}
+
+.campos {
+    width: 100%;
+}
+
+.buttonCM:hover {
+    background-color: #DC143C;
+    color: #FFF8DC;
+}
+
+
+/*! FIN : ESTILO MODAL CREAR NUEVA PELICULA */
