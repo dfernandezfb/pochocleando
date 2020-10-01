@@ -19,10 +19,5 @@ header.innerHTML = `
   
 `
   
-<<<<<<< HEAD
 // Código de página de Login
 
-=======
-
-// logIn
->>>>>>> master
