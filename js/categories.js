@@ -16,7 +16,7 @@ for(let i=0; i<cats.length;i++)
     carrousel.id=cats[i];
     carrousel.innerHTML=`
     <button class="angle-left h-50"><i class="fas fa-angle-left fa-2x angle-left"></i></button>
-    <div id="carrousel-${cats[i]}" class="d-flex p-5">
+    <div class="d-flex p-5 carrousel-${cats[i]}">
     </div>
     <button class="angle-right h-50"><i class="fas fa-angle-right fa-2x angle-right"></i></button>
     `
@@ -30,14 +30,14 @@ async function getMovies() {
     const data = await response.json();
     return data;
 }
+const com = document.querySelector('.carrousel-Comedia');
+const ter = document.querySelector('.carrousel-Terror');
+const dra = document.querySelector('.carrousel-Drama');
+const acc = document.querySelector('.carrousel-Acción');
+const cie = document.querySelector('.carrousel-Ficción');
 
 function buildComedy(movies){
     movies.map(movie => {
-        const com = document.querySelector('#carrousel-Comedia');
-        const ter = document.querySelector('#carrousel-Terror');
-        const dra = document.querySelector('#carrousel-Drama');
-        const acc = document.querySelector('#carrousel-Acción');
-        const cie = document.querySelector('#carrousel-Ficción');
         switch(movie.genero)
         {
             case 'Comedia':
@@ -135,14 +135,43 @@ getMovies()
 
 containerCategories.addEventListener("click",(event)=>{
     if(event.target.classList.contains("angle-right"))
-    {
-        console.log(event.target.parentElement)
-        com.scrollLeft+=260;
+    {   
+        if(event.target.parentElement.id === 'Comedia' || event.target.parentElement.parentElement.id === 'Comedia' )
+        {
+            com.scrollLeft+=260;
+        }else if(event.target.parentElement.id === 'Terror' || event.target.parentElement.parentElement.id === 'Terror')
+        {
+            ter.scrollLeft+=260;
+        } else if(event.target.parentElement.id === 'Drama' || event.target.parentElement.parentElement.id === 'Drama')
+        {
+            dra.scrollLeft+=260;
+        } else if(event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción')
+        {
+            acc.scrollLeft+=260;
+        } else(event.target.parentElement.id === 'Ficción' || event.target.parentElement.parentElement.id === 'Ficción')
+        {
+            cie.scrollLeft+=260;
+        }
     }
 })
 containerCategories.addEventListener("click",(event)=>{
     if(event.target.classList.contains("angle-left"))
     {
-        com.scrollLeft+=-260;
+        if(event.target.parentElement.id === 'Comedia' || event.target.parentElement.parentElement.id === 'Comedia' )
+        {
+            com.scrollLeft+=-260;
+        }else if(event.target.parentElement.id === 'Terror' || event.target.parentElement.parentElement.id === 'Terror')
+        {
+            ter.scrollLeft+=-260;
+        } else if(event.target.parentElement.id === 'Drama' || event.target.parentElement.parentElement.id === 'Drama')
+        {
+            dra.scrollLeft+=-260;
+        } else if(event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción')
+        {
+            acc.scrollLeft+=-260;
+        } else(event.target.parentElement.id === 'Ficción' || event.target.parentElement.parentElement.id === 'Ficción')
+        {
+            cie.scrollLeft+=-260;
+        }
     }
 })

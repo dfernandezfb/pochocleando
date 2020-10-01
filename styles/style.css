@@ -187,11 +187,11 @@ button:active {
     }
     64% {
         transform: translate(1px, 3px);
-        skew(-230deg);
+        skew:-230deg;
     }
     65% {
         transform: translate(-7px, 2px);
-        skew(120deg);
+        skew:120deg;
     }
     66% {
         transform: translate(0px, 0px) skew(0deg);
@@ -248,12 +248,12 @@ button:active {
 {
     overflow:hidden;
 }
-#carrousel-Comedia , #carrousel-Terror , #carrousel-Drama , #carrousel-Acción , #carrousel-Ficción
+.carrousel-Comedia , .carrousel-Terror , .carrousel-Drama , .carrousel-Acción , .carrousel-Ficción
 {
     overflow-x: scroll;
     scroll-behavior: smooth;
 }
-#carrousel-Comedia::-webkit-scrollbar , #carrousel-Terror::-webkit-scrollbar , #carrousel-Drama::-webkit-scrollbar , #carrousel-Acción::-webkit-scrollbar , #carrousel-Ficción::-webkit-scrollbar
+.carrousel-Comedia::-webkit-scrollbar , .carrousel-Terror::-webkit-scrollbar , .carrousel-Drama::-webkit-scrollbar , .carrousel-Acción::-webkit-scrollbar , .carrousel-Ficción::-webkit-scrollbar
 {
     display:none;
 }
