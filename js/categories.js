@@ -3,7 +3,7 @@ const containerCategories = document.getElementById("categories")
 const categories = document.createElement("h1");
 const URL = 'http://localhost:3000/peliculas/';
 categories.innerHTML="Categorias"
-categories.classList.add("ml-2","color5")
+categories.classList.add("ml-2","color3")
 containerCategories.appendChild(categories);
 
 let cats = ['Comedia','Terror','Drama','Acción','Ficción'];
@@ -15,13 +15,13 @@ for(let i=0; i<cats.length;i++)
     cat.style.marginLeft="20px"
     carrousel.id=cats[i];
     carrousel.innerHTML=`
-    <button class="angle-left h-50"><i class="fas fa-angle-left fa-2x angle-left"></i></button>
+    <button class="angle-left h-50 btn"><i class="fas fa-angle-left fa-2x angle-left"></i></button>
     <div class="d-flex p-5 carrousel-${cats[i]}">
     </div>
-    <button class="angle-right h-50"><i class="fas fa-angle-right fa-2x angle-right"></i></button>
+    <button class="angle-right h-50 btn"><i class="fas fa-angle-right fa-2x angle-right"></i></button>
     `
-    carrousel.classList.add("d-flex","mt-3","align-items-center","mx-2","carrousel");
-    cat.classList.add("color6");
+    carrousel.classList.add("d-flex","mt-3","align-items-center","carrousel");
+    cat.classList.add("color3");
     containerCategories.appendChild(cat);
     containerCategories.appendChild(carrousel);
 }
@@ -49,11 +49,12 @@ function buildComedy(movies){
                 movieCardco.innerHTML = `
                 <div id="${movie.id}" class="movie d-flex flex-column" style="background-image:url('${movie.imagen}');">
                 <div class="resume">
-                <h5 class="movie-title color3 m-2 text-center">${movie.nombre}</h5>
-                <p class="color3 movie-resume mb-0 mt-3 mx-3 text-center">${movie.descripcion}</p>
+                <h5 class="movie-title color6 m-2 text-center border-bottom">${movie.nombre}</h5>
+                <p class="color6 movie-resume mb-0 mt-3 mx-3 text-center">${movie.descripcion}</p>
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
+                <a href="#" class="btn text-light"><i class="fas fa-star fa-2x"></i></i></a>
                 </div>
                 </div>
                 </div>
@@ -66,11 +67,12 @@ function buildComedy(movies){
                 movieCardte.innerHTML = `
                 <div id="${movie.id}" class="movie d-flex flex-column" style="background-image:url('${movie.imagen}');">
                 <div class="resume">
-                <h5 class="movie-title text-light m-2 text-center">${movie.nombre}</h5>
-                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center">${movie.descripcion}</p>
+                <h5 class="movie-title text-light m-2 text-center color6 border-bottom">${movie.nombre}</h5>
+                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6">${movie.descripcion}</p>
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
+                <a href="#" class="btn text-light"><i class="fas fa-star fa-2x"></i></i></a>
                 </div>
                 </div>
                 </div>
@@ -83,11 +85,12 @@ function buildComedy(movies){
                 movieCarddr.innerHTML = `
                 <div id="${movie.id}" class="movie d-flex flex-column" style="background-image:url('${movie.imagen}');">
                 <div class="resume">
-                <h5 class="movie-title text-light m-2 text-center">${movie.nombre}</h5>
-                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center">${movie.descripcion}</p>
+                <h5 class="movie-title text-light m-2 text-center color6 border-bottom">${movie.nombre}</h5>
+                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6">${movie.descripcion}</p>
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
+                <a href="#" class="btn text-light"><i class="fas fa-star fa-2x"></i></i></a>
                 </div>
                 </div>
                 </div>
@@ -100,8 +103,8 @@ function buildComedy(movies){
                 movieCardac.innerHTML = `
                 <div id="${movie.id}" class="movie d-flex flex-column" style="background-image:url('${movie.imagen}');">
                 <div class="resume">
-                <h5 class="movie-title text-light m-2 text-center">${movie.nombre}</h5>
-                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center">${movie.descripcion}</p>
+                <h5 class="movie-title text-light m-2 text-center color6 border-bottom">${movie.nombre}</h5>
+                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6">${movie.descripcion}</p>
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
@@ -118,11 +121,12 @@ function buildComedy(movies){
                 movieCardci.innerHTML = `
                 <div id="${movie.id}" class="movie d-flex flex-column" style="background-image:url('${movie.imagen}');">
                 <div class="resume">
-                <h5 class="movie-title text-light m-2 text-center">${movie.nombre}</h5>
-                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center">${movie.descripcion}</p>
+                <h5 class="movie-title text-light m-2 text-center color6 border-bottom">${movie.nombre}</h5>
+                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6">${movie.descripcion}</p>
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
+                <a href="#" class="btn text-light"><i class="fas fa-star fa-2x"></i></i></a>
                 </div>
                 </div>
                 </div>
@@ -131,7 +135,7 @@ function buildComedy(movies){
                 break;        
             }
         }
-        com.scrollLeft=ter.scrollLeft=dra.scrollLeft=acc.scrollLeft=cie.scrollLeft=0;
+        com.scrollLeft=ter.scrollLeft=dra.scrollLeft=acc.scrollLeft=cie.scrollLeft=28;
     })
 }
 

@@ -167,6 +167,7 @@
     opacity: 0;
     transition: opacity 0.5s ease;
     cursor: default;
+    font-size: 0.7rem;
 }
 
 .resume:hover {
@@ -196,8 +197,18 @@
     overflow: scroll;
 }
 
+/* .movie-resume::-webkit-scrollbar {
+    display: none; */
+/* + */
 .movie-resume::-webkit-scrollbar {
-    display: none;
+	width: 5px;
+	color: #a9bdc5;
+}
+.movie-resume::-webkit-scrollbar-thumb{
+	background: #c02020;
+	border-radius: 10px;
+	border-right: 2px;
+
 }
 
 .carrousel {
@@ -519,3 +530,14 @@ footer{
 
 
 /*! FIN : ESTILO MODAL CREAR NUEVA PELICULA */
+
+body::-webkit-scrollbar {
+	width: 10px;
+	color: #0c1113;
+}
+body::-webkit-scrollbar-thumb{
+	background: #f0e0a0;
+	border-radius: 10px;
+	border-right: 2px;
+
+}
