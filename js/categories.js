@@ -1,10 +1,14 @@
 'use strict'
 const containerCategories = document.getElementById("categories")
 const categories = document.createElement("h1");
-const URL = 'http://localhost:3000/peliculas/';
 categories.innerHTML="Categorias"
 categories.classList.add("ml-2","color3")
 containerCategories.appendChild(categories);
+const containerFavs = document.getElementById("favorites-list")
+const favoritesList = document.createElement("table");
+containerFavs.appendChild(favoritesList);
+const URL = 'http://localhost:3000/peliculas/';
+
 
 let cats = ['Comedia','Terror','Drama','Acción','Ficción'];
 for(let i=0; i<cats.length;i++)
@@ -54,7 +58,8 @@ function buildComedy(movies){
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
-                <a href="#" class="btn text-light"><i class="fas fa-star fa-2x"></i></i></a>
+                <a href="#" class="btn text-light fav-btn"><i class="fas fa-star fa-2x fav-btn"></i></a>
+                </div>
                 </div>
                 </div>
                 </div>
@@ -72,7 +77,8 @@ function buildComedy(movies){
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
-                <a href="#" class="btn text-light"><i class="fas fa-star fa-2x"></i></i></a>
+                <a href="#" class="btn text-light fav-btn"><i class="fas fa-star fa-2x fav-btn"></i></a>
+                </div>
                 </div>
                 </div>
                 </div>
@@ -90,7 +96,8 @@ function buildComedy(movies){
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
-                <a href="#" class="btn text-light"><i class="fas fa-star fa-2x"></i></i></a>
+                <a href="#" class="btn text-light fav-btn"><i class="fas fa-star fa-2x fav-btn"></i></a>
+                </div>
                 </div>
                 </div>
                 </div>
@@ -108,7 +115,8 @@ function buildComedy(movies){
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
-                <a href="#" class="btn text-light"><i class="fas fa-star fa-2x"></i></i></a>
+                <a href="#" class="btn text-light fav-btn"><i class="fas fa-star fa-2x fav-btn"></i></a>
+                </div>
                 </div>
                 </div>
                 </div>
@@ -126,7 +134,8 @@ function buildComedy(movies){
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
-                <a href="#" class="btn text-light"><i class="fas fa-star fa-2x"></i></i></a>
+                <a href="#" class="btn text-light fav-btn"><i class="fas fa-star fa-2x fav-btn"></i></a>
+                </div>
                 </div>
                 </div>
                 </div>
@@ -142,6 +151,60 @@ function buildComedy(movies){
 getMovies()
 .then(movies => buildComedy(movies));
 
+function getMoviesLS()
+{
+    let movies;
+    if(localStorage.getItem('movies')===null)
+    {
+        movies=[]
+    }else{
+        movies=JSON.parse(localStorage.getItem('movies'));
+    }
+    return movies;
+}
+
+function saveMoviesLS(movieInfo)
+{
+    let movies = getMoviesLS();
+    movies.push(movieInfo);
+    localStorage.setItem('movies', JSON.stringify(movies));
+}
+function addMovieToFavs(productInfo)
+{
+    const favorite=document.createElement("tr")
+    favorite.innerHTML=`
+        <td class="img-fav">
+            ${productInfo.imagen}
+        </td>
+        <td class="name-fav">
+            ${productInfo.nombre}
+        </td>
+        <td class="img-fav">
+            <span>&times</span>
+        </td>
+    `;
+    console.log("hola");
+    favoritesList.appendChild(favorite);
+}
+function rendermoviesLS()
+{
+    let movies = getMoviesLS();
+    movies.forEach((movie)=>{
+    const favorite=document.createElement("tr")
+    favorite.innerHTML=`
+        <td class="img-fav">
+            ${movie.imagen}
+        </td>
+        <td class="name-fav">
+            ${movie.nombre}
+        </td>
+        <td class="img-fav">
+            <span>&times</span>
+        </td>
+    `;
+    favoritesList.appendChild(favorite);
+    })
+}
 containerCategories.addEventListener("click",(event)=>{
     if(event.target.classList.contains("angle-right"))
     {   
@@ -184,3 +247,33 @@ containerCategories.addEventListener("click",(event)=>{
         }
     }
 })
+document.addEventListener("DOMContentLoaded",rendermoviesLS);
+containerCategories.addEventListener("click",(e)=>{
+    e.preventDefault();
+    if(e.target.classList.contains("fav-btn"))
+    {
+        let movieInfo=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+        if(movieInfo.classList.contains("movie"))
+        {
+            movieInfo=
+            {
+                imagen: movieInfo.style.backgroundImage.slice(5,-2),
+                nombre: movieInfo.querySelector(".movie-title").textContent,
+                id: movieInfo.id
+            }
+        }
+        else
+        {
+            movieInfo=movieInfo.querySelector(".movie");
+            movieInfo=
+            {
+                imagen: movieInfo.style.backgroundImage.slice(5,-2),
+                nombre: movieInfo.querySelector(".movie-title").textContent,
+                id: movieInfo.id
+            }
+        }
+        addMovieToFavs(movieInfo)
+        saveMoviesLS(movieInfo)
+    }
+})
+
