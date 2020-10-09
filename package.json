@@ -1,0 +1,25 @@
+{
+  "name": "pochocleando",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch ./db/db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RominaEstrada/pochocleando.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RominaEstrada/pochocleando/issues"
+  },
+  "homepage": "https://github.com/RominaEstrada/pochocleando#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery-slim": "^3.0.0",
+    "json-server": "^0.16.2"
+  }
+}
