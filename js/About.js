@@ -1,7 +1,7 @@
 'use strict'
 const container = document.getElementById("root");
 let nombres = ['Diego Fernandez','Antonella Mercado','Romina Estrada','Sebastian Salas','Nicolas Sanchez','Florencia Ibañez','Tulio Ibañez'];
-let imagenes =['/img/Diego.jpeg','/img/Seba.jpg','/img/Nico.jpeg','/img/Romi.jpeg','/img/Anto.jpeg']
+let imagenes =['/img/Diego.jpeg','/img/Seba.jpg','/img/Nico.jpeg','/img/Romi.jpeg','/img/Anto.jpeg','/img/Tulio.jpeg']
 // crear array de imagenes y probar en src
 
 
@@ -126,11 +126,11 @@ const card= document.createElement('div');
             
             <div class ="col-12 col-md-6 col-lg-4 col-xl-3 col-sm-6 mb-4 mx-auto">
             <div class ="card">
-            <figure> <img class ="frontal" src=${imagenes[0]} />  
+            <figure> <img class ="frontal" src=${imagenes[5]} />  
             <figcaption class="trasera">
             <h2> ${nombres[6]} </h2>
             <hr>
-            <p> 24 Años
+            <p> 27 Años
             <br> Desarrolador web- Pochocleando </p>
             </figcaption>
             </figure>
