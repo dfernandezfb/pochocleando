@@ -194,6 +194,52 @@
       "imagen": "https://images-na.ssl-images-amazon.com/images/I/81Qupmv594L._RI_.jpg",
       "video": "https://www.youtube.com/embed/iDdYMOiIn3Q",
       "fav": false
+    },
+    {
+      "nombre": "Pelicula de prueba",
+      "descripcion": "esta es una nueva pruieba",
+      "director": "anto",
+      "genero": "Drama",
+      "categoria": "atp",
+      "anio": "1990",
+      "publicada": true,
+      "id": 16
+    },
+    {
+      "nombre": "Books of Blood",
+      "descripcion": "Un viaje a territorios inexplorados y prohibidos a través de tres historias enredadas en el espacio y el tiempo.",
+      "director": "Brannon Braga",
+      "genero": "Terror",
+      "categoria": "ATP",
+      "anio": "2020",
+      "publicada": true,
+      "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/bXLVZGgLgd7OwbfP6fC5GCfrxuD.jpg",
+      "video": "https://www.youtube.com/embed/k-BVMDGFMkA",
+      "id": 17
+    },
+    {
+      "nombre": "La boda de Jenny",
+      "descripcion": "Jenny ha llevado una vida abiertamente gay con todo su entorno excepto con su tradicional familia. La vida de todos se tambaleará después de que Jenny decida formar una familia y casarse con la mujer que hasta el momento pensaban que solo era su compañera de piso",
+      "director": "Mary Agnes Donoghue",
+      "genero": "Comedia",
+      "categoria": "ATP",
+      "anio": "2015",
+      "publicada": true,
+      "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/Aprcrx3hwiFU9z5Ek5p6bi2yW2g.jpg",
+      "video": "https://www.youtube.com/embed/d1j_etigUMo",
+      "id": 18
+    },
+    {
+      "nombre": "El Lado Siniestro de la Luna",
+      "descripcion": "En 1988, el oficial de la policía de Filadelfia Thomas Lockhart (Boyd Holbrook), ansioso por convertirse en detective, comienza a seguirle la pista a un asesino en serie que misteriosamente resurge cada nueve años. Cuando los crímenes del asesino empiezan a desafiar cualquier explicación científica, la obsesión por descubrir la verdad amenaza con destruir su carrera, su familia y posiblemente su cordura.",
+      "director": "Jim Mickle",
+      "genero": "Ciencia ficcion",
+      "categoria": "ATP",
+      "anio": "2019",
+      "publicada": true,
+      "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/nn1LVyYKASSsxEp4JCyBRYe3a27.jpg",
+      "video": "https://www.youtube.com/embed/srRgqeojKyM",
+      "id": 19
     }
   ],
   "series": [
@@ -337,6 +383,29 @@
       "elenco": "-",
       "origen": "Francia",
       "imagen": "https://martincid.com/wp-content/uploads/2019/03/MV5BYzVlOTQxOGMtNTlkZS00ZDJiLWJmNzQtN2NlM2UxMjdjYWE2XkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SY1000_SX1500_AL_.jpg"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Antonella",
+      "apellido": "Mercado",
+      "email": "antonellamercado@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "nombre": "Octavio",
+      "apellido": "Saucedo",
+      "email": "octa-saucedo@gmail.com",
+      "password": "11111111",
+      "id": 2
+    },
+    {
+      "nombre": "Lara",
+      "apellido": "Ojeda",
+      "email": "lara.ojeda@gmail.com",
+      "password": "12345678",
+      "id": 3
     }
   ]
 }
