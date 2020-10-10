@@ -193,9 +193,9 @@ function buildFavsList(movies)
 
 function modifyFav(e)
 {
-    e.preventDefault();
     if(e.target.classList.contains("fav-btn"))
     {    
+        e.preventDefault();
         let id;
         let movieInfo=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
         if(movieInfo.classList.contains("movie"))
@@ -290,7 +290,7 @@ containerCategories.addEventListener("click",(event)=>{
     }
 })
 
-containerCategories.addEventListener("click",modifyFav)
+// containerCategories.addEventListener("click",modifyFav)
 favoritesList.addEventListener("click",deleteFav)
 
 
