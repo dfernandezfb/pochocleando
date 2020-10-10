@@ -17,14 +17,19 @@ function createForm() {
     const bodyForm = document.createElement('div');
     bodyForm.innerHTML = `
 <div class="modal-body">
+<div  class="my-1">
 <label>Nombre:</label>
-<input type=text id=nombreInput class="campos inputEfect" required >
+<input type=text id=nombreInput class="formulario_input inputEfect" required >
+</div>
 <br>
+<div  class="my-1">
 <label>Descripcion:</label><br>
-<textarea id=descripcionInput class="campos inputEfect" required></textarea>
+<textarea id=descripcionInput class="formulario_input inputEfect" required></textarea>
+</div>
 <br>
+<div  class="my-1">
 <label>Genero:</label>
-<select id="generoInput" name="opciones" class="campos inputEfect" required>
+<select id="generoInput" name="opciones" class="formulario_input_select inputEfect" required>
   <option value="1">Accion</option>
   <option value="2">Drama</option>
   <option value="3">Comedia</option>
@@ -32,29 +37,39 @@ function createForm() {
   <option value="4">Suspenso</option>
   <option value="4">Terror</option>
 </select>
+</div>
 <br>
-<br>
+<div class="my-1">
 <label class="mr-2">Director:</label>
-<input type=text id=directorInput class="campos inputEfect" required>
+<input type=text id=directorInput class="formulario_input inputEfect" required>
+</div>
 <br>
+<div class="my-1">
 <label>Categoria:</label>
-<input type="text" id=categoriaInput class="campos inputEfect" required>
+<input type="text" id=categoriaInput class="formulario_input inputEfect" required>
+</div>
 <br>
+<div class="my-1">
 <label>Año:</label>
-<input type="text" id=anioInput class="campos inputEfect" required>
+<input type="text" id=anioInput class="formulario_input inputEfect" required>
+</div>
 <br>
+<div class="my-1">
 <label>Imagen (link):</label>
-<input type="text" id="imagenInput" class="campos inputEfect" value="" required>
+<input type="text" id="imagenInput" class="formulario_input inputEfect" value="" required>
+</div>
 <br>
+<div class="my-1">
 <label>Video (link):</label>
-<input type="text" id="videoInput" class="campos inputEfect" value="" required>
+<input type="text" id="videoInput" class="formulario_input inputEfect" value="" required>
+</div>
 <br>
-<div class="custom-control custom-switch form-group form-check">
-  <input type="checkbox" class="custom-control-input" id="publicadaInput">
+<div class="custom-control custom-switch form-group form-check my-1">
+  <input type="checkbox" class="custom-control-input color3" id="publicadaInput">
   <label class="custom-control-label" for="publicadaInput">Publicada</label>
 </div>
-<div class="custom-control custom-switch form-group form-check">
-  <input type="checkbox" class="custom-control-input" id="destacadaInput">
+<div class="custom-control custom-switch form-group form-check my-1">
+  <input type="checkbox" class="custom-control-input color3" id="destacadaInput">
   <label class="custom-control-label" for="destacadaInput">Destacada</label>
 </div>
 </div>
