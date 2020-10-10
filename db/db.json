@@ -194,6 +194,28 @@
       "imagen": "https://images-na.ssl-images-amazon.com/images/I/81Qupmv594L._RI_.jpg",
       "video": "https://www.youtube.com/embed/iDdYMOiIn3Q",
       "fav": false
+    },
+    {
+      "nombre": "Pelicula de prueba",
+      "descripcion": "esta es una nueva pruieba",
+      "director": "anto",
+      "genero": "Drama",
+      "categoria": "atp",
+      "anio": "1990",
+      "publicada": true,
+      "id": 16
+    },
+    {
+      "nombre": "Books of Blood",
+      "descripcion": "Un viaje a territorios inexplorados y prohibidos a través de tres historias enredadas en el espacio y el tiempo.",
+      "director": "Brannon Braga",
+      "genero": "Terror",
+      "categoria": "ATP",
+      "anio": "2020",
+      "publicada": true,
+      "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/bXLVZGgLgd7OwbfP6fC5GCfrxuD.jpg",
+      "video": "https://www.youtube.com/embed/k-BVMDGFMkA",
+      "id": 17
     }
   ],
   "series": [

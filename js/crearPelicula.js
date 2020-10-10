@@ -43,9 +43,19 @@ function createForm() {
 <label>Año:</label>
 <input type="text" id=anioInput class="campos inputEfect" required>
 <br>
+<label>Imagen (link):</label>
+<input type="text" id="imagenInput" class="campos inputEfect" value="" required>
+<br>
+<label>Video (link):</label>
+<input type="text" id="videoInput" class="campos inputEfect" value="" required>
+<br>
 <div class="custom-control custom-switch form-group form-check">
-  <input type="checkbox" class="custom-control-input" id="publicadaInput" required>
+  <input type="checkbox" class="custom-control-input" id="publicadaInput">
   <label class="custom-control-label" for="publicadaInput">Publicada</label>
+</div>
+<div class="custom-control custom-switch form-group form-check">
+  <input type="checkbox" class="custom-control-input" id="destacadaInput">
+  <label class="custom-control-label" for="destacadaInput">Destacada</label>
 </div>
 </div>
 `
@@ -73,12 +83,20 @@ formulario.addEventListener('submit', e => {
         const categoriaPeli = document.getElementById('categoriaInput').value;
         const anioPeli = document.getElementById('anioInput').value;
         const inputCheck = document.getElementById('publicadaInput');
-        let publicadaPeli = '';
-        if (inputCheck.checked == true) {
-            publicadaPeli = 'true';
-        } else {
-            publicadaPeli = 'false';
-        }
+        let publicadaPeli = inputCheck.checked;
+        const inputCheckDestacada = document.getElementById('destacadaInput');
+        let destacadaPeli = inputCheckDestacada.checked;
+        const imagenPeli = document.getElementById('imagenInput').value;
+        const videoPeli = document.getElementById('videoInput').value;
+
+
+        /*   let publicadaPeli = '';
+           if (inputCheck.checked == true) {
+               publicadaPeli = 'true';
+           } else {
+               publicadaPeli = 'false';
+           }
+           */
         const data = {
             nombre: nombrePeli,
             descripcion: descripcionPeli,
@@ -86,12 +104,15 @@ formulario.addEventListener('submit', e => {
             genero: generoPeli,
             categoria: categoriaPeli,
             anio: anioPeli,
-            publicada: publicadaPeli
+            publicada: publicadaPeli,
+            detacada: destacadaPeli,
+            imagen: imagenPeli,
+            video: videoPeli
         };
         postNewMovie(data);
     })
     //! Realiza post con la nueva pelicula
-async function postNewMovie({ nombre, descripcion, director, genero, categoria, anio, publicada }) {
+async function postNewMovie({ nombre, descripcion, director, genero, categoria, anio, publicada, destacada, imagen, video }) {
     const url = 'http://localhost:3000/peliculas';
     const response = await fetch(url, {
         method: 'POST',
@@ -99,7 +120,7 @@ async function postNewMovie({ nombre, descripcion, director, genero, categoria, 
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ nombre, descripcion, director, genero, categoria, anio, publicada })
+        body: JSON.stringify({ nombre, descripcion, director, genero, categoria, anio, publicada, destacada, imagen, video })
     })
     const newMovie = await response.json();
     console.log(newMovie);
