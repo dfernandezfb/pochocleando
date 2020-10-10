@@ -63,7 +63,7 @@ const cie = document.querySelector('.carrousel-Ficción');
 
 function buildMovieCards(movies){
     movies.map(movie => {
-        if(movie.publicada==='true')
+        if(movie.publicada===true)
         {
             switch(movie.genero)
             {

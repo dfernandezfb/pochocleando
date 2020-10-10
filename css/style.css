@@ -197,9 +197,6 @@
     overflow: scroll;
 }
 
-/* .movie-resume::-webkit-scrollbar {
-    display: none; */
-/* + */
 .movie-resume::-webkit-scrollbar {
 	width: 5px;
 	color: #a9bdc5;
@@ -352,7 +349,7 @@
 }   
   
 .nav-links .link{
-    opacity: 0;
+    opacity: 0; /*Para que opacidad 0?*/
   }
   .nav-links .link .item {
     font-size: 25px;
@@ -398,7 +395,7 @@
     position: relative;
 }
   .link:after {    
-      background: none repeat scroll 0 0 transparent;
+    background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
     display: block;

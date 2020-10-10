@@ -16,7 +16,6 @@ async function buildSlides() {
     let series = await getSeries();
     let peliculas = await getPeliculas();
     const datos = series.concat(peliculas);
-    console.log(datos)
     for (let i = 0; i < datos.length; i++) {
         if (datos[i].destacada === true) {
             containerSlider.innerHTML += `                 
