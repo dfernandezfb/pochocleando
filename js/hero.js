@@ -1,6 +1,8 @@
 const containerMain = document.querySelector('#container-main');
 const URLseries = 'http://localhost:3000/series';
 const URLpeliculas = 'http://localhost:3000/peliculas';
+const containerSlider = document.getElementById('inner-carousel');
+const carouselIndicators = document.querySelector('.carousel-indicators');
 
 async function getSeries() {
     const response = await fetch(URLseries);
@@ -15,15 +17,15 @@ async function getPeliculas() {
 async function buildSlides() {
     let series = await getSeries();
     let peliculas = await getPeliculas();
-    const datos = series.concat(peliculas);
-    console.log(datos)
+    const contenido = series.concat(peliculas);
+    const datos = contenido.filter(isOutstanding);
     for (let i = 0; i < datos.length; i++) {
         if (datos[i].destacada === true) {
             containerSlider.innerHTML += `                 
             <div class="carousel-item hero ${i === 0 ? 'active' : ''}" >
-             <img src="${datos[i].imagen}" class="d-block w-100 img-hero " alt="img-serie">
+             <img src="${datos[i].imagen}" class="d-block w-100 img-hero" alt="img-serie">
               <div class="carousel-caption d-none d-md-block">
-                    <div class= "d-flex align-items-center flex-column" style = "background: rgba(255, 255, 255, 0.3) ; border-radius: 15px; background-position: center top">
+                    <div class= "d-flex align-items-center flex-column data-hero">
                     <h5 class="text mt-2 title-black title">${datos[i].nombre}</h5>
                     <p class="user-select-none p-black text-center">${datos[i].descripcion}</p>
                     <a href="error404.html"> <button class="btn-hero btn-black bi bi-play mt-n3" id="btn-slide">
@@ -42,8 +44,11 @@ async function buildSlides() {
         }
     }
 }
-const containerSlider = document.getElementById('inner-carousel');
-const carouselIndicators = document.querySelector('.carousel-indicators');
-
 buildSlides();
+
+function isOutstanding(objeto) {
+    if (objeto.destacada === true) {
+        return objeto;
+    }
+}
 

@@ -527,6 +527,12 @@ footer{
 .hero{
     max-height:50vw ;
 }
+.data-hero{
+    background: rgba(255, 255, 255, 0.3) ; 
+    border-radius: 15px; 
+    background-position: center top;
+}
+
 .title-white{
     font-size: 5vw; 
     color:white;
@@ -573,11 +579,19 @@ footer{
     padding: 5px;   
     font-size: 10px;
     } 
+    .img-hero{
+        width: 13rem;
+        height: 15rem;
+    }
 }
 @media (max-width:850px){
     .btn-hero{
     padding: 1px;  
     font-size: 8px; 
+    }
+    .img-hero{
+        width: 13rem;
+        height: 15rem;
     }
 }
 
