@@ -22,7 +22,7 @@ function isAdmin() {
             <i class="fas fa-user-lock"></i>
              `
              links.innerHTMLs=`
-             <li class="link" id="admin"><a class="item" href="panelAdmin.html">Administrar</a></li>
+             <li class="link" id="admin"><a class="item" href="pagAdmin.html">Administrar</a></li>
               `             
         } else {
             user.innerHTML = "Bienvenido: " + user.nombre;
