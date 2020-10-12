@@ -840,3 +840,10 @@ body::-webkit-scrollbar {
 
 
 /**************************************************************************************************/
+
+/* ESTILO PAGINA ADMIN */
+
+.row-selected
+{
+    border: 2px solid black;
+}

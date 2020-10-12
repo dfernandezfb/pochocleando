@@ -1,10 +1,10 @@
 const form = document.getElementById("rootFormE");
 const modalFormE = document.getElementById('editarPeliModal');
-const URL = 'http://localhost:3000/peliculas/';
 form.classList.add('bg-color1');
 form.classList.add('color3');
 
 async function getMovie(id) {
+    const URL = 'http://localhost:3000/peliculas/';
     const newURL= `${URL}/${id}`
     const response = await fetch(newURL);
     const data = await response.json();
