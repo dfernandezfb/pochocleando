@@ -514,12 +514,6 @@
     width: 100%;
 }
 */
-<<<<<<< HEAD
-    
-    .buttonCM:hover {
-        background-color: #DC143C;
-        color: #FFF8DC;
-=======
 
 .buttonCM:hover {
     background-color: #DC143C;
@@ -598,7 +592,6 @@
     .btn-hero {
         padding: 5px;
         font-size: 10px;
->>>>>>> b1238a9f57232b0b6b4a956fe859692b243ec1da
     }
     /*! FIN : ESTILO MODAL CREAR NUEVA PELICULA */
     /*Hero-RE*/
