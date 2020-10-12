@@ -245,42 +245,6 @@
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/nn1LVyYKASSsxEp4JCyBRYe3a27.jpg",
       "video": "https://www.youtube.com/embed/srRgqeojKyM",
       "id": 19
-    },
-    {
-      "nombre": "asdasdasd",
-      "descripcion": "asdasdasdasd",
-      "director": "asdasdasd",
-      "genero": "Drama",
-      "categoria": "asdasdasd",
-      "anio": "12122",
-      "publicada": true,
-      "imagen": "asdasd",
-      "video": "asdasd",
-      "id": 20
-    },
-    {
-      "nombre": "asdasdasd",
-      "descripcion": "asdasdasdasd",
-      "director": "asdasdasd",
-      "genero": "Drama",
-      "categoria": "asdasdasd",
-      "anio": "12122",
-      "publicada": true,
-      "imagen": "asdasd",
-      "video": "asdasd",
-      "id": 21
-    },
-    {
-      "nombre": "asdasdasd",
-      "descripcion": "asdasdasdasd",
-      "director": "asdasdasd",
-      "genero": "Drama",
-      "categoria": "asdasdasd",
-      "anio": "12122",
-      "publicada": true,
-      "imagen": "asdasd",
-      "video": "asdasd",
-      "id": 22
     }
   ],
   "series": [

@@ -1,4 +1,4 @@
-const form = document.getElementById("rootFormE");
+const formE = document.getElementById("rootFormE");
 const modalFormE = document.getElementById('editarPeliModal');
 form.classList.add('bg-color1');
 form.classList.add('color3');
@@ -26,8 +26,8 @@ async function editMovie(id,newData){
 }
 
 function editForm(movie) {
-    const headerForm = document.createElement('div');
-    headerForm.innerHTML = `
+    const headerFormE = document.createElement('div');
+    headerFormE.innerHTML = `
 <div class="modal-header">
 <h5 class="modal-title text-center" id="exampleModalLabel">Editar pelicula</h5>
 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -35,8 +35,8 @@ function editForm(movie) {
 </button>
 </div>
 `
- const bodyForm = document.createElement('div');
- bodyForm.innerHTML = `
+ const bodyFormE = document.createElement('div');
+ bodyFormE.innerHTML = `
  <div class="modal-body">
 <label>Nombre:</label>
 <input type="text" id="nombreInputE" class="campos inputEfect" value="${movie.nombre}" required >
@@ -76,14 +76,14 @@ function editForm(movie) {
 </div>
 </div>
 ` ;
-const footerForm = document.createElement('div');
-footerForm.innerHTML = `<div class="modal-footer">
+const footerFormE = document.createElement('div');
+footerFormE.innerHTML = `<div class="modal-footer">
 <button type="submit" class="btn bg-color2 color3 buttonCM">Guardar</button>
 </div>
 `
-form.appendChild(headerForm);
-form.appendChild(bodyForm);
-form.appendChild(footerForm);
+formE.appendChild(headerFormE);
+formE.appendChild(bodyFormE);
+formE.appendChild(footerFormE);
 const generos = document.getElementById("generoInputE").options;
 let inputCheckE = document.getElementById("publicadaInputE");
 for (let i = 0; i < generos.length; i++) {
@@ -95,10 +95,9 @@ for (let i = 0; i < generos.length; i++) {
 inputCheckE.checked=movie.publicada;
 }
 
-getMovie(1)
-.then(movie=>editForm(movie));
 
-form.addEventListener("submit",(event)=>{
+
+formE.addEventListener("submit",(event)=>{
     event.preventDefault();
     // AGREGAR ID EN EL OBJETO
     const nombrePeli = document.getElementById('nombreInputE').value;
@@ -123,5 +122,5 @@ form.addEventListener("submit",(event)=>{
         imagen: imagenPeli,
         video: videoPeli
     };
-        editMovie(1,newData)
+        editMovie(idSelected,newData)
 })

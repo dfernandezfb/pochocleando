@@ -57,6 +57,7 @@ function allowButtons(e)
     }
     e.target.parentElement.classList.add("row-selected");
     document.querySelector(".edit-btn").removeAttribute("disabled")
+    document.querySelector(".eliminarPeli").removeAttribute("disabled")
     idSelected = e.target.parentElement.id;
     getMovie(idSelected)
     .then(movie=>editForm(movie));
@@ -233,3 +234,20 @@ formE.addEventListener("submit",(event)=>{
     };
         editMovie(idSelected,newData)
     })
+    
+    const deleteBtn = document.getElementById('eliminarPeli')
+
+async function deletMovie(id){
+    const url = 'http://localhost:3000/peliculas';
+    const newurl = `${url}/${id}`;
+    console.log(newurl);
+    const response =  await fetch (newurl, {method: 'DELETE'
+    })
+}
+
+document.querySelector(".btns").addEventListener('click' , e => {
+    if (e.target.classList.contains ('eliminarPeli')){
+    // ACÁ IRÍA MODAL
+    }
+})
+deletMovie(idSelected);

@@ -349,7 +349,7 @@ img {
 }
 
 .nav-links .link {
-    opacity: 0;
+    opacity: 1;
     /*Para que opacidad 0?*/
 }
 
@@ -621,7 +621,11 @@ body::-webkit-scrollbar {
     width: 10px;
     color: #0c1113;
 }
-
+body::-webkit-scrollbar-thumb{
+    background:#F0E0A0;
+    border-radius:10px;
+    border-right:2px;
+}
 
 /**************************************************************************************************/
 
