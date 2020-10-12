@@ -206,7 +206,7 @@
             "categoria": "ATP",
             "destacada": true,
             "publicada": true,
-            "anio": 2018,
+            "año": 2018,
             "imagen": "https://images.tntdrama.com/tnt/$dyna_params/https%3A%2F%2Fi.cdn.tntdrama.com%2Fassets%2Fimages%2F2019%2F04%2FLastOG-2048x1536.jpg",
             "video": "https://www.youtube.com/watch?v=CtgJkBU6uGk&ab_channel=RottenTomatoesTV"
         },
@@ -219,7 +219,7 @@
             "categoria": "ATP",
             "destacada": true,
             "publicada": true,
-            "anio": 2019,
+            "año": 2019,
             "imagen": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/08/14142213/El-Apache-La-vida-de-Carlos-Tevez-2.jpg",
             "video": "https://www.youtube.com/watch?v=cJddE9XX2ds&ab_channel=NetflixLatinoam%C3%A9rica"
         },
@@ -232,7 +232,7 @@
             "categoria": "ATP",
             "destacada": false,
             "publicada": true,
-            "anio": 2020,
+            "año": 2020,
             "imagen": "https://miro.medium.com/max/1200/1*W8JFEYBCnW5rmw9Y1VQ54A.jpeg",
             "video": "https://www.youtube.com/watch?v=K1boLn4lUjg&ab_channel=RottenTomatoesTV"
         },
@@ -245,7 +245,7 @@
             "categoria": "ATP",
             "destacada": false,
             "publicada": true,
-            "anio": 2019,
+            "año": 2019,
             "imagen": "https://www.cuatromedios.com.ar/asset/thumbnail,1140,1140,center,center//media/cuatromedios/images/2019/06/05/2019060523150424199.jpg",
             "video": "https://www.youtube.com/watch?v=a9tbKuqmuPo&ab_channel=BuenaVistaInternationalLatinoam%C3%A9rica"
         },
@@ -258,7 +258,7 @@
             "categoria": "ATP",
             "destacada": true,
             "publicada": true,
-            "anio": 2016,
+            "año": 2016,
             "imagen": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/07/24132616/La-granja-de-Zen%C3%B3n-portada.jpg",
             "video": "https://www.youtube.com/watch?v=yJdX9bb-LZI&ab_channel=ElReinoInfantil"
         },
@@ -271,7 +271,7 @@
             "categoria": "ATP",
             "destacada": false,
             "publicada": true,
-            "anio": 2010,
+            "año": 2010,
             "imagen": "https://media.airedesantafe.com.ar/p/0f66054000c8a60a956386ad877fd7d3/adjuntos/268/imagenes/002/145/0002145466/borgen-la-serie-politica-netflix.png",
             "video": "https://www.youtube.com/watch?v=OKduYvZ1TYo&ab_channel=Blog"
         },
@@ -284,7 +284,7 @@
             "categoria": "ATP",
             "destacada": true,
             "publicada": true,            
-            "anio": 2016,
+            "año": 2016,
             "imagen": "https://4.bp.blogspot.com/-MNwF5_UYpkw/Vv17opthgyI/AAAAAAAAMz8/ZoNcSpNf6R8lujLoJN-qeGCUokvR0uckA/s1600/love-1600x900.jpg",
             "video": "https://www.youtube.com/watch?v=FwiU4O5Cxrc&ab_channel=moviemaniacsDE"
         },
@@ -297,7 +297,7 @@
             "categoria": "ATP",
             "destacada": false,
             "publicada": true,
-            "anio": 2007,
+            "año": 2007,
             "imagen": "https://www.okchicas.com/wp-content/uploads/2019/07/Gossip-Girl-10.jpg",
             "video": "https://www.youtube.com/watch?v=eCg1RN-dyQk&ab_channel=ChelseaEley"
         },
@@ -310,7 +310,7 @@
             "categoria": "+18",
             "destacada": true,
             "publicada": true,
-            "anio": 2008,
+            "año": 2008,
             "imagen": "https://legendarykicks.mx/wp-content/uploads/2020/02/000160162hr-1170x780.jpg",
             "video": "https://www.youtube.com/watch?v=ceqOTZnhgY8&ab_channel=KlabaYouTubeGaming"
         },
@@ -323,7 +323,7 @@
             "categoria": "ATP",
             "destacada": false,
             "publicada": true,
-            "anio": 2019,
+            "año": 2019,
             "imagen": "https://martincid.com/wp-content/uploads/2019/03/MV5BYzVlOTQxOGMtNTlkZS00ZDJiLWJmNzQtN2NlM2UxMjdjYWE2XkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SY1000_SX1500_AL_.jpg",
             "video": "https://www.youtube.com/watch?v=Sh3Z2ViVaYU&ab_channel=NetflixLatinoam%C3%A9rica"
         }
