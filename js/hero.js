@@ -1,6 +1,7 @@
-const containerMain = document.querySelector('#container-main');
+'use strict'
 const URLseries = 'http://localhost:3000/series';
 const URLpeliculas = 'http://localhost:3000/peliculas';
+const containerMain = document.querySelector('#container-main');
 const containerSlider = document.getElementById('inner-carousel');
 const carouselIndicators = document.querySelector('.carousel-indicators');
 
@@ -43,8 +44,22 @@ async function buildSlides() {
               `
         }
     }
+    buildControl();
 }
+
 buildSlides();
+
+function buildControl() {
+    containerMain.innerHTML += `<a class="carousel-control-prev d-none d-sm-flex" href="#container-main" id="" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next d-none d-sm-flex" href="#container-main" id="next-slide" role="button"
+data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>`
+}
 
 function isOutstanding(objeto) {
     if (objeto.destacada === true) {
