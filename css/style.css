@@ -514,10 +514,91 @@
     width: 100%;
 }
 */
+<<<<<<< HEAD
     
     .buttonCM:hover {
         background-color: #DC143C;
         color: #FFF8DC;
+=======
+
+.buttonCM:hover {
+    background-color: #DC143C;
+    color: #FFF8DC;
+}
+
+
+/*! FIN : ESTILO MODAL CREAR NUEVA PELICULA */
+
+
+/*Hero-RE*/
+
+.img-hero {
+    max-width: 100%;
+}
+
+.hero {
+    max-height: 50vw;
+}
+.data-hero{
+    background: rgba(255, 255, 255, 0.3) ; 
+    border-radius: 15px; 
+    background-position: center top;
+}
+
+.title-white{
+    font-size: 5vw; 
+    color:white;
+}
+
+.title-black {
+    font-size: 5vw;
+    color: black;
+}
+
+.p-white {
+    color: white;
+    font-size: 1.6vw;
+    font-weight: bolder;
+}
+
+.p-black {
+    color: black;
+    font-size: 1.6vw;
+    font-weight: bolder;
+}
+
+.btn-hero {
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: bolder;
+}
+
+.btn-white {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-black {
+    border: 2px solid black;
+    color: black;
+}
+
+.btn-white:hover {
+    border: 2px solid black;
+    color: black;
+}
+
+.btn-black:hover {
+    border: 2px solid white;
+    color: white;
+}
+
+@media (max-width:990px) {
+    .btn-hero {
+        padding: 5px;
+        font-size: 10px;
+>>>>>>> b1238a9f57232b0b6b4a956fe859692b243ec1da
     }
     /*! FIN : ESTILO MODAL CREAR NUEVA PELICULA */
     /*Hero-RE*/
@@ -733,9 +814,15 @@ body::-webkit-scrollbar-thumb{
     opacity: 1;
 }
 
-.formulario_grupo_incorrecto .formulario_validacion_estado {
-    color: #bb2929;
-    opacity: 1;
+@media (max-width:990px){
+    .btn-hero{
+    padding: 5px;   
+    font-size: 10px;
+    } 
+    .img-hero{
+        width: 13rem;
+        height: 15rem;
+    }
 }
 
 
@@ -906,6 +993,10 @@ body::-webkit-scrollbar-thumb{
         color: #fff;
         border-color: red;
         background-color: red;
+    }
+    .img-hero{
+        width: 13rem;
+        height: 15rem;
     }
 }
     /*********************Medias querys*************************************/
