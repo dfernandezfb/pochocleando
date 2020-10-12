@@ -545,64 +545,43 @@ footer {
 
 
 /*Hero-RE*/
-
-.img-hero {
-    max-width: 100%;
-}
-
-.hero {
-    max-height: 50vw;
-}
 .data-hero{
     background: rgba(255, 255, 255, 0.3) ; 
     border-radius: 15px; 
-    background-position: center top;
 }
+.img-hero {
+    max-width: 100%;
+    height: auto;
 
-.title-white{
-    font-size: 5vw; 
-    color:white;
+}
+.hero {
+    max-height: 50vw;
 }
 
 .title-black {
     font-size: 5vw;
     color: black;
 }
-
-.p-white {
-    color: white;
-    font-size: 1.6vw;
-    font-weight: bolder;
-}
-
 .p-black {
     color: black;
     font-size: 1.6vw;
     font-weight: bolder;
 }
-
+.p-white {
+    color: white;
+    font-size: 1.6vw;
+    font-weight: bolder;
+}
 .btn-hero {
     background-color: transparent;
     border-radius: 25px;
     padding: 10px 25px;
     font-weight: bolder;
 }
-
-.btn-white {
-    border: 2px solid white;
-    color: white;
-}
-
 .btn-black {
     border: 2px solid black;
     color: black;
 }
-
-.btn-white:hover {
-    border: 2px solid black;
-    color: black;
-}
-
 .btn-black:hover {
     border: 2px solid white;
     color: white;
@@ -613,15 +592,22 @@ footer {
         padding: 5px;
         font-size: 10px;
     }
-}
-
-@media (max-width:850px) {
-    .btn-hero {
-        padding: 1px;
-        font-size: 8px;
+    .img-hero{
+        max-width: 100%;
+        height: auto;
+    }
+    .p-black{
+        display: none;
     }
 }
 
+@media (min-width:992px) {
+
+}
+
+@media (min-width: 575px) { 
+    
+ }
 body::-webkit-scrollbar {
     width: 10px;
     color: #0c1113;
@@ -834,7 +820,10 @@ body::-webkit-scrollbar {
         height: 15rem;
     }
 }
-
+/*Render usuario RE*/
+.user-render{
+    margin:5px 15px;
+}
 
 /*
     @media (min-width: 360px) {

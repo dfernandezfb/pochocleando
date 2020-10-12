@@ -20,11 +20,12 @@ async function buildSlides() {
     let peliculas = await getPeliculas();
     const contenido = series.concat(peliculas);
     const datos = contenido.filter(isOutstanding);
+
     for (let i = 0; i < datos.length; i++) {
         if (datos[i].destacada === true) {
             containerSlider.innerHTML += `                 
             <div class="carousel-item hero ${i === 0 ? 'active' : ''}" >
-             <img src="${datos[i].imagen}" class="d-block w-100 img-hero" alt="img-serie">
+             <img src="${datos[i].imagen}" class="d-block w-100 img-hero img-fluid" alt="img-serie">
               <div class="carousel-caption d-none d-md-block">
                     <div class= "d-flex align-items-center flex-column data-hero">
                     <h5 class="text mt-2 title-black title">${datos[i].nombre}</h5>
@@ -50,15 +51,13 @@ async function buildSlides() {
 buildSlides();
 
 function buildControl() {
-    containerMain.innerHTML += `<a class="carousel-control-prev d-none d-sm-flex" href="#container-main" id="" role="button" data-slide="prev">
+    containerMain.innerHTML += `
+<a class="carousel-control-prev d-none d-sm-flex" href="#container-main" id="" role="button" data-slide="prev">
 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="sr-only">Previous</span>
-</a>
-<a class="carousel-control-next d-none d-sm-flex" href="#container-main" id="next-slide" role="button"
-data-slide="next">
+<span class="sr-only">Previous</span></a>
+<a class="carousel-control-next d-none d-sm-flex" href="#container-main" id="next-slide" role="button" data-slide="next">
 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="sr-only">Next</span>
-</a>`
+<span class="sr-only">Next</span></a>`
 }
 
 function isOutstanding(objeto) {

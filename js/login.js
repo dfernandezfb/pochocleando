@@ -22,11 +22,11 @@ function showUser() {
     let user = JSON.parse(localStorage.getItem('user'));
     if (user.admin === true) {
         renderUser.innerHTML = `<div class="d-flex align-content-end flex-wrap">
-        <h5 class="p-white"><i class="fas fa-user-cog"></i>¡Bienvenido ${user.nombre}!</h5>
+        <h5 class="p-white"><i class="fas fa-user-cog user-render"></i>¡Bienvenido ${user.nombre}!</h5>
         </div>`
         links.innerHTML += `<li class="link" id="admin"><a class="item" href="pagAdmin.html">Panel Administración</a></li>`
     } else {
-        renderUser.innerHTML = `<h5 class="p-white"><i class="fas fa-user"></i>¡Bienvenido ${user.nombre}!<h5>`
+        renderUser.innerHTML = `<h5 class="p-white"><i class="fas fa-user user-render"></i>¡Bienvenido ${user.nombre}!<h5>`
     }
     links.innerHTML +=`<li class="link" id="admin"><a class="item" href="fullPage.html">Cerrar sesión</a></li>`
 }
