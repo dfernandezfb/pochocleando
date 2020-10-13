@@ -3,17 +3,21 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/renderUser.css">
     <title>Pochocleando</title>
 </head>
 
 <body>
     <header class="logoContainer">
         <img class="logoHeader" src="/img/logo pochocleando tema oscuro.png" alt="sLogo" width="150px">
-        <div id="user"></div>
+        <div id="user">
+
+        </div>
+
     </header>
     <nav class="hamb">
         <div class="hamburger">
@@ -24,6 +28,37 @@
                 <li class="link" id="login"><a class="item" href="#">Iniciar Sesión</a></li>
                 <li class="link" id="registro"><a class="item" href="#">Regístrate</a></li>
                 <li class="link"><a class="item" href="#">Contacto</a></li>
+            </div>
+            <div class=" col-4 render-user">
+            <!--  <nav class="navbar navbar-dark ">  -->  
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <img src="/img/user.png" width="50" height="50" class="d-inline-block align-top" alt=""
+                            loading="lazy">
+                    </button>
+                <!-- </nav> -->
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="render-user">
+                        <ul class="nav flex-column">
+                            <li class="nav-item ">
+                                <a class="nav-link active text-white" href="#">ROMINA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Editar perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Configuraciones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Ayuda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Cerrar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </ul>
     </nav>
@@ -97,7 +132,7 @@
         </div>
     </footer>
     <script src="./js/hero.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/renderUser.js"></script>
     <script src="js/categories.js"></script>
     <script src="/js/app.js"></script>
     <script src="https://kit.fontawesome.com/d4db128a0c.js" crossorigin="anonymous"></script>
