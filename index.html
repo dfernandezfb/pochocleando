@@ -6,56 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="/icon/faviconPochoclenado .ICO.ico">
     <title>Pochocleando</title>
-</head>
-
-<body>
+  </head>
+  <body>
     <header class="logoContainer">
-        <img class="logoHeader" src="/img/logo pochocleando tema oscuro.png" alt="sLogo" width="150px">
-        <p id="user"></p>
+        <img class= "logoHeader" src="/img/logo pochocleando tema oscuro.png" alt="sLogo" width="150px">
     </header>
     <nav class="hamb">
         <div class="hamburger">
             <img src="/img/icon pochoclenado ICO.ico" alt="logoHamb">
         </div>
+        <div class="searcher">
+            <input type="search" placeholder="Busca" class="search" id="search-bar-id">
+            <input type="image" id="btnsearch" onclick="buscar()" src="img/search.png" class="img-search">
+        </div>
+        <div id="lista-busqueda"></div>
         <ul class="nav-links">
-            <div id="links">
-                <li class="link" id="login"><a class="item" href="#">Iniciar Sesión</a></li>
-                <li class="link" id="registro"><a class="item" href="#">Regístrate</a></li>
-                <li class="link"><a class="item" href="#">Contacto</a></li>
-            </div>
+            <li class="link"><a class="item" href="#">Iniciar Sesión</a></li>
+            <li class="link"><a class="item" href="#">Regístrate</a></li>
+            <li class="link"><a class="item" href="#">Contacto</a></li>
         </ul>
     </nav>
-    <!--Start Hero RE-->
-    <div class="carousel slide carousel-fade" id="container-main" data-ride="carousel">
-        <ol class="carousel-indicators d-none d-sm-flex">
-        </ol>
-        <div class="carousel-inner container-slider" id="inner-carousel">
-        </div>
-        <a class="carousel-control-prev d-none d-sm-flex" href="#container-main" id="" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next d-none d-sm-flex" href="#container-main" id="next-slide" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <!--End Hero RE-->
+
     <div id="categories"></div>
-    <div id="favorites-list"></div>
-    <!-- FOOTER -->
+
     <footer>
         <div class="container-fluid text-white">
             <div class="row p-3">
                 <div class="d-none d-md-block col-md-12 col-lg-6 p-3">
                     <h4>Pochocleando</h4>
-                    <p>Pochocleando es una página web donde puedes ver tus series y peliculas favoritas sin necesidad de
-                        estar pagando otros servicios o tener que estar quitando anuncios por horas. Entra y disfruta de
-                        lo que Pochocleando te ofrece totalmente
-                        gratis, desde tu navegador web ya sea que estés desde tu tablet, smartphone, computadora y hasta
-                        tu smartTV!.</p>
+                    <p>Pochocleando es una página web donde puedes ver tus series y peliculas favoritas sin necesidad de estar pagando otros servicios o tener que estar quitando anuncios por horas. Entra y disfruta de lo que Pochocleando te ofrece totalmente
+                        gratis, desde tu navegador web ya sea que estés desde tu tablet, smartphone, computadora y hasta tu smartTV!.</p>
                 </div>
                 <div class="col-12 col-lg-3 p-3">
                     <h4 class="center-lg">Redes Sociales</h4>
@@ -88,8 +69,7 @@
                 <div class="d-xs-block d-lg-none col-12 text-center p-3 align-self-end">
                     <p>Disponible en iOS y Android.</p>
                     <a href="#"><img class="img-fluid p-2" width="200" src="img/app-store.png" alt="app-store"></a>
-                    <a href="#"><img class="img-fluid p-2" width="200" src="img/googleplay-store.png"
-                            alt="google-store"></a>
+                    <a href="#"><img class="img-fluid p-2" width="200" src="img/googleplay-store.png" alt="google-store"></a>
                 </div>
             </div>
             <div class="row copyright-legal text-center">
@@ -106,15 +86,37 @@
             </div>
         </div>
     </footer>
-    <!-- FIN FOOTER -->
-    <script src="./js/hero.js"></script>
-    <script src="./js/login.js"></script>
     <script src="js/categories.js"></script>
     <script src="/js/app.js"></script>
     <script src="https://kit.fontawesome.com/d4db128a0c.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/search-bar.js"></script>
 </body>
 
 </html>
+
+<!--CREO QUE ESTO NO VA -->
+<!--<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <link href="css/style.css" rel=stylesheet>
+</head>
+
+<body>
+    <ul id="root"></ul>
+    <div id="rootImage"></div>
+    <div id="nuevo"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>
+-->
