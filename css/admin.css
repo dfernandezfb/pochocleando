@@ -1,0 +1,40 @@
+.row-movie
+{
+    cursor: pointer  ;
+}
+.row-movie:hover
+{
+    background-color: #f0e0a0;
+    color:black;
+}
+.row-selected
+{
+    background-color: #c02020;
+    font-weight: bold;
+}
+.administracion h2,p
+{
+    cursor: default;
+}
+    /*! INICIO : ESTILO MODAL CREAR NUEVA PELICULA */
+    .inputEfect:focus {
+    border: 6px solid #f0e0a0;
+    color: black;
+}
+
+.campos {
+    width: 100%;
+}
+
+
+.buttonCM:hover {
+    background-color: #DC143C;
+    color: #FFF8DC;
+}
+
+
+/*! FIN : ESTILO MODAL CREAR NUEVA PELICULA */
+
+
+
+

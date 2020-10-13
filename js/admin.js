@@ -2,7 +2,7 @@
 const rootAdmin = document.querySelector(".movies-table");
 const moviesTable= document.createElement("table");
 let idSelected;
-moviesTable.classList.add("table","table-hover")
+moviesTable.classList.add("table")
 moviesTable.innerHTML=`
 <thead class="thead-dark">
 <tr>
@@ -32,6 +32,7 @@ function generateTable(movies)
     movies.map(movie =>{
         const row = document.createElement("tr");
         row.id=movie.id;
+        row.classList.add("color6","row-movie")
         row.innerHTML=`
         <th scope="row">${movie.nombre}</th>
         <td>${movie.director}</td>
@@ -248,6 +249,6 @@ async function deletMovie(id){
 document.querySelector(".btns").addEventListener('click' , e => {
     if (e.target.classList.contains ('eliminarPeli')){
     // ACÁ IRÍA MODAL
+    deletMovie(idSelected); //Y ESTE ESTARÍA EN EL EVENTO DEL BOTON DEL MODAL
     }
 })
-deletMovie(idSelected);
