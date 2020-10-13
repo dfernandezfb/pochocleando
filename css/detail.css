@@ -186,7 +186,7 @@ a:hover:after {
 	border: none;
 	min-width: 98%;
 	min-height: 100%;
-	height: 300px;
+	height: 450px;
 	top: 50%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-20%);
@@ -203,7 +203,7 @@ a:hover:after {
 transition: all 0.5s ease;
 cursor:zoom-in;
 float: left;
-margin-top: -410px;
+margin-top: -420px;
 /*Podria modificarsew ---- */
 width: 280px;
 height: 420px;
@@ -267,7 +267,7 @@ align-items: center;
     margin: auto;
     background: rgba(0,0,0, 0.5);
 	border: none;
-	transform: translateY(-700%);
+	transform: translateY(-950%);
 	border-radius: 0.31em;
 	padding: 0.8em 1em;
 	color: #fff;
@@ -312,13 +312,13 @@ align-items: center;
 } 
 .botonD {
 margin: auto;
-font-size: 1em;
-transform: translateY(-800%);
+font-size: 0.8em;
+transform: translateY(-1400%);
 
 }
 }
 
-@media screen and (max-width: 415px){
+@media screen and (max-width: 426px){
 	.body {
 		width: 100%;
 	}
@@ -341,9 +341,8 @@ transform: translateY(-800%);
 		display: none;
 	} 
 	.botonD {
-	margin: auto;
-	font-size: 0.85em;
-	transform: translateY(-1000%);
+	font-size: 0.7em;
+	transform: translateY(-1650%);
 	}
 }
 
@@ -370,9 +369,7 @@ transform: translateY(-800%);
 		display: none;
 	} 
 	.botonD {
-  
-	font-size: 0.7em;
-	 transform: translateY(-1200%);
+  display: none;
 	}
 }
 

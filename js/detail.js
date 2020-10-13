@@ -1,4 +1,5 @@
 
+
 let container = document.getElementById("containerD");
 let video= document.getElementById("vid");
 const URL= "http://localhost:3000/peliculas";
@@ -63,8 +64,25 @@ getmovie()
             container.appendChild(año)
             container.appendChild(imagen)
             vid.appendChild(video)
-            
+
         }
+
+
+
+      /*   const getData = url_api => {
+            return new Promise((resolve, reject) => {
+              fetch(url_api)
+              .then(response => {
+                if(response.status === 200) {
+                  resolve(response.json())
+                } else {
+                  const error = new Error('Ha ocurrido un error', url_api)
+                  reject(error);
+                }
+              })
+            })
+          }  */
+
     
 
 
