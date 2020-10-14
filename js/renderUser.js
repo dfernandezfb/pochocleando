@@ -4,6 +4,7 @@ const renderUser = document.getElementById('user');
 const links = document.querySelector('#links');
 const login = document.querySelector('#login');
 const registro = document.querySelector('#registro');
+const lista = document.querySelector('#lista')
 
 let user = {
     nombre: "Romina",
@@ -17,14 +18,6 @@ showUser();
 function saveUserOnLS(user) {
     localStorage.setItem('user', JSON.stringify(user));
 }
-
-
-
-
-
-
-
-
 
 function showUser() {
     removeLinksFromDOM();
@@ -46,4 +39,12 @@ function removeLinksFromDOM() {
 //Eliminar user de LS
 function removeUserFromLS(user) {
     localStorage.setItem('user', JSON.stringify(user));
+}
+
+function render() {
+    if (lista.style.visibility == "hidden") {
+        lista.style.visibility = "visible";
+    }
+    else
+        lista.style.visibility = "hidden"
 }

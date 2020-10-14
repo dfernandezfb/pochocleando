@@ -14,9 +14,7 @@
 <body>
     <header class="logoContainer">
         <img class="logoHeader" src="/img/logo pochocleando tema oscuro.png" alt="sLogo" width="150px">
-        <div id="user">
-
-        </div>
+        <div id="user">        </div>
 
     </header>
     <nav class="hamb">
@@ -29,37 +27,29 @@
                 <li class="link" id="registro"><a class="item" href="#">Regístrate</a></li>
                 <li class="link"><a class="item" href="#">Contacto</a></li>
             </div>
-            <div class=" col-4 render-user">
-            <!--  <nav class="navbar navbar-dark ">  -->  
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <img src="/img/user.png" width="50" height="50" class="d-inline-block align-top" alt=""
-                            loading="lazy">
-                    </button>
-                <!-- </nav> -->
-                <div class="collapse" id="navbarToggleExternalContent">
-                    <div class="render-user">
-                        <ul class="nav flex-column">
-                            <li class="nav-item ">
-                                <a class="nav-link active text-white" href="#">ROMINA</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Editar perfil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Configuraciones</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Ayuda</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Cerrar sesión</a>
-                            </li>
-                        </ul>
+
+            <!-- inicio button user -->
+            <div class=" col-4 render-user ">
+                <button class="navbar-toggler btn-user" style="outline: none; " type="button" onclick="render()">
+                    <img src="/img/user.png" width="50" height="50" class="d-inline-block align-top" alt="avatar"
+                        loading="lazy">
+                </button>
+                <div class="lista d-flex flex-column" id="lista">
+                    <div><a class="nav-link active text-white" href="#">ROMINA
+                            <img class="img-user" src="/img/edit2.png" width="14px" height="14px"  alt="edit">
+                        </a>
+                    </div>
+                    <div><a class="nav-link text-white" href="error404.html">Editar perfil</a>
+                    </div>
+                    <div><a class="nav-link text-white" href="error404.html">Configuraciones</a>
+                    </div>
+                    <div><a class="nav-link text-white" href="error404.html">Ayuda</a>
+                    </div>
+                    <div><a class="nav-link text-white" href="fullPage.html">Cerrar sesión</a>
                     </div>
                 </div>
             </div>
+            <!-- Fin button user -->
         </ul>
     </nav>
     <!--Start Hero RE-->
