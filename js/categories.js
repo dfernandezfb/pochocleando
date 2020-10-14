@@ -24,8 +24,8 @@ for(let i=0; i<cats.length;i++)
     </div>
     <button class="angle-right h-50 btn"><i class="fas fa-angle-right fa-2x angle-right color6"></i></button>
     `
-    carrousel.classList.add("d-flex","mt-3","align-items-center","carrousel");
-    cat.classList.add("color6", "commontexts");
+    carrousel.classList.add("d-flex","align-items-center","carrousel","mt-0");
+    cat.classList.add("color6", "commontexts","mb-0");
     containerCategories.appendChild(cat);
     containerCategories.appendChild(carrousel);
 }
