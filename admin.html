@@ -48,7 +48,7 @@
             Editar pelicula
         </button>
         <!-- Botón para eliminar pelicula -->
-        <button class="btn bg-color2 color6 p-1 my-1 eliminarPeli titlesandbtns" id="eliminarPeli" disabled>
+        <button class="btn bg-color2 color6 p-1 my-1 titlesandbtns eliminarPeli" data-toggle="modal" data-target="#eliminarPeliModal" disabled>
             Eliminar pelicula
         </button>
     </div>
@@ -70,14 +70,10 @@
     </div>
 </div>
 <!-- Modal para borrar pelicula-->
- <!-- Modal para borrar pelicula-->
  <div class="modal fade" id="eliminarPeliModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <form id="rootFormElim"></form>
-            <!-- <H3 id="modalText">¿Está seguro de que desea eliminar esta pelicula permanente?</H3>
-            <button id="SiModal">Aceptar</button>
-            <button id="NoModal">Cancelar</button>                                -->
+            <div id="rootElim"></div>
         </div>
     </div>
 </div>
@@ -147,7 +143,7 @@
         <!-- FIN FOOTER -->
     <script src="js/crearPelicula.js"></script>
     <!-- <script src="js/editarPelicula.js"></script> -->
-    <script src="js/borrarPeliculas.js"></script>
+    <!-- <script src="js/borrarPeliculas.js"></script> -->
     <script src="js/admin.js"></script>
     <script src="https://kit.fontawesome.com/d4db128a0c.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
