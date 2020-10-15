@@ -5,7 +5,10 @@
     font-weight: bolder;
 }
 .btn-user{
-    outline: none;    
+    outline: none;  
+}
+.btn-user{
+   
 }
 .lista{
     position: absolute;
@@ -18,12 +21,6 @@
     box-shadow: 0px 0px 5px black;
     float: right;
     min-width: 160px;
-}
-.lista-visible{
-    visibility: visible;
-}
-.lista-oculta{
-    visibility: hidden;
 }
 .img-user{
     position: absolute;
