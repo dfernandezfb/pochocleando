@@ -7,7 +7,7 @@ containerCategories.appendChild(categories);
 const containerFavs = document.getElementById("favorites-list")
 const favoritesList = document.createElement("table");
 containerFavs.appendChild(favoritesList);
-const URL = 'http://localhost:3000/peliculas/';
+const URL = 'http://localhost:3000/peliculas';
 
 
 let cats = ['Comedia','Terror','Drama','Acción','Ficción'];
@@ -250,8 +250,6 @@ getMovies()
 containerCategories.addEventListener("click",(event)=>{
     if(event.target.classList.contains("angle-right"))
     {   
-        console.log(event.target.parentElement.parentElement.parentElement);
-        console.log(event.target.parentElement.parentElement);
         if(event.target.parentElement.id === 'Comedia' || event.target.parentElement.parentElement.id === 'Comedia' )
         {
             com.scrollLeft+=260;
@@ -260,11 +258,12 @@ containerCategories.addEventListener("click",(event)=>{
             ter.scrollLeft+=260;
         } else if(event.target.parentElement.id === 'Drama' || event.target.parentElement.parentElement.id === 'Drama')
         {
+            console.log("hola");
             dra.scrollLeft+=260;
         } else if(event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción')
         {
             acc.scrollLeft+=260;
-        } else(event.target.parentElement.id === 'Ficción' || event.target.parentElement.parentElement.id === 'Ficción')
+        } else
         {
             cie.scrollLeft+=260;
         }
@@ -285,7 +284,7 @@ containerCategories.addEventListener("click",(event)=>{
         } else if(event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción')
         {
             acc.scrollLeft+=-260;
-        } else(event.target.parentElement.id === 'Ficción' || event.target.parentElement.parentElement.id === 'Ficción')
+        } else
         {
             cie.scrollLeft+=-260;
         }
@@ -293,9 +292,9 @@ containerCategories.addEventListener("click",(event)=>{
 })
 
 // containerCategories.addEventListener("click",modifyFav)
-favoritesList.addEventListener("click",deleteFav)
+// favoritesList.addEventListener("click",deleteFav)
 
-
+document.addEventListener("DOMContentLoaded",getFavsLSJSON);
 
 
 
@@ -305,17 +304,14 @@ favoritesList.addEventListener("click",deleteFav)
 
 //----------------------FAVORITOS CON LOCAL STORAGE--------------------
 
-// function getMoviesLS()
-// {
-//     let movies;
-//     if(localStorage.getItem('movies')===null)
-//     {
-//         movies=[]
-//     }else{
-//         movies=JSON.parse(localStorage.getItem('movies'));
-//     }
-//     return movies;
-// }
+function getFavsLSJSON()
+{
+    let user;
+    let favs;
+    user=JSON.parse(localStorage.getItem('user'));
+    favs=user.favs;
+    localStorage.setItem('favs',JSON.stringify(favs));
+}
 
 // function saveMoviesLS(movieInfo)
 // {
