@@ -264,7 +264,7 @@ containerCategories.addEventListener("click",(event)=>{
         } else if(event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción')
         {
             acc.scrollLeft+=260;
-        } else(event.target.parentElement.id === 'Ficción' || event.target.parentElement.parentElement.id === 'Ficción')
+        } else
         {
             cie.scrollLeft+=260;
         }
@@ -285,7 +285,7 @@ containerCategories.addEventListener("click",(event)=>{
         } else if(event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción')
         {
             acc.scrollLeft+=-260;
-        } else(event.target.parentElement.id === 'Ficción' || event.target.parentElement.parentElement.id === 'Ficción')
+        } else
         {
             cie.scrollLeft+=-260;
         }
@@ -293,7 +293,7 @@ containerCategories.addEventListener("click",(event)=>{
 })
 
 // containerCategories.addEventListener("click",modifyFav)
-favoritesList.addEventListener("click",deleteFav)
+// favoritesList.addEventListener("click",deleteFav)
 
 
 
