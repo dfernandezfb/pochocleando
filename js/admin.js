@@ -100,7 +100,7 @@ function createFormE() {
     mFormE.innerHTML = `
 <div class="modal-header">
 <h5 class="modal-title text-center" id="exampleModalLabel">Editar película</h5>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<button type="button" class="close color6" data-dismiss="modal" aria-label="Close">
 <span aria-hidden="true">&times;</span>
 </button>
 </div>
@@ -235,19 +235,56 @@ formE.addEventListener("submit",(event)=>{
         editMovie(idSelected,newData)
     })
     
-    const deleteBtn = document.getElementById('eliminarPeli')
+
+// -------Eliminar peliculas
+const formElim = document.getElementById("rootElim"); 
+const modalFormElim = document.getElementById("eliminarPeliModal");
+formElim.classList.add('bg-color1');
+formElim.classList.add('color3');
+
 
 async function deletMovie(id){
+    console.log(id);
     const url = 'http://localhost:3000/peliculas';
     const newurl = `${url}/${id}`;
-    console.log(newurl);
     const response =  await fetch (newurl, {method: 'DELETE'
     })
 }
 
-document.querySelector(".btns").addEventListener('click' , e => {
-    if (e.target.classList.contains ('eliminarPeli')){
-    // ACÁ IRÍA MODAL
-    deletMovie(idSelected); //Y ESTE ESTARÍA EN EL EVENTO DEL BOTON DEL MODAL
+
+
+function deleteForm() {
+    const headerFormElim = document.createElement('div');
+    headerFormElim.innerHTML = `
+<div class="modal-header">
+<h3 class="modal-title text-center titlesandbtns" id="exampleModalLabel">Eliminar Pelicula</h3>
+<button type="button" class="close color6" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+`;
+ const bodyFormElim = document.createElement('div');
+ bodyFormElim.innerHTML = `
+ <div class="modal-body commontexts">
+  <h4 id:"modalTextDelet"> ¿Está seguro que desea eliminar esta pelicula de forma permanente?</h4>
+  <p>Nota: Puede desactivar la opción de "Publicada" para cambiar la visibilidad del elemento sin eliminarlo de la base de datos.</p>
+</div>
+`;
+const footerFormElim = document.createElement('div');
+footerFormElim.innerHTML = `<div class="modal-footer">
+<button class="btn bg-color2 color3 buttonCM aceptar titlesandbtns" id="eliminarPeli">Si</button>
+<button type="button" class="btn bg-color2 color3 buttonCM titlesandbtns" data-dismiss="modal">No</button>
+</div>
+`;
+
+formElim.appendChild(headerFormElim);
+formElim.appendChild(bodyFormElim);
+formElim.appendChild(footerFormElim);
+}
+
+deleteForm();
+formElim.addEventListener("click", e => {
+    if (e.target.classList.contains ('aceptar')){ 
+        deletMovie(idSelected);
     }
 })
