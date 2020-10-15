@@ -17,11 +17,11 @@
     cursor: default;
 }
     /*! INICIO : ESTILO MODAL CREAR NUEVA PELICULA */
-    .inputEfect:focus {
+ /*   .inputEfect:focus {
     border: 6px solid #f0e0a0;
     color: black;
 }
-
+*/
 .campos {
     width: 100%;
 }
