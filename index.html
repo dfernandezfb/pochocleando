@@ -4,28 +4,33 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/allpages.css" />
     <link rel="icon" href="/icon/faviconPochoclenado .ICO.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Sans+Narrow:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <title>Pochocleando</title>
 </head>
 
 <body>
     <header class="logoContainer">
-        <img class="logoHeader" src="/img/logo pochocleando tema oscuro.png" alt="sLogo" width="150px">
-        <p id="user"></p>
+        <img class="logoHeader" src="/img/Png Logo blanco Navbar.png" alt="sLogo" width="150px">
     </header>
-    <nav class="hamb">
+    <nav class="hamb bg-color1">
         <div class="hamburger">
-            <img src="/img/icon pochoclenado ICO.ico" alt="logoHamb">
+            <img id="hamb-icon" src="/img/icon pochoclenado ICO.ico" alt="logoHamb">
         </div>
+        <!-- <div class="searcher">
+            <input type="search" placeholder="Busca" class="search" id="search-bar-id">
+            <input type="image" id="btnsearch" onclick="buscar()" src="img/search.png" class="img-search">
+        </div>
+        <div id="lista-busqueda"></div> -->
         <ul class="nav-links">
-            <div id="links">
-                <li class="link" id="login"><a class="item" href="#">Iniciar Sesión</a></li>
-                <li class="link" id="registro"><a class="item" href="#">Regístrate</a></li>
-                <li class="link"><a class="item" href="#">Contacto</a></li>
-            </div>
+            <li class="link"><a class="item" href="index.html">Home</a></li>
+            <li class="link"><a class="item" href="#">Mi lista</a></li>
+            <li class="link"><a class="item" href="admin.html">Admin</a></li>
+        
         </ul>
     </nav>
     <!--Start Hero RE-->
@@ -44,44 +49,44 @@
         </a>
     </div>
     <!--End Hero RE-->
-    <div id="categories"></div>
+    <div id="categories" class="bg-colorg pt-2" style=" background: linear-gradient(to bottom right, #7a0909 0%, #000000 100%);"></div>
     <div id="favorites-list"></div>
     <!-- FOOTER -->
     <footer>
-        <div class="container-fluid text-white">
+        <div class="container-fluid text-white bg-color1">
             <div class="row p-3">
                 <div class="d-none d-md-block col-md-12 col-lg-6 p-3">
-                    <h4>Pochocleando</h4>
-                    <p>Pochocleando es una página web donde puedes ver tus series y peliculas favoritas sin necesidad de
+                    <h4 class="titlesandbtns">Pochocleando</h4>
+                    <p class="commontexts">Pochocleando es una página web donde puedes ver tus series y peliculas favoritas sin necesidad de
                         estar pagando otros servicios o tener que estar quitando anuncios por horas. Entra y disfruta de
                         lo que Pochocleando te ofrece totalmente
                         gratis, desde tu navegador web ya sea que estés desde tu tablet, smartphone, computadora y hasta
                         tu smartTV!.</p>
                 </div>
                 <div class="col-12 col-lg-3 p-3">
-                    <h4 class="center-lg">Redes Sociales</h4>
+                    <h4 class="center-lg titlesandbtns">Redes Sociales</h4>
                     <div class="social-icons mt-3">
-                        <a class="icon social-icon p-4" href="#"><i class="fab fa-facebook"></i></a>
-                        <a class="icon social-icon p-4" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="icon social-icon p-4" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="icon social-icon p-4" href="#"><i class="fab fa-google-plus"></i></a>
+                        <a class="icon social-icon p-4 color3" href="#"><i class="fab fa-facebook "></i></a>
+                        <a class="icon social-icon p-4 color3" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="icon social-icon p-4 color3" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="icon social-icon p-4 color3" href="#"><i class="fab fa-google-plus"></i></a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-3 p-3 mb-2">
-                    <h4 class="center-lg">Contactanos</h4>
-                    <div class="row ml-2 mr-2">
+                    <h4 class="center-lg titlesandbtns">Contactanos</h4>
+                    <div class="row ml-2 mr-2 commontexts">
                         <div class="col-12 col-sm-4 col-lg-12 text-center">
-                            <i class="icon fas fa-map-marker-alt mt-3 mb-3"></i>
+                            <i class="icon fas fa-map-marker-alt mt-3 mb-3 color3"></i>
                             <p class="m-1">Gral. Paz 576</p>
                             <p class="m-1">San Miguel de Tucuman</p>
                             <p class="m-1">Tucuman</p>
                         </div>
                         <div class="col-12 col-sm-4 col-lg-12 text-center">
-                            <i class="icon fas fa-mobile-alt mt-3 mb-3"></i>
+                            <i class="icon fas fa-mobile-alt mt-3 mb-3 color3"></i>
                             <p>+54 381 578-3030</p>
                         </div>
                         <div class="col-12 col-sm-4 col-lg-12 text-center">
-                            <i class="icon fas fa-envelope mt-3 mb-3"></i>
+                            <i class="icon fas fa-envelope mt-3 mb-3 color3"></i>
                             <p>pochocleando@rcs.com</p>
                         </div>
                     </div>
@@ -89,8 +94,7 @@
                 <div class="d-xs-block d-lg-none col-12 text-center p-3 align-self-end">
                     <p>Disponible en iOS y Android.</p>
                     <a href="#"><img class="img-fluid p-2" width="200" src="img/app-store.png" alt="app-store"></a>
-                    <a href="#"><img class="img-fluid p-2" width="200" src="img/googleplay-store.png"
-                            alt="google-store"></a>
+                    <a href="#"><img class="img-fluid p-2" width="200" src="img/googleplay-store.png" alt="google-store"></a>
                 </div>
             </div>
             <div class="row copyright-legal text-center">
@@ -98,27 +102,23 @@
                     <p class="">© 2020 Todos los derechos reservados<i> | </i><b>Pochocleando</b></p>
                 </div>
                 <div class="col-12 col-md-6">
-                    <a class="text-white" href="#">About Us</a>
+                    <a class="text-white" href="About.html">About Us</a>
                     <i> | </i>
-                    <a class="text-white" href="#">Privacidad y Política</a>
+                    <a class="text-white" href="error404.html">Privacidad y Política</a>
                     <i> | </i>
-                    <a class="text-white" href="#">Términos y Condiciones</a>
+                    <a class="text-white" href="error404.html">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- FIN FOOTER -->
-    <script src="./js/hero.js"></script>
-    <script src="./js/login.js"></script>
     <script src="js/categories.js"></script>
     <script src="/js/app.js"></script>
+    <script src="js/hero.js"></script>
     <script src="https://kit.fontawesome.com/d4db128a0c.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js " integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV " crossorigin="anonymous "></script>
+    <!-- <script src="./js/search-bar.js"></script> -->
 </body>
 
 </html>

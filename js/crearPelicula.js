@@ -33,7 +33,7 @@ function createForm() {
   <option value="1">Accion</option>
   <option value="2">Drama</option>
   <option value="3">Comedia</option>
-  <option value="4">Ciencia ficcion</option>
+  <option value="4">Ciencia Ficcion</option>
   <option value="4">Suspenso</option>
   <option value="4">Terror</option>
 </select>
@@ -118,9 +118,9 @@ formulario.addEventListener('submit', e => {
             director: directorPeli,
             genero: generoPeli,
             categoria: categoriaPeli,
-            anio: anioPeli,
+            año: anioPeli,
             publicada: publicadaPeli,
-            detacada: destacadaPeli,
+            destacada: destacadaPeli,
             imagen: imagenPeli,
             video: videoPeli
         };

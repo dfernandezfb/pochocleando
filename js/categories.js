@@ -1,8 +1,8 @@
 'use strict'
 const containerCategories = document.getElementById("categories")
 const categories = document.createElement("h1");
-categories.innerHTML="Categorias"
-categories.classList.add("ml-2","color3")
+categories.innerHTML="Categorías"
+categories.classList.add("ml-2","color3","titlesandbtns")
 containerCategories.appendChild(categories);
 const containerFavs = document.getElementById("favorites-list")
 const favoritesList = document.createElement("table");
@@ -19,13 +19,13 @@ for(let i=0; i<cats.length;i++)
     cat.style.marginLeft="20px"
     carrousel.id=cats[i];
     carrousel.innerHTML=`
-    <button class="angle-left h-50 btn"><i class="fas fa-angle-left fa-2x angle-left"></i></button>
+    <button class="angle-left h-50 btn"><i class="fas fa-angle-left fa-2x angle-left color6"></i></button>
     <div class="d-flex p-5 carrousel-${cats[i]}">
     </div>
-    <button class="angle-right h-50 btn"><i class="fas fa-angle-right fa-2x angle-right"></i></button>
+    <button class="angle-right h-50 btn"><i class="fas fa-angle-right fa-2x angle-right color6"></i></button>
     `
-    carrousel.classList.add("d-flex","mt-3","align-items-center","carrousel");
-    cat.classList.add("color3");
+    carrousel.classList.add("d-flex","align-items-center","carrousel","mt-0");
+    cat.classList.add("color6", "commontexts","mb-0");
     containerCategories.appendChild(cat);
     containerCategories.appendChild(carrousel);
 }
@@ -73,8 +73,8 @@ function buildMovieCards(movies){
                 movieCardco.innerHTML = `
                 <div id="${movie.id}" class="movie d-flex flex-column" style="background-image:url('${movie.imagen}');">
                 <div class="resume">
-                <h5 class="movie-title color6 m-2 text-center border-bottom">${movie.nombre}</h5>
-                <p class="color6 movie-resume mb-0 mt-3 mx-3 text-center">${movie.descripcion}</p>
+                <h5 class="movie-title color6 m-2 pt-1 text-center border-bottom titlesandbtns">${movie.nombre}</h5>
+                <p class="color6 movie-resume mb-0 mt-3 mx-3 text-center commontexts">${movie.descripcion}</p>
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
@@ -92,8 +92,8 @@ function buildMovieCards(movies){
                 movieCardte.innerHTML = `
                 <div id="${movie.id}" class="movie d-flex flex-column" style="background-image:url('${movie.imagen}');">
                 <div class="resume">
-                <h5 class="movie-title text-light m-2 text-center color6 border-bottom">${movie.nombre}</h5>
-                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6">${movie.descripcion}</p>
+                <h5 class="movie-title text-light m-2 pt-1 text-center color6 border-bottom titlesandbtns">${movie.nombre}</h5>
+                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6 commontexts">${movie.descripcion}</p>
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
@@ -111,8 +111,8 @@ function buildMovieCards(movies){
                 movieCarddr.innerHTML = `
                 <div id="${movie.id}" class="movie d-flex flex-column" style="background-image:url('${movie.imagen}');">
                 <div class="resume">
-                <h5 class="movie-title text-light m-2 text-center color6 border-bottom">${movie.nombre}</h5>
-                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6">${movie.descripcion}</p>
+                <h5 class="movie-title text-light m-2 pt-1 text-center color6 border-bottom titlesandbtns">${movie.nombre}</h5>
+                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6 commontexts">${movie.descripcion}</p>
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
@@ -130,8 +130,8 @@ function buildMovieCards(movies){
                 movieCardac.innerHTML = `
                 <div id="${movie.id}" class="movie d-flex flex-column" style="background-image:url('${movie.imagen}');">
                 <div class="resume">
-                <h5 class="movie-title text-light m-2 text-center color6 border-bottom">${movie.nombre}</h5>
-                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6">${movie.descripcion}</p>
+                <h5 class="movie-title text-light m-2 pt-1 text-center color6 border-bottom titlesandbtns">${movie.nombre}</h5>
+                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6 commontexts">${movie.descripcion}</p>
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
@@ -149,8 +149,8 @@ function buildMovieCards(movies){
                 movieCardci.innerHTML = `
                 <div id="${movie.id}" class="movie d-flex flex-column" style="background-image:url('${movie.imagen}');">
                 <div class="resume">
-                <h5 class="movie-title text-light m-2 text-center color6 border-bottom">${movie.nombre}</h5>
-                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6">${movie.descripcion}</p>
+                <h5 class="movie-title text-light m-2 pt-1 text-center color6 border-bottom titlesandbtns">${movie.nombre}</h5>
+                <p class="text-light movie-resume mb-1 mt-3 mx-3 text-center color6 commontexts">${movie.descripcion}</p>
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
@@ -250,6 +250,8 @@ getMovies()
 containerCategories.addEventListener("click",(event)=>{
     if(event.target.classList.contains("angle-right"))
     {   
+        console.log(event.target.parentElement.parentElement.parentElement);
+        console.log(event.target.parentElement.parentElement);
         if(event.target.parentElement.id === 'Comedia' || event.target.parentElement.parentElement.id === 'Comedia' )
         {
             com.scrollLeft+=260;
@@ -262,7 +264,7 @@ containerCategories.addEventListener("click",(event)=>{
         } else if(event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción')
         {
             acc.scrollLeft+=260;
-        } else(event.target.parentElement.id === 'Ficción' || event.target.parentElement.parentElement.id === 'Ficción')
+        } else
         {
             cie.scrollLeft+=260;
         }
@@ -283,7 +285,7 @@ containerCategories.addEventListener("click",(event)=>{
         } else if(event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción')
         {
             acc.scrollLeft+=-260;
-        } else(event.target.parentElement.id === 'Ficción' || event.target.parentElement.parentElement.id === 'Ficción')
+        } else
         {
             cie.scrollLeft+=-260;
         }
@@ -291,7 +293,7 @@ containerCategories.addEventListener("click",(event)=>{
 })
 
 // containerCategories.addEventListener("click",modifyFav)
-favoritesList.addEventListener("click",deleteFav)
+// favoritesList.addEventListener("click",deleteFav)
 
 
 
