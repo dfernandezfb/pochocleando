@@ -26,7 +26,7 @@ async function buildSlides() {
             containerSlider.innerHTML += `                 
             <div class="carousel-item hero ${i === 0 ? 'active' : ''}" >
              <img src="${datos[i].imagen}" class="d-block w-100 img-hero img-fluid" alt="img-serie">
-              <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-caption">
                     <div class= "d-flex align-items-center flex-column data-hero">
                     <h5 class="text title-black title">${datos[i].nombre}</h5>
                     <p class="user-select-none p-black text-center">${datos[i].descripcion}</p>
@@ -35,7 +35,7 @@ async function buildSlides() {
                        xmlns="http://www.w3.org/2000/svg">
                        <path d="M11.596 8.697l-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
                     </svg> REPRODUCIR </button>
-                   </a>
+                    </a>
                     </div>
               </div>              
             </div> 

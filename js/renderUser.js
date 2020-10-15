@@ -10,14 +10,9 @@ let user = {
     apellido: "Estrada",
     admin: true,
 }
-function saveUserOnLS(user) {
-    localStorage.setItem('user', JSON.stringify(user));
-}
 
-menuUser.innerHTML = ` <button class="navbar-toggler btn-user" style="outline: none; " type="button">
-<img src="ggf.png" width="50" height="50" class="d-inline-block align-top avatar" alt="avatar"
-    loading="lazy">
-</button>`
+menuUser.innerHTML = ` <button class="navbar-toggler btn-user" style="outline: none;" type="button">
+<img src=" " width="50" height="50" class="d-inline-block align-top avatar" alt="avatar" loading="lazy"></button>`
 
 const imgAvatar = document.querySelector('.avatar');
 
@@ -25,26 +20,31 @@ saveUserOnLS(user);
 
 showUser();
 
+function saveUserOnLS(user) {
+    localStorage.setItem('user', JSON.stringify(user));
+}
+
 function showUser() {
     removeLinksFromDOM();
     let user = JSON.parse(localStorage.getItem('user'));
     if (user.admin === true) {
         links.innerHTML += `<li class="link" id="admin"><a class="item" href="pagAdmin.html">Panel Administración</a></li>`
-        imgAvatar.src = "img/admin2.png";
+        imgAvatar.src = "img/admin.png";
     } else {
         imgAvatar.src = "img/user.png";
     }
-    menuUser.innerHTML += `<div class="lista d-flex flex-column">
-    <div><a class="nav-link active text-white" href="#">${user.nombre}</a>
-        <img class="img-edit" src="/img/edit2.png" width="14px" height="14px" alt="edit">
-    </div>
-        <div><a class="nav-link text-white" href="error404.html">Editar perfil</a>
+    menuUser.innerHTML += `
+    <div class="lista p-white" style="visibility: hidden;" >
+        <div><a class="nav-link option p-white" href="#">${user.nombre}</a>
         </div>
-        <div><a class="nav-link text-white" href="error404.html">Configuraciones</a>
+        <div class="d-inline"><a class="nav-link option p-white" href="error404.html">Editar perfil</a>
+        <img class="img-icon" src="img/edit3.png" alt="edit">
         </div>
-        <div><a class="nav-link text-white" href="error404.html">Ayuda</a>
+        <div><a class="nav-link option p-white" href="error404.html">Configuraciones</a>
         </div>
-        <div><a class="nav-link text-white" href="fullPage.html"><button class="btn-exit">Cerrar sesión</button></a>
+        <div><a class="nav-link option p-white" href="error404.html">Ayuda</a>
+        </div>
+        <div><a class="nav-link option" href="fullPage.html"><button class="btn-exit p-white" style:"border: none;">Cerrar sesión</button></a>
         </div>
     </div>   
     `
@@ -53,30 +53,19 @@ const lista = document.querySelector('.lista');
 const btnExit = document.querySelector('.btn-exit')
 const btnUser = document.querySelector('.btn-user')
 
-btnUser.addEventListener('click', render)
+btnUser.addEventListener('click', showLista)
 btnExit.addEventListener('click', removeUserFromLS);
 
 function removeLinksFromDOM() {
     links.removeChild(login);
     links.removeChild(registro);
 }
+function showLista() {
+    if (lista.style.visibility == "hidden") {
+        lista.style.visibility = "visible";
+    }else lista.style.visibility="hidden";
+}
 function removeUserFromLS(user) {
     localStorage.setItem('user', JSON.stringify(user));
 }
-function render() {
-    if (lista.style.visibility == "hidden") {
-        lista.style.visibility = "visible";
-    }
-    else
-        lista.style.visibility = "hidden"
-}
 
-
-//btnUser.onclick = function render() {
-
-
-/* CONSULTAR PORQUE NO PUEDO IMPLEMENTAR DE ESTA FORMA
-`<button class="navbar-toggler btn-user" style="outline: none; " type="button" onclick="render()">
-  <img src ${user.admin===true ? "=/img/admin2.png" : "=/img/user.png"} width="50" height="50" class="d-inline-block align-top" alt="avatar"
-      loading="lazy"></button>`
-  */

@@ -243,7 +243,7 @@
 
 .logoContainer {
     background-color: #010f2b;
-    height: 50px;
+    height: 30px;
 }
 
 .hamb {
@@ -264,19 +264,19 @@
 .nav-links {
     color: #f0f2f5;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .link {
     color: #f0f2f5;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .item {
     color: #f0f2f5;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .logoHeader {
@@ -288,7 +288,7 @@
 }
 
 img {
-    display: none;
+   display: none;
 }
 
 .landing {
