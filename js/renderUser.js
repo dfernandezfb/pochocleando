@@ -1,8 +1,6 @@
 'use strict'
 
-const links = document.querySelector('#links');
-const login = document.querySelector('#login');
-const registro = document.querySelector('#registro');
+const menuHome = document.querySelector('.menu-home');
 const menuUser = document.querySelector('.menu-user');
 
 let user = {
@@ -24,18 +22,17 @@ function saveUserOnLS(user) {
     localStorage.setItem('user', JSON.stringify(user));
 }
 
-function showUser() {
-    removeLinksFromDOM();
+function showUser() { 
     let user = JSON.parse(localStorage.getItem('user'));
     if (user.admin === true) {
-        links.innerHTML += `<li class="link" id="admin"><a class="item" href="pagAdmin.html">Panel Administración</a></li>`
+        menuHome.innerHTML += `<li class="link" id="admin"><a class="item" href="admin.html">ADMIN</a></li>`
         imgAvatar.src = "img/admin.png";
     } else {
         imgAvatar.src = "img/user.png";
     }
     menuUser.innerHTML += `
     <div class="lista p-white" style="visibility: hidden;" >
-        <div><a class="nav-link option p-white" href="#">${user.nombre}</a>
+        <div><a class="nav-link option p-white" href="#">${user.nombre.toUpperCase()}</a>
         </div>
         <div class="d-inline"><a class="nav-link option p-white" href="error404.html">Editar perfil</a>
         <img class="img-icon" src="img/edit3.png" alt="edit">
@@ -53,18 +50,14 @@ const lista = document.querySelector('.lista');
 const btnExit = document.querySelector('.btn-exit')
 const btnUser = document.querySelector('.btn-user')
 
-btnUser.addEventListener('click', showLista)
-btnExit.addEventListener('click', removeUserFromLS);
+//btnUser.addEventListener('click', showLista)
+//btnExit.addEventListener('click', removeUserFromLS);
 
-function removeLinksFromDOM() {
-    links.removeChild(login);
-    links.removeChild(registro);
-}
-function showLista() {
+/*function showLista() {
     if (lista.style.visibility == "hidden") {
         lista.style.visibility = "visible";
     }else lista.style.visibility="hidden";
-}
+}*/
 function removeUserFromLS(user) {
     localStorage.setItem('user', JSON.stringify(user));
 }
