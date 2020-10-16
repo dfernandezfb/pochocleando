@@ -47,7 +47,6 @@ function generateTable(movies)
 }
 
 const formE = document.getElementById("rootFormE");
-const modalFormE = document.getElementById('editarPeliModal');
 formE.classList.add('bg-color1');
 formE.classList.add('color3');
 function allowButtons(e)
@@ -97,8 +96,8 @@ async function editMovie(id,newData){
 }
 
 function createFormE() {
-    var modalFormE = document.createElement('div');
-    modalFormE.innerHTML = `
+    const mFormE = document.createElement('div');
+    mFormE.innerHTML = `
 <div class="modal-header">
 <h5 class="modal-title text-center" id="exampleModalLabel">Editar película</h5>
 <button type="button" class="close color6" data-dismiss="modal" aria-label="Close">
@@ -165,7 +164,7 @@ function createFormE() {
 <button  type="submit" class="btn bg-color2 color3 buttonCM">Editar</button>
 </div>
 `
-formE.appendChild(modalFormE);
+formE.appendChild(mFormE);
 }
 createFormE();
 

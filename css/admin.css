@@ -16,15 +16,20 @@
 p {
     cursor: default;
 }
+<<<<<<< HEAD
 
 
 /*! INICIO : ESTILO MODAL CREAR NUEVA PELICULA */
 
 .inputEfect:focus {
+=======
+    /*! INICIO : ESTILO MODAL CREAR NUEVA PELICULA */
+ /*   .inputEfect:focus {
+>>>>>>> fddedb661cddfc556440fc145d2cb6d2f61384ee
     border: 6px solid #f0e0a0;
     color: black;
 }
-
+*/
 .campos {
     width: 100%;
 }

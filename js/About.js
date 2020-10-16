@@ -14,7 +14,7 @@ const title= document.createElement('h1');
 title.classList.add('titulo',"titlesandbtns");
 title.innerHTML= `¿Que es Pochocleando?`;
 const aboutus= document.createElement('p');
-aboutus.classList.add('nosotros', 'commontexts');
+aboutus.classList.add('nosotros', 'commontexts', 'color6');
 aboutus.innerHTML= `
 Pochocleando es un servicio de streaming por suscripción que les permite a sus miembros ver series y películas sin publicidades en un dispositivo con conexión a internet.
 También puedes descargar series y películas en un dispositivo con iOS, Android o Windows 10 y verlas sin conexión a internet.
@@ -27,7 +27,7 @@ const title2= document.createElement('h1');
 title2.classList.add('titulo','titlesandbtns');
 title2.innerHTML= `Dispositivos Compatibles`;
 const aboutus2= document.createElement('p');
-aboutus2.classList.add('nosotros','commontexts');
+aboutus2.classList.add('nosotros','commontexts','color6');
 aboutus2.innerHTML= `Puedes ver Pochocleando a través de cualquier dispositivo con conexión a internet que cuente con la app de Pochocleando, 
 incluidos smart TV, consolas de juegos, reproductores multimedia, decodificadores, smartphones y tablets. <br> También puedes ver Pochocleando en tu computadora, en un navegador de internet. Para obtener información sobre los navegadores web compatibles, consulta los <a href="#"> requisitos del sistema</a>, además de nuestras recomendaciones sobre la velocidad de conexión a internet para lograr el mejor rendimiento. 
 <br> ¿Necesitas ayuda para la configuración?
@@ -37,7 +37,7 @@ const title3= document.createElement('h1');
 title3.classList.add('titulo','titlesandbtns');
 title3.innerHTML= `Nuestro Equipo`;
 const aboutus3= document.createElement('p');
-aboutus3.classList.add('nosotros','commontexts');
+aboutus3.classList.add('nosotros','commontexts','color6');
 aboutus3.innerHTML= `Somos un equipo pequeño y unido, centrado en hacer que Pochocleando sea poderoso y fácil de usar.
  <br> Algunos de nosotros tenemos nuestro propio trabajo en pochocleando, otros son directores, ilustradores y cineastas. 
  Hemos trabajado duro para construir una empresa en la que hacemos grandes cosas. Estamos aquí para ayudarlo a encontrar comodidad y dirvesion en una plataforma sencilla y facil de usar.`;
