@@ -118,7 +118,7 @@ formulario.addEventListener('submit', e => {
             director: directorPeli,
             genero: generoPeli,
             categoria: categoriaPeli,
-            anio: anioPeli,
+            año: anioPeli,
             publicada: publicadaPeli,
             destacada: destacadaPeli,
             imagen: imagenPeli,
@@ -128,7 +128,8 @@ formulario.addEventListener('submit', e => {
         postNewMovie(data);
     })
     //! Realiza post con la nueva pelicula
-async function postNewMovie({ nombre, descripcion, director, genero, categoria, anio, publicada, destacada, imagen, video }) {
+async function postNewMovie({ nombre, descripcion, director, genero, categoria, año, publicada, destacada, imagen, video }) {
+
     const url = 'http://localhost:3000/peliculas';
     const response = await fetch(url, {
         method: 'POST',
@@ -136,7 +137,9 @@ async function postNewMovie({ nombre, descripcion, director, genero, categoria, 
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ nombre, descripcion, director, genero, categoria, anio, publicada, destacada, imagen, video })
+
+        body: JSON.stringify({ nombre, descripcion, director, genero, categoria, año, publicada, destacada, imagen, video })
+
     })
     const newMovie = await response.json();
     console.log(newMovie);
