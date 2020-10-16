@@ -10,7 +10,7 @@ function renderError() {
     <h3>Page not found</h3>
     </div>
     </div>
-    <a class="buttonw" href="index.html" type="button">Volver</a>
+    <a class="buttonError" href="index.html" type="button">Volver</a>
    `
     container.appendChild(title);
 
