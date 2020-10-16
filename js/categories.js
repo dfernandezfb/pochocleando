@@ -168,84 +168,8 @@ function buildMovieCards(movies){
     })
 }
 
-function buildFavsList(movies)
-{
-    movies.map(movie=>
-    {
-        if (movie.fav===true)
-        {
-            const favorite=document.createElement("tr");
-            favorite.id=`${movie.id}`;
-            favorite.innerHTML=`
-           
-            <img src="${movie.imagen}" alt="hola">
-            <td class="name-fav">
-            ${movie.nombre}
-            </td>
-            <td class="close-fav">
-            <a href=# class="delete-fav">&times</a>
-            </td>
-            `;
-            favoritesList.appendChild(favorite);
-        }
-    })
-}
-
-function modifyFav(e)
-{
-    if(e.target.classList.contains("fav-btn"))
-    {    
-        e.preventDefault();
-        let id;
-        let movieInfo=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-        if(movieInfo.classList.contains("movie"))
-        {
-            id= movieInfo.id;
-        }
-        else
-        {
-            movieInfo=movieInfo.querySelector(".movie");
-            id= movieInfo.id;
-        }
-        getMovie(id)
-        .then(movie=>modifyFavServer(movie))
-    }
-}
-
-function modifyFavServer(movie)
-{
-    movie.fav=(movie.fav===true)? false : true;
-    const newData={
-        id:movie.id,
-        nombre:movie.nombre,
-        descripcion:movie.descripcion,
-        director:movie.director,
-        genero:movie.genero,
-        categoria:movie.categoria,
-        publicada:movie.publicada,
-        año:movie.año,
-        imagen:movie.imagen,
-        video:movie.video,
-        fav:movie.fav
-    };
-    editMovie(movie.id,newData);
-}
-
-function deleteFav(e)
-{
-    if(e.target.classList.contains("delete-fav"))
-    e.preventDefault();
-    {
-        let id = e.target.parentElement.parentElement.id;
-        getMovie(id)
-        .then(movie=>modifyFavServer(movie))
-    }
-}
-
 getMovies()
 .then(movies => buildMovieCards(movies))
-getMovies()
-.then(movies => buildFavsList(movies))
 
 containerCategories.addEventListener("click",(event)=>{
     if(event.target.classList.contains("angle-right"))
@@ -291,125 +215,128 @@ containerCategories.addEventListener("click",(event)=>{
     }
 })
 
-// containerCategories.addEventListener("click",modifyFav)
-// favoritesList.addEventListener("click",deleteFav)
-
-document.addEventListener("DOMContentLoaded",getFavsLSJSON);
-
-
-
-
-
-
-
 //----------------------FAVORITOS CON LOCAL STORAGE--------------------
 
-function getFavsLSJSON()
-{
-    let user;
-    let favs;
-    user=JSON.parse(localStorage.getItem('user'));
-    favs=user.favs;
-    localStorage.setItem('favs',JSON.stringify(favs));
+// SE SUPONE QUE DESDE EL LOGIN ME TRAE EN LOCAL STORAGE LOS FAVS (IMAGEN Y NOMBRE) APARTE DEL USER
+function getFavsLS() {
+    return JSON.parse(localStorage.getItem('favs'));
 }
 
-// function saveMoviesLS(movieInfo)
-// {
-//     let movies = getMoviesLS();
-//     movies.push(movieInfo);
-//     localStorage.setItem('movies', JSON.stringify(movies));
-// }
-// function addMovieToFavs(productInfo)
-// {
-//     const favorite=document.createElement("tr")
-//     favorite.id=`${productInfo.id}`;
-//     favorite.innerHTML=`
-//         <td class="img-fav">
-//             ${productInfo.imagen}
-//         </td>
-//         <td class="name-fav">
-//             ${productInfo.nombre}
-//         </td>
-//         <td class="close-fav">
-//             <a href=# class="delete-fav">&times</a>
-//         </td>
-//     `;
-//     favoritesList.appendChild(favorite);
-// }
-// function rendermoviesLS()
-// {
-//     let movies = getMoviesLS();
-//     movies.forEach((movie)=>{
-//     const favorite=document.createElement("tr")
-//     favorite.id=`${movie.id}`;
-//     favorite.innerHTML=`
-//         <td class="img-fav">
-//             ${movie.imagen}
-//         </td>
-//         <td class="name-fav">
-//             ${movie.nombre}
-//         </td>
-//         <td class="close-fav">
-//             <a href=# class="delete-fav">&times</a>
-//         </td>
-//     `;
-//     favoritesList.appendChild(favorite);
-//     })
-// }
-// function deleteFav(e)
-// {
-//     e.preventDefault();
-//     if(e.target.classList.contains("delete-fav"))
-//     {
-//         const removedElement = e.target.parentElement.parentElement
-//         const deleteId= removedElement.id;
-//         e.target.parentElement.parentElement.remove();
-//         console.log(deleteId);
-//         deleteFavLS(deleteId);
-//     }
-// }
-// function deleteFavLS(deleteId)
-// {
-//     console.log("hola");
-//     let movies = getMoviesLS();
-//     movies.forEach((movie,index)=>{
-//         if(movie.id === deleteId)
-//         {
-//             console.log("hola");
-//             movies.splice(index,1);
-//         }
-//     })
-//     localStorage.setItem("movies",JSON.stringify(movies));
-// }
-// document.addEventListener("DOMContentLoaded",rendermoviesLS);
-// containerCategories.addEventListener("click",(e)=>{
-//     e.preventDefault();
-//     if(e.target.classList.contains("fav-btn"))
-//     {
-//         let movieInfo=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-//         if(movieInfo.classList.contains("movie"))
-//         {
-//             e.target.classList.add("color3")
-//             movieInfo=
-//             {
-//                 imagen: movieInfo.style.backgroundImage.slice(5,-2),
-//                 nombre: movieInfo.querySelector(".movie-title").textContent,
-//                 id: movieInfo.id
-//             }
-//         }
-//         else
-//         {
-//             e.target.children.classList.add("color3")
-//             movieInfo=movieInfo.querySelector(".movie");
-//             movieInfo=
-//             {
-//                 imagen: movieInfo.style.backgroundImage.slice(5,-2),
-//                 nombre: movieInfo.querySelector(".movie-title").textContent,
-//                 id: movieInfo.id
-//             }
-//         }
-//         addMovieToFavs(movieInfo)
-//         saveMoviesLS(movieInfo)
-//     }
-// })
-// document.addEventListener("click",deleteFav);
+function saveFavLS(favInfo)
+{
+    let favs = getFavsLS();
+    favs.push(favInfo);
+    localStorage.setItem('favs', JSON.stringify(favs));
+}
+function addFav(favInfo)
+{
+    const favorite=document.createElement("tr")
+    favorite.id=favInfo.id
+    favorite.classList.add(`fav-${favInfo.id}`);
+    favorite.innerHTML=`
+        <td class="img-fav">
+            ${favInfo.imagen}
+        </td>
+        <td class="name-fav">
+            ${favInfo.nombre}
+        </td>
+        <td class="close-fav">
+            <a href=# class="delete-fav">&times</a>
+        </td>
+    `;
+    favoritesList.appendChild(favorite);
+}
+function renderFavsLS()
+{
+    let favs = getFavsLS();
+    favs.forEach((fav)=>{
+    const favorite=document.createElement("tr")
+    favorite.id=fav.id
+    favorite.classList.add(`fav-${fav.id}`);
+    favorite.innerHTML=`
+        <td class="img-fav">
+            ${fav.imagen}
+        </td>
+        <td class="name-fav">
+            ${fav.nombre}
+        </td>
+        <td class="close-fav">
+            <a href=# class="delete-fav">&times</a>
+        </td>
+    `;
+    favoritesList.appendChild(favorite);
+    })
+}
+function deleteFav(e)
+{
+    e.preventDefault();
+    if(e.target.classList.contains("delete-fav"))
+    {
+        const removedElement = e.target.parentElement.parentElement
+        const deleteId= removedElement.id;
+        e.target.parentElement.parentElement.remove();
+        deleteFavLS(deleteId);
+    }
+}
+function deleteFavLS(deleteId)
+{
+    let favs = getFavsLS();
+    favs.forEach((fav,index)=>{
+        if(fav.id === deleteId)
+        {
+            favs.splice(index,1);
+        }
+    })
+    localStorage.setItem("favs",JSON.stringify(favs));
+}
+document.addEventListener("DOMContentLoaded",renderFavsLS);
+containerCategories.addEventListener("click",(e)=>{
+    e.preventDefault();
+    if(e.target.classList.contains("fav-btn"))
+    {
+        let favInfo=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+        if(favInfo.classList.contains("movie"))
+        {
+            if (e.target.classList.contains("color3"))
+            {
+                e.target.classList.remove("color3")
+                favoritesList.querySelector(`.fav-${favInfo.id}`).remove()
+                deleteFavLS(favInfo.id)
+            }  
+            else{
+                e.target.classList.add("color3")
+                favInfo=
+                {
+                    imagen: favInfo.style.backgroundImage.slice(5,-2),
+                    nombre: favInfo.querySelector(".movie-title").textContent,
+                    id: favInfo.id
+                }
+                addFav(favInfo)
+                saveFavLS(favInfo)
+            }
+        }
+        else
+        {
+            favInfo=favInfo.querySelector(".movie");
+            if(e.target.children.classList.contains("color3"))
+            {
+                e.target.classList.remove("color3")
+                favoritesList.querySelector(`.fav-${favInfo.id}`).remove()
+                deleteFavLS(favInfo.id)
+            }
+            else
+            {
+                e.target.children.classList.add("color3")
+                favInfo=
+                {
+                    imagen: favInfo.style.backgroundImage.slice(5,-2),
+                    nombre: favInfo.querySelector(".movie-title").textContent,
+                    id: favInfo.id
+                }
+                addFav(favInfo)
+                saveFavLS(favInfo)
+            }
+        }
+    }
+})
+favoritesList.addEventListener("click",deleteFav);
