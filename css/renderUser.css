@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu-user{
+ display: flex;
+}
+.btn-user{
+    outline: none;  
+}
+.lista{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 9999;
+    background: #010f2b;
+    opacity: 0.9;
+    top: 50px;  
+    box-shadow: 0px 0px 5px black;
+    float: right;
+    left: -95px;
+    min-width: 160px;
+}
+
+.p-white {
+    color: white;
+    font-size: 1vw
+}
+
+.btn-exit{
+    background: #010f2b;
+    border: none;   
+}
+.img-icon{
+    width:20px;
+    height:20px;
+}
+
+.option:hover{
+    background-color: #010b1f;
+}
+
