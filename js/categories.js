@@ -165,41 +165,7 @@ function buildMovieCards(movies) {
     })
 }
 
-function buildFavsList(movies) {
-    movies.map(movie => {
-        if (movie.fav === true) {
-            const favorite = document.createElement("tr");
-            favorite.id = `${movie.id}`;
-            favorite.innerHTML = `
-           
-            <img src="${movie.imagen}" alt="hola">
-            <td class="name-fav">
-            ${movie.nombre}
-            </td>
-            <td class="close-fav">
-            <a href=# class="delete-fav">&times</a>
-            </td>
-            `;
-            favoritesList.appendChild(favorite);
-        }
-    })
-}
 
-function modifyFav(e) {
-    if (e.target.classList.contains("fav-btn")) {
-        e.preventDefault();
-        let id;
-        let movieInfo = e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-        if (movieInfo.classList.contains("movie")) {
-            id = movieInfo.id;
-        } else {
-            movieInfo = movieInfo.querySelector(".movie");
-            id = movieInfo.id;
-        }
-        getMovie(id)
-            .then(movie => modifyFavServer(movie))
-    }
-}
 
 function modifyFavServer(movie) {
     movie.fav = (movie.fav === true) ? false : true;
@@ -245,7 +211,7 @@ containerCategories.addEventListener("click", (event) => {
             dra.scrollLeft += 260;
         } else if (event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción') {
             acc.scrollLeft += 260;
-        } else(event.target.parentElement.id === 'Ficción' || event.target.parentElement.parentElement.id === 'Ficción') {
+        } else{
             cie.scrollLeft += 260;
         }
     }
@@ -260,14 +226,14 @@ containerCategories.addEventListener("click", (event) => {
             dra.scrollLeft += -260;
         } else if (event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción') {
             acc.scrollLeft += -260;
-        } else(event.target.parentElement.id === 'Ficción' || event.target.parentElement.parentElement.id === 'Ficción') {
+        } else{
             cie.scrollLeft += -260;
         }
     }
 })
 
 // containerCategories.addEventListener("click",modifyFav)
-favoritesList.addEventListener("click", deleteFav)
+// favoritesList.addEventListener("click", deleteFav)
 
 
 
