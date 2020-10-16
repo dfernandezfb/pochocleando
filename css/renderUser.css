@@ -5,7 +5,19 @@
    .btn-user{
        outline: none;  
        border-radius: 50%;
+       width: auto ;
+       position: relative;
+       display: inline-block;
    }
+   .items-user{
+    width: 100%;
+    flex-direction: row;
+    box-sizing: border-box;
+   }
+   .truncate {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
    .lista{
        display: flex;
        flex-direction: column;
@@ -13,7 +25,7 @@
        z-index: 9999;
        background: #010f2b;
        opacity: 0.9;
-       top: 90px;  
+       top: 80px;  
        box-shadow: 0px 0px 5px black;
        float: right;   
        min-width: 160px;
@@ -43,4 +55,3 @@
        color: white;
        text-decoration: none;
    }
-   

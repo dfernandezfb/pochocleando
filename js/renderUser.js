@@ -9,9 +9,10 @@ let user = {
     admin: true,
 }
 
-menuUser.innerHTML = ` <button class="navbar-toggler btn-user" style="outline: none;" type="button">
-<img src=" " width="50" height="50" class="d-inline-block align-top avatar" alt="avatar" loading="lazy"></button>`
-
+menuUser.innerHTML = `
+<div role="button" class=" btn-user" tabindex="0" style="outline: none;">
+<img src=" " width="50" height="50" class="d-inline-block align-top avatar" alt="avatar" loading="lazy"></div>
+`
 const imgAvatar = document.querySelector('.avatar');
 
 saveUserOnLS(user);
@@ -22,8 +23,9 @@ function saveUserOnLS(user) {
     localStorage.setItem('user', JSON.stringify(user));
 }
 
-function showUser() { 
+function showUser() {
     let user = JSON.parse(localStorage.getItem('user'));
+
     if (user.admin === true) {
         menuHome.innerHTML += `<li class="link" id="admin"><a class="item" href="admin.html">ADMIN</a></li>`
         imgAvatar.src = "img/admin.png";
@@ -31,34 +33,33 @@ function showUser() {
         imgAvatar.src = "img/user.png";
     }
     menuUser.innerHTML += `
-    <div class="lista p-white" style="visibility: hidden;" >
-        <div><a class="nav-link option p-white" href="#">${user.nombre.toUpperCase()}</a>
+    <span class="lista" role="button" tabindex="0" style="visibility: hidden;" >
+        <div class="items-user "><a class="option p-white" href="#">${user.nombre.toUpperCase()}</a>
         </div>
-        <div class="d-inline"><a class="nav-link option p-white" href="error404.html">Editar perfil</a>
-        <img class="img-icon" src="img/edit3.png" alt="edit">
+        <div class="items-user"><a class="option p-white" tabindex="0" href="error404.html">Editar perfil <i class="pl-3 fas fa-pencil-alt"></i></a>
         </div>
-        <div><a class="nav-link option p-white" href="error404.html">Configuraciones</a>
+        <div class="items-user"><a class="option p-white" href="error404.html">Configuraciones</a>
         </div>
-        <div><a class="nav-link option p-white" href="error404.html">Ayuda</a>
+        <div class="items-user"><a class="option p-white" href="error404.html">Ayuda</a>
         </div>
-        <div><a class="nav-link option" href="fullPage.html"><button class="btn-exit p-white" style:"border: none;">Cerrar sesión</button></a>
+        <div class="items-user"><a class="option" href="fullPage.html"><button class="btn-exit p-white" style:"border: none;">Cerrar sesión <i class="pl-3 fas fa-sign-out-alt"></i></button></a>
         </div>
-    </div>   
+    </span>   
     `
+    
 }
 const lista = document.querySelector('.lista');
 const btnExit = document.querySelector('.btn-exit')
 const btnUser = document.querySelector('.btn-user')
+btnUser.addEventListener('click', showLista)
+btnExit.addEventListener('click', removeUserFromLS);
 
-//btnUser.addEventListener('click', showLista)
-//btnExit.addEventListener('click', removeUserFromLS);
-
-/*function showLista() {
+function showLista() {
     if (lista.style.visibility == "hidden") {
         lista.style.visibility = "visible";
-    }else lista.style.visibility="hidden";
-}*/
-function removeUserFromLS(user) {
-    localStorage.setItem('user', JSON.stringify(user));
+    } 
+    else lista.style.visibility = "hidden";
 }
-
+function removeUserFromLS(user) {
+    localStorage.removeItem('user');
+}
