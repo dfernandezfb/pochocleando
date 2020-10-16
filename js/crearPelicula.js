@@ -30,7 +30,7 @@ function createForm() {
 <div  class="my-1">
 <label>Genero:</label>
 <select id="generoInput" name="opciones" class="formulario_input_select inputEfect" required>
-  <option value="1">Accion</option>
+  <option value="1">Acción</option>
   <option value="2">Drama</option>
   <option value="3">Comedia</option>
   <option value="4">Ciencia Ficcion</option>
@@ -124,10 +124,12 @@ formulario.addEventListener('submit', e => {
             imagen: imagenPeli,
             video: videoPeli
         };
+        console.log(data);
         postNewMovie(data);
     })
     //! Realiza post con la nueva pelicula
-async function postNewMovie({ nombre, descripcion, director, genero, categoria, anio, publicada, destacada, imagen, video }) {
+async function postNewMovie({ nombre, descripcion, director, genero, categoria, año, publicada, destacada, imagen, video }) {
+
     const url = 'http://localhost:3000/peliculas';
     const response = await fetch(url, {
         method: 'POST',
@@ -135,7 +137,9 @@ async function postNewMovie({ nombre, descripcion, director, genero, categoria, 
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ nombre, descripcion, director, genero, categoria, anio, publicada, destacada, imagen, video })
+
+        body: JSON.stringify({ nombre, descripcion, director, genero, categoria, año, publicada, destacada, imagen, video })
+
     })
     const newMovie = await response.json();
     console.log(newMovie);
