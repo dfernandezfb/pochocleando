@@ -8,39 +8,18 @@
   
   /* <---------------------PAGINA ABOUT US SEBA----------------------> */
   
-.row {
+.row_s {
 	width: 100%;
 	margin: 0 auto;
 }
 body {
 	width: 100%;
 	height: 100%;
-	/* display: flex; */
+	/* display: flex; 
 	justify-content: center;
 	align-items: center;
-	font-family: sans-serif; 
-	overflow-x: hidden;
-}
-
-.vacio {
-	background: url(/img/cinePochocleando.jpg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100vw 90vh;
-	width: 100%;
-	height: 450px;
-}
-
-.titulo{
-	color: #F0E0A0 ;
-	width: auto;
-	font-size: 2em;
-    
-}
-.nosotros {
-	color: #838486 ;
-	text-align: center;
-	font-size: 1.1em;
+	font-family: sans-serif;  */
+	overflow-x: hidden; 
 }
 
 .containerA {
@@ -50,8 +29,37 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	max-width: 1400px; 
 }
+.vacio {
+	background: url(/img/cinePochocleando.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100vw 90vh; 
+	width: 100%;
+	height: 450px;
+}
+.a_about:link{
+	text-decoration: none;
+	color: #F0E0A0;
+	transition: .5s ease all;
+}
+.a_about:hover {
+	color: red;
+}
+
+.titulo{
+	color: #F0E0A0 ;
+	width: auto;
+	font-size: 2em;
+    
+}
+.nosotros {
+	width: 98%;
+	color: #838486 ;
+	text-align: center;
+	font-size: 1.1em;
+}
+
 
 body::-webkit-scrollbar {
 	width: 7px;
@@ -61,23 +69,23 @@ body::-webkit-scrollbar-thumb{
 	background: #F0E0A0;
 	border-radius: 10px;
 	border-right: 2px;
-
 }
 
 
 .card  {
-	width: 300px;
+  
+	width: 280px;
 	height: 360px;
 	margin: 20px;
-	border-radius: 6px;
-	overflow: hidden;
-	/* background: #0c1113;
-	box-shadow: 0px 1px 10px #0c1113ba(0,0, 0, 0.2); */
+	border-radius: 6px; 
+	overflow: hidden; 
+	
 	cursor: pointer;
 }
 
 .card:hover{
-	box-shadow: 5px 5px 20px  #B08070;
+	box-shadow: 5px 5px 20px  #F0E0A0;
+	opacity: 1;
 	transform: translateY(-4%);
 }
 
@@ -85,6 +93,7 @@ body::-webkit-scrollbar-thumb{
 
 /* -----------------------------------------------IMAGEN 3D--------------------------------------------*/
 figure {
+	
 	width: auto;
 	height: 320px;
 	margin: 0;
@@ -100,20 +109,21 @@ figure {
 
 figure .frontal,
 figure .trasera {
-	width: 300px;
+	width: 280px;
 	height: 360px;
 	border-radius: 5px;
 	transition: all ease .5s;
 }
 
+
 figure .frontal {
-	
 	display: block;
 	background: #000;
 
 	/* Podemos ocultar la imagen al da la vuelta si lo queremos */
 	/*backface-visibility: hidden;*/
 }
+
 
 figure .trasera {
 	position: absolute;
@@ -126,7 +136,6 @@ figure .trasera {
 }
 
 
-
 figure .trasera hr {
 	height: 2px;
 	background: #fff;
@@ -136,7 +145,6 @@ figure .trasera hr {
 }
 
 figure .trasera p {
-	font-family: 'Open Sans', sans-serif;
 	line-height: 22px;
 	font-size: 14px;
 }
@@ -147,9 +155,6 @@ figure .trasera p {
 	box-shadow: 0px 2px 10px 2px #0c1113;
 }
 
- /* .card:hover figure img { */
-	/* Si queremos podemos aplicar un efecto blur a nuestra imagen al girar */
-	 /* filter:blur(2px); }  */
 
  .card:nth-child(1) figure .trasera{
 	background: rgba(95,58,53,0.7);
@@ -173,16 +178,12 @@ figure .trasera p {
 	}
 	body {
 		width: 100%;
-	   height: 100%;
-	   display: flex;
-	   justify-content: center;
-	   align-items: center;
-	   font-family: sans-serif; 
+	   height: 100%; 
 	   overflow-x: hidden;
    }
    
    .vacio {
-	   background: url(/img/cine.jpg);
+	   background: url(/img/cinePochocleando.jpg);
 	   background-repeat: no-repeat;
 	   background-attachment: fixed;
 	   background-size: 100vw 90vh;
@@ -193,10 +194,13 @@ figure .trasera p {
 	width: auto;
 	justify-content: center;
 	background: #0c1113; 
-	display: flex;
+	/*  display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	max-width: 760px; 
+	flex-wrap: wrap; */
+	
+}
+.nosotros {
+	width: 95%;
 }
 	.card  {
 		width: 300px;
@@ -228,13 +232,9 @@ figure .trasera {
 		-moz-box-sizing: border-box;
 	}
 	body {
-		width: 100%;
+	   width: 100%;
 	   height: 100%;
-	   display: flex;
 	   font-size: 0.7em;
-	   justify-content: center;
-	   align-items: center;
-	   font-family: sans-serif; 
 	   overflow-x: hidden;
    }
    
@@ -245,9 +245,14 @@ figure .trasera {
 	width: 100%;
 	justify-content: center;
 	background: #0c1113; 
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	
+}
+.titulo{
+	font-size: 1.6em;
+    
+}
+.nosotros {
+	width: 90%;
 }
 	.card  {
 		width: 320px;
@@ -282,11 +287,7 @@ figure .trasera {
 	body {
 		width: 100%;
 	   height: 100%;
-	   /* display: flex; */
-	   justify-content: center;
-	   align-items: center;
-	   font-family: sans-serif; 
-	 /*   overflow-x: hidden; */
+	 overflow-x: hidden; 
    }
    
    .vacio {
@@ -296,12 +297,14 @@ figure .trasera {
 	width: auto;
 	justify-content: center;
 	background: #0c1113; 
-	/* display: flex; */
-	align-items: center;
-	text-align: center;
 	font-size: 0.8em;
-	flex-direction: row;
-	flex-wrap: wrap;
+	
+} 
+.titulo{
+	font-size: 1.6em;
+}
+.nosotros {
+	width: 90%;
 }
 	.card  {
 		width: 275px;
