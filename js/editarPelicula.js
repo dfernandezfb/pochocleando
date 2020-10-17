@@ -5,19 +5,19 @@ form.classList.add('color3');
 
 async function getMovie(id) {
     const URL = 'http://localhost:3000/peliculas/';
-    const newURL= `${URL}/${id}`
+    const newURL = `${URL}/${id}`
     const response = await fetch(newURL);
     const data = await response.json();
     return data;
 }
 
-async function editMovie(id,newData){
+async function editMovie(id, newData) {
     const newURL = `${URL}/${id}`;
-    const response = await fetch(newURL,{
-        method:'PUT',
-        headers:{
-            'Accept':'application/json',
-            'Content-Type':'application/json'
+    const response = await fetch(newURL, {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(newData)
     });
@@ -35,17 +35,17 @@ function editForm(movie) {
 </button>
 </div>
 `
- const bodyFormE = document.createElement('div');
- bodyFormE.innerHTML = `
+    const bodyFormE = document.createElement('div');
+    bodyFormE.innerHTML = `
  <div class="modal-body">
 <label>Nombre:</label>
-<input type="text" id="nombreInputE" class="campos inputEfect" value="${movie.nombre}" required >
+<input type="text" id="nombreInputE" class="campos" value="${movie.nombre}" required >
 <br>
 <label>Descripcion:</label><br>
-<textarea id="descripcionInputE" class="campos inputEfect" required>${movie.descripcion}</textarea>
+<textarea id="descripcionInputE" class="campos" required>${movie.descripcion}</textarea>
 <br>
 <label>Genero:</label>
-<select id="generoInputE" name="opciones" class="campos inputEfect" required>
+<select id="generoInputE" name="opciones" class="campos" required>
 <option value="1">Accion</option>
 <option value="2">Drama</option>
 <option value="3">Comedia</option>
@@ -56,48 +56,47 @@ function editForm(movie) {
   <br>
   <br>
   <label class="mr-2">Director:</label>
-  <input type=text id="directorInputE" class="campos inputEfect" value="${movie.director}" required>
+  <input type=text id="directorInputE" class="campos" value="${movie.director}" required>
   <br>
 <label>Categoria:</label>
-<input type="text" id="categoriaInputE" class="campos inputEfect" value="${movie.categoria}" required>
+<input type="text" id="categoriaInputE" class="campos" value="${movie.categoria}" required>
 <br>
 <label>Año:</label>
-<input type="text" id="anioInputE" class="campos inputEfect" value="${movie.año}" required>
+<input type="text" id="anioInputE" class="campos" value="${movie.año}" required>
 <br>
 <label>Imagen (link):</label>
-<input type="text" id="imagenInputE" class="campos inputEfect" value="${movie.imagen}" required>
+<input type="text" id="imagenInputE" class="campos" value="${movie.imagen}" required>
 <br>
 <label>Video (link):</label>
-<input type="text" id="videoInputE" class="campos inputEfect" value="${movie.video}" required>
+<input type="text" id="videoInputE" class="campos" value="${movie.video}" required>
 <br>
 <div class="custom-control custom-switch form-group form-check">
 <input type="checkbox" class="custom-control-input" id="publicadaInputE">
 <label class="custom-control-label" for="publicadaInputE">Publicada</label>
 </div>
 </div>
-` ;
-const footerFormE = document.createElement('div');
-footerFormE.innerHTML = `<div class="modal-footer">
-<button type="submit" class="btn bg-color2 color3 buttonCM">Guardar</button>
+`;
+    const footerFormE = document.createElement('div');
+    footerFormE.innerHTML = `<div class="modal-footer">
+<button type="submit" class="btn bg-color2 color3">Guardar</button>
 </div>
 `
-formE.appendChild(headerFormE);
-formE.appendChild(bodyFormE);
-formE.appendChild(footerFormE);
-const generos = document.getElementById("generoInputE").options;
-let inputCheckE = document.getElementById("publicadaInputE");
-for (let i = 0; i < generos.length; i++) {
-    if(generos[i].text===`${movie.genero}`)
-    {
-        generos[i].setAttribute("selected","");
+    formE.appendChild(headerFormE);
+    formE.appendChild(bodyFormE);
+    formE.appendChild(footerFormE);
+    const generos = document.getElementById("generoInputE").options;
+    let inputCheckE = document.getElementById("publicadaInputE");
+    for (let i = 0; i < generos.length; i++) {
+        if (generos[i].text === `${movie.genero}`) {
+            generos[i].setAttribute("selected", "");
+        }
     }
+    inputCheckE.checked = movie.publicada;
 }
-inputCheckE.checked=movie.publicada;
-}
 
 
 
-formE.addEventListener("submit",(event)=>{
+formE.addEventListener("submit", (event) => {
     event.preventDefault();
     // AGREGAR ID EN EL OBJETO
     const nombrePeli = document.getElementById('nombreInputE').value;
@@ -122,5 +121,5 @@ formE.addEventListener("submit",(event)=>{
         imagen: imagenPeli,
         video: videoPeli
     };
-        editMovie(idSelected,newData)
+    editMovie(idSelected, newData)
 })
