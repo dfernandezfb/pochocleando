@@ -1,4 +1,5 @@
 /* <---------------------PAGINA DETALLE SEBA----------------------> */
+
 /* :root {
 	--rojo: #E50914;
 	--fondo: #141414;
@@ -112,14 +113,28 @@ align-items: center;
  .botonD i {
 	margin-right: 1.25em;
 }
-
+ .title_c {
+color:lightsalmon;
+} 
 .c_container {
-margin-right: 50%;
-margin-left: 50%;
 width: 90%;
 margin: 20px;
-opacity: 0.5;
 }
+.card_s{
+	background: #c02020;
+	opacity: 0.6;
+	border-radius: 0.5em;
+	transition: .5s ease all;
+	cursor: pointer;
+	
+}
+.card_s:hover{
+	opacity: 1;
+	background:#c02020;
+	box-shadow: 5px 5px 20px  #F0E0A0;
+	transform: translateY(-4%);
+}
+
 .card-title {
 	color: #F0E0A0;
 }
