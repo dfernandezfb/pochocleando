@@ -5,8 +5,11 @@ categories.innerHTML="Categorías"
 categories.classList.add("ml-2","color3","titlesandbtns")
 containerCategories.appendChild(categories);
 const containerFavs = document.getElementById("favorites-list")
-const favoritesList = document.createElement("table");
-containerFavs.appendChild(favoritesList);
+const favsTitle = document.createElement("div");
+favsTitle.classList.add("titlesandbtns","dropdown-header", "text-center","bg-color1","color6","mt-0");
+favsTitle.style.fontSize="large"
+favsTitle.innerHTML="Lista de favoritos"
+containerFavs.appendChild(favsTitle);
 const URL = 'http://localhost:3000/peliculas';
 
 
@@ -230,52 +233,64 @@ function saveFavLS(favInfo)
 }
 function addFav(favInfo)
 {
-    const favorite=document.createElement("tr")
-    favorite.id=favInfo.id
-    favorite.classList.add(`fav-${favInfo.id}`);
+    const favorite=document.createElement("div")
+    favorite.id=`fav-${favInfo.id}`
+    favorite.style.width= "350px";
+    favorite.classList.add(`fav-${favInfo.id}`,"dropdown-item");
     favorite.innerHTML=`
-        <td class="img-fav">
-            ${favInfo.imagen}
-        </td>
-        <td class="name-fav">
-            ${favInfo.nombre}
-        </td>
-        <td class="close-fav">
-            <a href=# class="delete-fav">&times</a>
-        </td>
+    <div class="row no-gutters">
+        <div class="col-md-4" style="height:100px">
+            <img src="${favInfo.imagen}" class="card-img h-100" alt="...">
+        </div>
+        <div class="col-md-7">
+            <a href="detail.html#${favInfo.id}" class="text-decoration-none color1"><h5 class="card-title">${favInfo.nombre}</h5></a>
+        </div>
+        <div class="col-md-1">
+            <h3 class="delete-fav color2 ml-2" role="button">&times</h3>
+        </div>
+    </div>
+    <hr>
     `;
-    favoritesList.appendChild(favorite);
+    containerFavs.appendChild(favorite);
 }
 function renderFavsLS()
 {
-    let favs = getFavsLS();
-    favs.forEach((fav)=>{
-    const favorite=document.createElement("tr")
-    favorite.id=fav.id
-    favorite.classList.add(`fav-${fav.id}`);
-    favorite.innerHTML=`
-        <td class="img-fav">
-            ${fav.imagen}
-        </td>
-        <td class="name-fav">
-            ${fav.nombre}
-        </td>
-        <td class="close-fav">
-            <a href=# class="delete-fav">&times</a>
-        </td>
-    `;
-    favoritesList.appendChild(favorite);
-    })
+    setTimeout(() => {
+        let favs = getFavsLS();
+        favs.forEach((fav)=>{
+            const favorite=document.createElement("div")
+            favorite.id=`fav-${fav.id}`
+            favorite.style.width= "350px";
+            favorite.classList.add(`fav-${fav.id}`,"dropdown-item");
+            favorite.innerHTML=`
+            <div class="row no-gutters">
+                <div class="col-md-4" style="height:100px">
+                    <img src="${fav.imagen}" class="card-img h-100" alt="...">
+                </div>
+                <div class="col-md-7">
+                    <a href="detail.html#${fav.id}" class="text-decoration-none color1"><h5 class="card-title">${fav.nombre}</h5></a>
+                </div>
+                <div class="col-md-1">
+                    <h3 class="delete-fav color2 ml-2" role="button">&times</h3>
+                </div>
+            </div>
+            <hr>
+            `;
+            containerFavs.appendChild(favorite);
+            document.getElementById(`${fav.id}`).querySelector('.fa-star').classList.add('color3');
+        })
+    },2000);
 }
 function deleteFav(e)
 {
     e.preventDefault();
     if(e.target.classList.contains("delete-fav"))
     {
-        const removedElement = e.target.parentElement.parentElement
-        const deleteId= removedElement.id;
-        e.target.parentElement.parentElement.remove();
+        const removedElement = e.target.parentElement.parentElement.parentElement
+        const deleteId= removedElement.id.slice(4);
+        removedElement.remove();
         deleteFavLS(deleteId);
+        document.getElementById(`${deleteId}`).querySelector('.fa-star').classList.remove('color3');
     }
 }
 function deleteFavLS(deleteId)
@@ -300,7 +315,7 @@ containerCategories.addEventListener("click",(e)=>{
             if (e.target.classList.contains("color3"))
             {
                 e.target.classList.remove("color3")
-                favoritesList.querySelector(`.fav-${favInfo.id}`).remove()
+                containerFavs.querySelector(`.fav-${favInfo.id}`).remove()
                 deleteFavLS(favInfo.id)
             }  
             else{
@@ -321,7 +336,7 @@ containerCategories.addEventListener("click",(e)=>{
             if(e.target.children.classList.contains("color3"))
             {
                 e.target.classList.remove("color3")
-                favoritesList.querySelector(`.fav-${favInfo.id}`).remove()
+                containerFavs.querySelector(`.fav-${favInfo.id}`).remove()
                 deleteFavLS(favInfo.id)
             }
             else
@@ -339,4 +354,4 @@ containerCategories.addEventListener("click",(e)=>{
         }
     }
 })
-favoritesList.addEventListener("click",deleteFav);
+containerFavs.addEventListener("click",deleteFav);
