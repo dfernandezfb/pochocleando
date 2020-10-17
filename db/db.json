@@ -137,10 +137,10 @@
       "director": "Reinhard Klooss",
       "genero": "Comedia",
       "categoria": "ATP",
-      "destacada": false,
+      "destacada": true,
       "publicada": true,
       "año": 2019,
-      "imagen": "https://i.pinimg.com/originals/2e/98/87/2e98872d1141c2bc5bc7adebd492a2c0.png",
+      "imagen": "https://images7.alphacoders.com/797/thumb-1920-797324.jpg",
       "video": "https://www.youtube.com/embed/4Yq15X_gj9A"
     },
     {
@@ -190,7 +190,7 @@
       "genero": "Ciencia Ficcion",
       "categoria": "ATP",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "año": 2018,
       "imagen": "https://images-na.ssl-images-amazon.com/images/I/81Qupmv594L._RI_.jpg",
       "video": "https://www.youtube.com/embed/iDdYMOiIn3Q",
@@ -451,8 +451,8 @@
       "categoria": "+16",
       "año": "2020",
       "publicada": true,
-      "destacada": false,
-      "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/2D2gi13hnrXWaspWuWmdbEZ8bef.jpg",
+      "destacada": true,
+      "imagen": "https://media.vanityfair.com/photos/5f7223801974fdefdd159e0d/5:3/w_1999,h_1199,c_limit/the-boys-in-the-band.jpg",
       "video": "https://www.youtube.com/embed/862Pb9oDDAo",
       "id": 35
     },
