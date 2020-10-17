@@ -30,7 +30,7 @@
     color: white;
 }
 
-
+/*para md */
 @media (max-width:992px) {
     .btn-hero {
         padding: 5px;
@@ -48,6 +48,7 @@
         font-size: 10px;
     }
     }
+/*para sm*/
 @media (max-width: 768px) {
       .img-hero{
         width: 13rem;
@@ -55,6 +56,7 @@
     }
 
  }
+ /*para xsm*/
 @media (max-width: 576px) {
 .img-hero{
    width: 10rem;
