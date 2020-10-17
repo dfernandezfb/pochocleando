@@ -79,114 +79,7 @@
     /*<------------------------FIN CARRUSSEL-DIEGO --------------------->*/
     
     /****************************************************************************/
-/*Hero-RE*/
 
-.img-hero {
-    max-width: 100%;
-}
-
-.hero {
-    max-height: 45vw;
-}
-.data-hero{
-    background: rgba(255, 255, 255, 0.5) ; 
-    border-radius: 15px; 
-    background-position: center top;
-}
-
-.title-white{
-    font-size: 5vw; 
-    color:white;
-}
-
-.title-black {
-    font-size: 5vw;
-    color: black;
-}
-
-.p-white {
-    color: white;
-    font-size: 1.6vw;
-    font-weight: bolder;
-}
-
-.p-black {
-    color: black;
-    font-size: 1.6vw;
-    font-weight: bolder;
-}
-
-.btn-hero {
-    background-color: transparent;
-    border-radius: 25px;
-    padding: 10px 25px;
-    font-weight: bolder;
-}
-
-.btn-white {
-    border: 2px solid white;
-    color: white;
-}
-
-.btn-black {
-    border: 2px solid black;
-    color: black;
-}
-
-.btn-white:hover {
-    border: 2px solid black;
-    color: black;
-}
-
-.btn-black:hover {
-    border: 2px solid white;
-    color: white;
-}
-
-@media (max-width:990px) {
-    .btn-hero {
-        padding: 5px;
-        font-size: 10px;
-    }
-    /*! FIN : ESTILO MODAL CREAR NUEVA PELICULA */
-    /*Hero-RE*/
-    
-    .img-hero {
-        max-width: 100%;
-    }
-    
-    .hero {
-        max-height: 50vw;
-    }
-    
-    .title-white {
-        font-size: 5vw;
-        color: white;
-    }
-    
-    .title-black {
-        font-size: 5vw;
-        color: black;
-    }
-    
-    .p-white {
-        color: white;
-        font-size: 1.6vw;
-        font-weight: bolder;
-    }
-    
-    .p-black {
-        color: black;
-        font-size: 1.6vw;
-        font-weight: bolder;
-    }
-    
-    .btn-hero {
-        background-color: transparent;
-        border-radius: 25px;
-        padding: 10px 25px;
-        font-weight: bolder;
-    }
 
 /**************************************************************************************************/
 
@@ -563,7 +456,6 @@
             text-align: center;
         }
     }
-}
     /*
     @media (min-width: 360px) {
         .fondo-body-form {
