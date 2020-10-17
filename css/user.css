@@ -15,12 +15,12 @@
     top: 55px;
 }
   .btn-user{
-       outline: none;  
-       border-radius: 50%;
-       height: 50px;
-       width: 50px;
-       border: none;
-       cursor: pointer;
+    outline: none;  
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
    }
 .lista a {
     text-decoration: none;
@@ -29,29 +29,46 @@
 }
 .lista .option{
     color: white;
-    font-size: 1vw;
 }
 
-.lista a:hover{
+.lista a:hover, a .btn-exit:hover{
     background-color: #010b1f;
-    color: white;
+    color: #f0e0a0;
 }
 
 .menu-user:hover .lista{
     display: block;
     padding: .5rem 1rem;
-} 
+}
 
 .menu-user:hover .btn-user{
 
 }
-
 .p-white {
     color: white;
-    font-size: 1vw
+    font-size: 1vw;
 }
-
 .btn-exit{
     background: none;
     border: none;   
+}
+
+@media (max-width:992px) {
+    .p-white {
+        color: white;
+        font-size: 1.5vw
+    }
+    }
+
+@media (max-width: 768px) {
+   
+    .p-white {
+        color: white;
+        font-size: 2vw;
+    }
+    
+ }
+@media (max-width: 576px) {
+
+
 }
