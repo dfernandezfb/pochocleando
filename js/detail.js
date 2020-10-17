@@ -96,9 +96,12 @@ getmovie()
                 return response.json()
             })
             .then((posts)=> {
+              const t_comentarios= document.createElement("h1");
+              t_comentarios.innerHTML= `Comentarios`;
+              t_comentarios.classList.add('title_c','titlesandbtns');
+              comentarios.appendChild(t_comentarios);
               posts.map(post =>
                 {
-                  
                   const comentario = document.createElement("div");
                   comentario.innerHTML=
                   `
@@ -108,8 +111,8 @@ getmovie()
                       <div class="col-3 col-md-1 ml-3">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1200px-User_icon_2.svg.png" class="card-img rounded-circle w-100" alt="" >
                       </div>
-                      <div class="col-8">
-                        <div class="card-body p-1">
+                      <div class="col-8 ">
+                        <div class="card-body p-1 card_s">
                           <h5 class="card-title mb-0">${post.name}</h5>
                           <p class="card-text">${post.body}</p>
                           <p class="card-text"> ${post.email} </p> 
@@ -120,7 +123,7 @@ getmovie()
                    </div>
                       `
                       comentarios.appendChild(comentario);
-                }) 
+                    }) 
             })
         }
 
