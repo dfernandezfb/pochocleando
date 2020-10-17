@@ -1,194 +1,264 @@
-/*<------------------------INICIO CARRUSSEL-DIEGO --------------------->*/
+    /*<------------------------INICIO CARRUSSEL-DIEGO --------------------->*/
+    
+    .movie-card {
+        transition: transform 0.5 ease;
+    }
+    
+    .movie-card:hover {
+        transform: scale(1.3);
+    }
+    
+    .resume {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 16rem;
+        height: 18rem;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        cursor: default;
+        font-size: 0.7rem;
+    }
+    
+    .resume:hover {
+        opacity: 1;
+    }
+    
+    .movie-title {
+        cursor: default;
+    }
+    
+    .movie {
+        width: 16rem;
+        height: 18rem;
+        margin: 10px;
+        background-size: 100% 100%;
+        box-shadow: -10px 10px rgba(12, 17, 19, 0.1), 0 15px 30px rgba(12, 17, 19, .65);
+    }
+    
+    .carrousel {
+        margin-left: 15px;
+        width: 95%;
+        height: auto;
+    }
+    
+    .movie-resume {
+        height: 9rem;
+        overflow: scroll;
+    }
+    
+    .movie-resume::-webkit-scrollbar {
+        width: 5px;
+        color: #a9bdc5;
+    }
+    
+    .movie-resume::-webkit-scrollbar-thumb {
+        background: #c02020;
+        border-radius: 10px;
+        border-right: 2px;
+    }
+    
+    .carrousel {
+        overflow: hidden;
+    }
+    
+    .carrousel-Comedia,
+    .carrousel-Terror,
+    .carrousel-Drama,
+    .carrousel-Acción,
+    .carrousel-Ficción {
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+    
+    .carrousel-Comedia::-webkit-scrollbar,
+    .carrousel-Terror::-webkit-scrollbar,
+    .carrousel-Drama::-webkit-scrollbar,
+    .carrousel-Acción::-webkit-scrollbar,
+    .carrousel-Ficción::-webkit-scrollbar {
+        display: none;
+    }
+    /*<------------------------FIN CARRUSSEL-DIEGO --------------------->*/
+    
+    /****************************************************************************/
 
-.movie-card {
-    transition: transform 0.5 ease;
+
+/**************************************************************************************************/
+
+
+/************************INICIO - ESTILO: FORMULARIO PARA REGISTRARSE******************************/
+
+
+/**************************************************************************************************/
+
+.fondo-body-form {
+    background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 50%), url('https://i.blogs.es/aa91a3/cine-/2560_3000.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.movie-card:hover {
-    transform: scale(1.3);
+.formulario {
+    width: 600px;
+    padding: 0;
+    margin: auto;
 }
 
-.resume {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 16rem;
-    height: 18rem;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    cursor: default;
-    font-size: 0.7rem;
+.formulario_boton {
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+    -webkit-appearance: none;
+    margin-right: auto;
+    margin-top: 0.8em;
+    text-align: center;
 }
 
-.resume:hover {
-    opacity: 1;
+.formulario_boton:hover {
+    box-shadow: 5px 5px 10px #f0e0a0;
 }
 
-.movie-title {
-    cursor: default;
+.formulario_grupo_input {
+    position: relative;
 }
 
-.movie {
-    width: 16rem;
-    height: 18rem;
-    margin: 10px;
-    background-size: 100% 100%;
-    box-shadow: -10px 10px rgba(12, 17, 19, 0.1), 0 15px 30px rgba(12, 17, 19, .65);
+.formulario_input {
+    width: 100%;
+    background-image: none;
+    background: none;
+    border: 1px solid #c02020;
+    color: #f0e0a0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    transition: all 0.5s ease;
+    border-radius: 6px;
+    font-size: 0.85em;
 }
 
-.carrousel {
-    margin-left: 15px;
-    width: 95%;
-    height: auto;
+.formulario_input_select {
+    width: 100%;
+    background-image: none;
+    background-color: black;
+    border: 1px solid #c02020;
+    color: #f0e0a0;
+    /* border-top: none;
+    border-left: none;
+    border-right: none;*/
+    border-radius: 0;
+    transition: all 0.5s ease;
+    border-radius: 6px;
+    font-size: 0.85em;
 }
 
-.movie-resume {
-    height: 9rem;
-    overflow: scroll;
+.formulario_input:focus {
+    outline: none;
+    border-color: #f0e0a0;
 }
 
-.movie-resume::-webkit-scrollbar {
-    width: 5px;
-    color: #a9bdc5;
-}
-
-.movie-resume::-webkit-scrollbar-thumb {
-    background: #c02020;
-    border-radius: 10px;
-    border-right: 2px;
-}
-
-.carrousel {
-    overflow: hidden;
-}
-
-.carrousel-Comedia,
-.carrousel-Terror,
-.carrousel-Drama,
-.carrousel-Acción,
-.carrousel-Ficción {
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-}
-
-.carrousel-Comedia::-webkit-scrollbar,
-.carrousel-Terror::-webkit-scrollbar,
-.carrousel-Drama::-webkit-scrollbar,
-.carrousel-Acción::-webkit-scrollbar,
-.carrousel-Ficción::-webkit-scrollbar {
+.formulario_input_error {
+    font-size: 0.7em;
+    margin-bottom: 0;
+    font-style: oblique;
     display: none;
 }
 
-
-/*<------------------------FIN CARRUSSEL-DIEGO --------------------->*/
-
-
-/****************************************************************************/
-
-
-/*Hero-RE*/
-
-.img-hero {
-    max-width: 100%;
+.formulario_input_error_activo {
+    display: block;
 }
 
-.hero {
-    max-height: 45vw;
+.formulario_validacion_estado {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
 }
 
-.data-hero {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-    background-position: center top;
+.formulario_label {
+    transform: translatex(1px);
+    left: 5px;
+    color: rgba(#c02020, .10);
+    transition: all 0.25s ease;
+    backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 1rem;
 }
 
-.title-white {
-    font-size: 5vw;
-    color: white;
+.formulario_label_activo {
+    transform: translateY(4px);
+    font-size: 1rem;
+    color: #c02020;
 }
 
-.title-black {
-    font-size: 5vw;
-    color: black;
+.formulario_mensaje {
+    height: 1em;
+    line-height: 0.85em;
+    color: #c02020;
+    padding: 0 0.80em;
+    border-radius: 2px;
+    display: none;
 }
 
-.p-white {
-    color: white;
-    font-size: 1.6vw;
-    font-weight: bolder;
+.formulario_mensaje_activo {
+    display: block;
 }
 
-.p-black {
-    color: black;
-    font-size: 1.6vw;
-    font-weight: bolder;
+.formulario_mensaje p {
+    margin: 0;
+    font-style: oblique;
 }
 
-.btn-hero {
-    background-color: transparent;
-    border-radius: 25px;
-    padding: 10px 25px;
-    font-weight: bolder;
+.formulario_mensaje small {
+    margin: 0;
 }
 
-.btn-white {
-    border: 2px solid white;
-    color: white;
+.formulario_legend {
+    border: 3px solid #f0e0a0;
+    padding: 6px;
+    border-radius: 5px;
 }
 
-.btn-black {
-    border: 2px solid black;
-    color: black;
+.fieldset {
+    border: 3px solid #c02020;
+    padding: 6px;
+    display: flex;
+    width: 600px;
+    justify-content: center;
+    align-content: center;
 }
 
-.btn-white:hover {
-    border: 2px solid black;
-    color: black;
+.formulario_mensaje_exito {
+    height: 0.7em;
+    color: #119200;
+    display: none;
 }
 
-.btn-black:hover {
-    border: 2px solid white;
-    color: white;
+.formulario_mensaje_exito_activo {
+    display: block;
 }
 
-@media (max-width:990px) {
-    .btn-hero {
-        padding: 5px;
-        font-size: 10px;
+.formulario_grupo_correcto .formulario_validacion_estado {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+@media (max-width:990px){
+    .btn-hero{
+    padding: 5px;   
+    font-size: 10px;
+    } 
+    .img-hero{
+        width: 13rem;
+        height: 15rem;
     }
-    /*! FIN : ESTILO MODAL CREAR NUEVA PELICULA */
-    /*Hero-RE*/
-    .img-hero {
-        max-width: 100%;
-    }
-    .hero {
-        max-height: 50vw;
-    }
-    .title-white {
-        font-size: 5vw;
-        color: white;
-    }
-    .title-black {
-        font-size: 5vw;
-        color: black;
-    }
-    .p-white {
-        color: white;
-        font-size: 1.6vw;
-        font-weight: bolder;
-    }
-    .p-black {
-        color: black;
-        font-size: 1.6vw;
-        font-weight: bolder;
-    }
-    .btn-hero {
-        background-color: transparent;
-        border-radius: 25px;
-        padding: 10px 25px;
-        font-weight: bolder;
-    }
-    /**************************************************************************************************/
-    /************************INICIO - ESTILO: FORMULARIO PARA REGISTRARSE******************************/
-    /**************************************************************************************************/
+}
+
+
+/*********************Medias querys*************************************/
+
+@media (max-width: 700px) {
     .fondo-body-form {
         background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 50%), url('https://i.blogs.es/aa91a3/cine-/2560_3000.jpg');
         background-repeat: no-repeat;
@@ -519,7 +589,6 @@
         .formulario_mensaje p {
             font-size: 0.8em;
         }
-<<<<<<< HEAD:css/index.css
     }*/
 
 
@@ -531,17 +600,3 @@
 
 /**************************************************************************************************/
 
-=======
-}
-*/
-/**************************************************************************************************/
-
-/************************FIN - ESTILO: FORMULARIO PARA REGISTRARSE*********************************/
-
-/**************************************************************************************************/
-
-/* ESTILO PAGINA ADMIN */
-.row-selected {
-    border: 2px solid black;
-}
->>>>>>>b891ef0... arreglando rebase luego de traer cambiso del repo de diego parte dos:css/style.css

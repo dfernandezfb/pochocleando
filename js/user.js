@@ -28,16 +28,16 @@ function showUser() {
 
     if (user.admin === true) {
         menuHome.innerHTML += `<li class="link" id="admin"><a class="item" href="admin.html">ADMIN</a></li>`
-        imgAvatar.src = "img/admin.png";
+        imgAvatar.src = "./img/admin.png";
     } else {
-        imgAvatar.src = "img/user.png";
+        imgAvatar.src = "./img/user.png";
     }
     menuUser.innerHTML += `
     <div class="lista commontexts p-white">
         <a class="option" href="#">${user.nombre.toUpperCase()}</a>       
         <a class="option" href="error404.html">Editar perfil <i class="pl-3 fas fa-pencil-alt"></i></a>    
         <a class="option" href="error404.html">Configuraciones</a>
-        <a class="option" href="error404.html">Ayuda</a>      
+        <a class="option " href="error404.html">Ayuda</a>      
         <a class="option" href="fullPage.html"><button class="p-white btn-exit">Cerrar sesión <i class="pl-3 fas fa-sign-out-alt"></i></button></a>
     </div>   
     `
@@ -45,16 +45,16 @@ function showUser() {
 }
 const lista = document.querySelector('.lista');
 const btnExit = document.querySelector('.btn-exit')
-/* const btnUser = document.querySelector('.btn-user')
-btnUser.addEventListener('click', showLista) */
+const btnUser = document.querySelector('.btn-user')
+btnUser.addEventListener('click', showLista);
 btnExit.addEventListener('click', removeUserFromLS);
 
-/*function showLista() {
+function showLista() {
     if (lista.style.visibility == "hidden") {
         lista.style.visibility = "visible";
     } 
     else lista.style.visibility = "hidden";
-}*/
+}
 function removeUserFromLS(user) {
     localStorage.removeItem('user');
 }

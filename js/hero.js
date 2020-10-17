@@ -29,7 +29,7 @@ async function buildSlides() {
               <div class="carousel-caption">
                     <div class= "d-flex align-items-center flex-column data-hero">
                     <h5 class="text title-black title titlesandbtns">${datos[i].nombre}</h5>
-                    <p class="user-select-none p-black text-center commontexts">${datos[i].descripcion}</p>
+                    <p class="p-black text-center commontexts p-hero">${datos[i].descripcion}</p>
                     <a href="error404.html"> <button class="btn-hero bi bi-play p-black titlesandbtns" id="btn-slide">
                     <i class="fas fa-play"></i> REPRODUCIR </button>
                     </a>
