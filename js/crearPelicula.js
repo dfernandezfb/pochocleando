@@ -19,17 +19,17 @@ function createForm() {
 <div class="modal-body">
 <div  class="my-1">
 <label>Nombre:</label>
-<input type=text id=nombreInput class="formulario_input inputEfect" required >
+<input type=text id=nombreInput class="formulario_input" required >
 </div>
 <br>
 <div  class="my-1">
 <label>Descripcion:</label><br>
-<textarea id=descripcionInput class="formulario_input inputEfect" required></textarea>
+<textarea id=descripcionInput class="formulario_input" required></textarea>
 </div>
 <br>
 <div  class="my-1">
 <label>Genero:</label>
-<select id="generoInput" name="opciones" class="formulario_input_select inputEfect" required>
+<select id="generoInput" name="opciones" class="formulario_input_select" required>
   <option value="1">Acción</option>
   <option value="2">Drama</option>
   <option value="3">Comedia</option>
@@ -41,27 +41,27 @@ function createForm() {
 <br>
 <div class="my-1">
 <label class="mr-2">Director:</label>
-<input type=text id=directorInput class="formulario_input inputEfect" required>
+<input type=text id=directorInput class="formulario_input" required>
 </div>
 <br>
 <div class="my-1">
 <label>Categoria:</label>
-<input type="text" id=categoriaInput class="formulario_input inputEfect" required>
+<input type="text" id=categoriaInput class="formulario_input" required>
 </div>
 <br>
 <div class="my-1">
 <label>Año:</label>
-<input type="text" id=anioInput class="formulario_input inputEfect" required>
+<input type="text" id=anioInput class="formulario_input" required>
 </div>
 <br>
 <div class="my-1">
 <label>Imagen (link):</label>
-<input type="text" id="imagenInput" class="formulario_input inputEfect" value="" required>
+<input type="text" id="imagenInput" class="formulario_input" value="" required>
 </div>
 <br>
 <div class="my-1">
 <label>Video (link):</label>
-<input type="text" id="videoInput" class="formulario_input inputEfect" value="" required>
+<input type="text" id="videoInput" class="formulario_input" value="" required>
 </div>
 <br>
 <div class="custom-control custom-switch form-group form-check my-1">
@@ -76,7 +76,7 @@ function createForm() {
 `
     const footerForm = document.createElement('div');
     footerForm.innerHTML = `<div class="modal-footer">
- <button  type="submit" class="btn bg-color2 color3 buttonCM">Crear</button>
+ <button  type="submit" class="btn bg-color2 color3">Crear</button>
 </div>
 `
     formulario.appendChild(headerForm);
