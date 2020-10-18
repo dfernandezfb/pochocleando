@@ -301,12 +301,12 @@ footer {
     background: linear-gradient(to bottom right, #7a0909 0%, #000000 100%);
 }
 body::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
     color: #0c1113;
 }
 body::-webkit-scrollbar-thumb{
-    background:#F0E0A0;
-    border-radius:10px;
+    background: #c02020;
+    border-radius:12px;
     border-right:2px;
 }
 .titlesandbtns

@@ -1,9 +1,9 @@
 'use strict'
 const rootAdmin = document.querySelector(".movies-table");
-const moviesTable= document.createElement("table");
+const moviesTable = document.createElement("table");
 let idSelected;
 moviesTable.classList.add("table")
-moviesTable.innerHTML=`
+moviesTable.innerHTML = `
 <thead class="thead-dark">
 <tr>
         <th scope="col">Nombre</th>
@@ -19,21 +19,19 @@ moviesTable.innerHTML=`
 `;
 rootAdmin.appendChild(moviesTable);
 
-async function getMovies()
-{
+async function getMovies() {
     const URL = 'http://localhost:3000/peliculas'
     const response = await fetch(URL);
-    const data= await response.json();
+    const data = await response.json();
     return data;
 }
 
-function generateTable(movies)
-{
-    movies.map(movie =>{
+function generateTable(movies) {
+    movies.map(movie => {
         const row = document.createElement("tr");
-        row.id=movie.id;
-        row.classList.add("color6","row-movie")
-        row.innerHTML=`
+        row.id = movie.id;
+        row.classList.add("color6", "row-movie")
+        row.innerHTML = `
         <th scope="row">${movie.nombre}</th>
         <td>${movie.director}</td>
         <td>${movie.genero}</td>
@@ -49,10 +47,9 @@ function generateTable(movies)
 const formE = document.getElementById("rootFormE");
 formE.classList.add('bg-color1');
 formE.classList.add('color3');
-function allowButtons(e)
-{
-    if(document.querySelector(".row-selected")!= null)
-    {
+
+function allowButtons(e) {
+    if (document.querySelector(".row-selected") != null) {
         document.querySelector(".row-selected").classList.remove("row-selected");
     }
     e.target.parentElement.classList.add("row-selected");
@@ -60,13 +57,13 @@ function allowButtons(e)
     document.querySelector(".eliminarPeli").removeAttribute("disabled")
     idSelected = e.target.parentElement.id;
     getMovie(idSelected)
-    .then(movie=>editForm(movie));
+        .then(movie => editForm(movie));
 }
 
 getMovies()
-.then(movies => generateTable(movies));
+    .then(movies => generateTable(movies));
 
-document.querySelector("tbody").addEventListener("click",allowButtons)
+document.querySelector("tbody").addEventListener("click", allowButtons)
 
 
 
@@ -74,20 +71,20 @@ document.querySelector("tbody").addEventListener("click",allowButtons)
 
 async function getMovie(id) {
     const URL = 'http://localhost:3000/peliculas';
-    const newURL= `${URL}/${id}`
+    const newURL = `${URL}/${id}`
     const response = await fetch(newURL);
     const data = await response.json();
     return data;
 }
 
-async function editMovie(id,newData){
+async function editMovie(id, newData) {
     const URL = 'http://localhost:3000/peliculas';
     const newURL = `${URL}/${id}`;
-    const response = await fetch(newURL,{
-        method:'PUT',
-        headers:{
-            'Accept':'application/json',
-            'Content-Type':'application/json'
+    const response = await fetch(newURL, {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(newData)
     });
@@ -107,17 +104,17 @@ function createFormE() {
 <div class="modal-body">
 <div  class="my-1">
 <label>Nombre:</label>
-<input type=text id=nombreInputE class="formulario_input inputEfect" required >
+<input type=text id=nombreInputE class="formulario_input " required >
 </div>
 <br>
 <div  class="my-1">
 <label>Descripcion:</label><br>
-<textarea id=descripcionInputE class="formulario_input inputEfect" required></textarea>
+<textarea id=descripcionInputE class="formulario_input" required></textarea>
 </div>
 <br>
 <div  class="my-1">
 <label>Genero:</label>
-<select id="generoInputE" name="opciones" class="formulario_input_select inputEfect" required>
+<select id="generoInputE" name="opciones" class="formulario_input_select " required>
   <option value="1">Accion</option>
   <option value="2">Drama</option>
   <option value="3">Comedia</option>
@@ -128,27 +125,27 @@ function createFormE() {
 <br>
 <div class="my-1">
 <label class="mr-2">Director:</label>
-<input type=text id=directorInputE class="formulario_input inputEfect" required>
+<input type=text id=directorInputE class="formulario_input" required>
 </div>
 <br>
 <div class="my-1">
 <label>Categoria:</label>
-<input type="text" id=categoriaInputE class="formulario_input inputEfect" required>
+<input type="text" id=categoriaInputE class="formulario_input" required>
 </div>
 <br>
 <div class="my-1">
 <label>Año:</label>
-<input type="text" id=anioInputE class="formulario_input inputEfect" required>
+<input type="text" id=anioInputE class="formulario_input" required>
 </div>
 <br>
 <div class="my-1">
 <label>Imagen (link):</label>
-<input type="text" id="imagenInputE" class="formulario_input inputEfect" value="" required>
+<input type="text" id="imagenInputE" class="formulario_input" value="" required>
 </div>
 <br>
 <div class="my-1">
 <label>Video (link):</label>
-<input type="text" id="videoInputE" class="formulario_input inputEfect" value="" required>
+<input type="text" id="videoInputE" class="formulario_input" value="" required>
 </div>
 <br>
 <div class="custom-control custom-switch form-group form-check my-1">
@@ -161,16 +158,15 @@ function createFormE() {
 </div>
 </div>
 <div class="modal-footer">
-<button  type="submit" class="btn bg-color2 color3 buttonCM">Editar</button>
+<button  type="submit" class="btn bg-color2 color3">Editar</button>
 </div>
 `
-formE.appendChild(mFormE);
+    formE.appendChild(mFormE);
 }
 createFormE();
 
 
-function editForm(movie)
-{
+function editForm(movie) {
     const nombrePeliE = document.getElementById('nombreInputE');
     const descripcionPeliE = document.getElementById('descripcionInputE');
     const directorPeliE = document.getElementById('directorInputE');
@@ -182,30 +178,28 @@ function editForm(movie)
     const inputCheckPE = document.getElementById('destacadaInputE');
 
     nombrePeliE.value = movie.nombre;
-    descripcionPeliE.value=movie.descripcion;
-    directorPeliE.value=movie.director;
-    categoriaPeliE.value=movie.categoria;
-    anioPeliE.value=movie.año;
-    imagenPeliE.value=movie.imagen;
-    videoPeliE.value=movie.video;
+    descripcionPeliE.value = movie.descripcion;
+    directorPeliE.value = movie.director;
+    categoriaPeliE.value = movie.categoria;
+    anioPeliE.value = movie.año;
+    imagenPeliE.value = movie.imagen;
+    videoPeliE.value = movie.video;
     const generos = document.getElementById("generoInputE");
-    if(document.querySelector(".gender-selected")!= null)
-    {
+    if (document.querySelector(".gender-selected") != null) {
         document.querySelector(".gender-selected").removeAttribute("selected");
         document.querySelector(".gender-selected").classList.remove("gender-selected");
     }
     for (let i = 0; i < generos.length; i++) {
-        if(generos.options[i].text===`${movie.genero}`)
-        {
-            generos.options[i].setAttribute("selected","");
+        if (generos.options[i].text === `${movie.genero}`) {
+            generos.options[i].setAttribute("selected", "");
             generos.options[i].classList.add("gender-selected");
         }
     }
-    inputCheckE.checked=movie.publicada;
-    inputCheckPE.checked=movie.destacada;
+    inputCheckE.checked = movie.publicada;
+    inputCheckPE.checked = movie.destacada;
 }
 
-formE.addEventListener("submit",(event)=>{
+formE.addEventListener("submit", (event) => {
     event.preventDefault();
     const nombrePeliE = document.getElementById('nombreInputE');
     const descripcionPeliE = document.getElementById('descripcionInputE');
@@ -232,22 +226,23 @@ formE.addEventListener("submit",(event)=>{
         imagen: imagenPeliE.value,
         video: videoPeliE.value
     };
-        editMovie(idSelected,newData)
-    })
-    
+    editMovie(idSelected, newData)
+})
+
 
 // -------Eliminar peliculas
-const formElim = document.getElementById("rootElim"); 
+const formElim = document.getElementById("rootElim");
 const modalFormElim = document.getElementById("eliminarPeliModal");
 formElim.classList.add('bg-color1');
 formElim.classList.add('color3');
 
 
-async function deletMovie(id){
+async function deletMovie(id) {
     console.log(id);
     const url = 'http://localhost:3000/peliculas';
     const newurl = `${url}/${id}`;
-    const response =  await fetch (newurl, {method: 'DELETE'
+    const response = await fetch(newurl, {
+        method: 'DELETE'
     })
 }
 
@@ -263,28 +258,28 @@ function deleteForm() {
 </button>
 </div>
 `;
- const bodyFormElim = document.createElement('div');
- bodyFormElim.innerHTML = `
+    const bodyFormElim = document.createElement('div');
+    bodyFormElim.innerHTML = `
  <div class="modal-body commontexts">
   <h4 id:"modalTextDelet"> ¿Está seguro que desea eliminar esta pelicula de forma permanente?</h4>
   <p>Nota: Puede desactivar la opción de "Publicada" para cambiar la visibilidad del elemento sin eliminarlo de la base de datos.</p>
 </div>
 `;
-const footerFormElim = document.createElement('div');
-footerFormElim.innerHTML = `<div class="modal-footer">
+    const footerFormElim = document.createElement('div');
+    footerFormElim.innerHTML = `<div class="modal-footer">
 <button class="btn bg-color2 color3 buttonCM aceptar titlesandbtns" id="eliminarPeli">Si</button>
 <button type="button" class="btn bg-color2 color3 buttonCM titlesandbtns" data-dismiss="modal">No</button>
 </div>
 `;
 
-formElim.appendChild(headerFormElim);
-formElim.appendChild(bodyFormElim);
-formElim.appendChild(footerFormElim);
+    formElim.appendChild(headerFormElim);
+    formElim.appendChild(bodyFormElim);
+    formElim.appendChild(footerFormElim);
 }
 
 deleteForm();
 formElim.addEventListener("click", e => {
-    if (e.target.classList.contains ('aceptar')){ 
+    if (e.target.classList.contains('aceptar')) {
         deletMovie(idSelected);
     }
 })

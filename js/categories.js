@@ -5,9 +5,12 @@ categories.innerHTML = "Categorías"
 categories.classList.add("ml-2", "color3", "titlesandbtns")
 containerCategories.appendChild(categories);
 const containerFavs = document.getElementById("favorites-list")
-const favoritesList = document.createElement("table");
-containerFavs.appendChild(favoritesList);
-const URL = 'http://localhost:3000/peliculas/';
+const favsTitle = document.createElement("div");
+favsTitle.classList.add("titlesandbtns","dropdown-header", "text-center","bg-color1","color6","mt-0");
+favsTitle.style.fontSize="large"
+favsTitle.innerHTML="Lista de favoritos"
+containerFavs.appendChild(favsTitle);
+const URL = 'http://localhost:3000/peliculas';
 
 
 let cats = ['Comedia', 'Terror', 'Drama', 'Acción', 'Ficción'];
@@ -165,54 +168,28 @@ function buildMovieCards(movies) {
     })
 }
 
-
-
-function modifyFavServer(movie) {
-    movie.fav = (movie.fav === true) ? false : true;
-    const newData = {
-        id: movie.id,
-        nombre: movie.nombre,
-        descripcion: movie.descripcion,
-        director: movie.director,
-        genero: movie.genero,
-        categoria: movie.categoria,
-        publicada: movie.publicada,
-        año: movie.año,
-        imagen: movie.imagen,
-        video: movie.video,
-        fav: movie.fav
-    };
-    editMovie(movie.id, newData);
-}
-
-function deleteFav(e) {
-    if (e.target.classList.contains("delete-fav"))
-        e.preventDefault(); {
-        let id = e.target.parentElement.parentElement.id;
-        getMovie(id)
-            .then(movie => modifyFavServer(movie))
-    }
-}
-
 getMovies()
-    .then(movies => buildMovieCards(movies))
-getMovies()
-    .then(movies => buildFavsList(movies))
+.then(movies => buildMovieCards(movies))
 
-containerCategories.addEventListener("click", (event) => {
-    if (event.target.classList.contains("angle-right")) {
-        console.log(event.target.parentElement.parentElement.parentElement);
-        console.log(event.target.parentElement.parentElement);
-        if (event.target.parentElement.id === 'Comedia' || event.target.parentElement.parentElement.id === 'Comedia') {
-            com.scrollLeft += 260;
-        } else if (event.target.parentElement.id === 'Terror' || event.target.parentElement.parentElement.id === 'Terror') {
-            ter.scrollLeft += 260;
-        } else if (event.target.parentElement.id === 'Drama' || event.target.parentElement.parentElement.id === 'Drama') {
-            dra.scrollLeft += 260;
-        } else if (event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción') {
-            acc.scrollLeft += 260;
-        } else{
-            cie.scrollLeft += 260;
+containerCategories.addEventListener("click",(event)=>{
+    if(event.target.classList.contains("angle-right"))
+    {   
+        if(event.target.parentElement.id === 'Comedia' || event.target.parentElement.parentElement.id === 'Comedia' )
+        {
+            com.scrollLeft+=260;
+        }else if(event.target.parentElement.id === 'Terror' || event.target.parentElement.parentElement.id === 'Terror')
+        {
+            ter.scrollLeft+=260;
+        } else if(event.target.parentElement.id === 'Drama' || event.target.parentElement.parentElement.id === 'Drama')
+        {
+            console.log("hola");
+            dra.scrollLeft+=260;
+        } else if(event.target.parentElement.id === 'Acción' || event.target.parentElement.parentElement.id === 'Acción')
+        {
+            acc.scrollLeft+=260;
+        } else
+        {
+            cie.scrollLeft+=260;
         }
     }
 })
@@ -232,128 +209,140 @@ containerCategories.addEventListener("click", (event) => {
     }
 })
 
-// containerCategories.addEventListener("click",modifyFav)
-// favoritesList.addEventListener("click", deleteFav)
-
-
-
-
-
-
-
-
-
 //----------------------FAVORITOS CON LOCAL STORAGE--------------------
 
-// function getMoviesLS()
-// {
-//     let movies;
-//     if(localStorage.getItem('movies')===null)
-//     {
-//         movies=[]
-//     }else{
-//         movies=JSON.parse(localStorage.getItem('movies'));
-//     }
-//     return movies;
-// }
+// SE SUPONE QUE DESDE EL LOGIN ME TRAE EN LOCAL STORAGE LOS FAVS (IMAGEN Y NOMBRE) APARTE DEL USER
+function getFavsLS() {
+    return JSON.parse(localStorage.getItem('favs'));
+}
 
-// function saveMoviesLS(movieInfo)
-// {
-//     let movies = getMoviesLS();
-//     movies.push(movieInfo);
-//     localStorage.setItem('movies', JSON.stringify(movies));
-// }
-// function addMovieToFavs(productInfo)
-// {
-//     const favorite=document.createElement("tr")
-//     favorite.id=`${productInfo.id}`;
-//     favorite.innerHTML=`
-//         <td class="img-fav">
-//             ${productInfo.imagen}
-//         </td>
-//         <td class="name-fav">
-//             ${productInfo.nombre}
-//         </td>
-//         <td class="close-fav">
-//             <a href=# class="delete-fav">&times</a>
-//         </td>
-//     `;
-//     favoritesList.appendChild(favorite);
-// }
-// function rendermoviesLS()
-// {
-//     let movies = getMoviesLS();
-//     movies.forEach((movie)=>{
-//     const favorite=document.createElement("tr")
-//     favorite.id=`${movie.id}`;
-//     favorite.innerHTML=`
-//         <td class="img-fav">
-//             ${movie.imagen}
-//         </td>
-//         <td class="name-fav">
-//             ${movie.nombre}
-//         </td>
-//         <td class="close-fav">
-//             <a href=# class="delete-fav">&times</a>
-//         </td>
-//     `;
-//     favoritesList.appendChild(favorite);
-//     })
-// }
-// function deleteFav(e)
-// {
-//     e.preventDefault();
-//     if(e.target.classList.contains("delete-fav"))
-//     {
-//         const removedElement = e.target.parentElement.parentElement
-//         const deleteId= removedElement.id;
-//         e.target.parentElement.parentElement.remove();
-//         console.log(deleteId);
-//         deleteFavLS(deleteId);
-//     }
-// }
-// function deleteFavLS(deleteId)
-// {
-//     console.log("hola");
-//     let movies = getMoviesLS();
-//     movies.forEach((movie,index)=>{
-//         if(movie.id === deleteId)
-//         {
-//             console.log("hola");
-//             movies.splice(index,1);
-//         }
-//     })
-//     localStorage.setItem("movies",JSON.stringify(movies));
-// }
-// document.addEventListener("DOMContentLoaded",rendermoviesLS);
-// containerCategories.addEventListener("click",(e)=>{
-//     e.preventDefault();
-//     if(e.target.classList.contains("fav-btn"))
-//     {
-//         let movieInfo=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
-//         if(movieInfo.classList.contains("movie"))
-//         {
-//             e.target.classList.add("color3")
-//             movieInfo=
-//             {
-//                 imagen: movieInfo.style.backgroundImage.slice(5,-2),
-//                 nombre: movieInfo.querySelector(".movie-title").textContent,
-//                 id: movieInfo.id
-//             }
-//         }
-//         else
-//         {
-//             e.target.children.classList.add("color3")
-//             movieInfo=movieInfo.querySelector(".movie");
-//             movieInfo=
-//             {
-//                 imagen: movieInfo.style.backgroundImage.slice(5,-2),
-//                 nombre: movieInfo.querySelector(".movie-title").textContent,
-//                 id: movieInfo.id
-//             }
-//         }
-//         addMovieToFavs(movieInfo)
-//         saveMoviesLS(movieInfo)
-//     }
-// })
-// document.addEventListener("click",deleteFav);
+function saveFavLS(favInfo)
+{
+    let favs = getFavsLS();
+    favs.push(favInfo);
+    localStorage.setItem('favs', JSON.stringify(favs));
+}
+function addFav(favInfo)
+{
+    const favorite=document.createElement("div")
+    favorite.id=`fav-${favInfo.id}`
+    favorite.style.width= "350px";
+    favorite.classList.add(`fav-${favInfo.id}`,"dropdown-item");
+    favorite.innerHTML=`
+    <div class="row no-gutters">
+        <div class="col-md-4" style="height:100px">
+            <img src="${favInfo.imagen}" class="card-img h-100" alt="...">
+        </div>
+        <div class="col-md-7">
+            <a href="detail.html#${favInfo.id}" class="text-decoration-none color1"><h5 class="card-title">${favInfo.nombre}</h5></a>
+        </div>
+        <div class="col-md-1">
+            <h3 class="delete-fav color2 ml-2" role="button">&times</h3>
+        </div>
+    </div>
+    <hr>
+    `;
+    containerFavs.appendChild(favorite);
+}
+function renderFavsLS()
+{
+    setTimeout(() => {
+        let favs = getFavsLS();
+        favs.forEach((fav)=>{
+            const favorite=document.createElement("div")
+            favorite.id=`fav-${fav.id}`
+            favorite.style.width= "350px";
+            favorite.classList.add(`fav-${fav.id}`,"dropdown-item");
+            favorite.innerHTML=`
+            <div class="row no-gutters">
+                <div class="col-md-4" style="height:100px">
+                    <img src="${fav.imagen}" class="card-img h-100" alt="...">
+                </div>
+                <div class="col-md-7">
+                    <a href="detail.html#${fav.id}" class="text-decoration-none color1"><h5 class="card-title">${fav.nombre}</h5></a>
+                </div>
+                <div class="col-md-1">
+                    <h3 class="delete-fav color2 ml-2" role="button">&times</h3>
+                </div>
+            </div>
+            <hr>
+            `;
+            containerFavs.appendChild(favorite);
+            document.getElementById(`${fav.id}`).querySelector('.fa-star').classList.add('color3');
+        })
+    },2000);
+}
+function deleteFav(e)
+{
+    e.preventDefault();
+    if(e.target.classList.contains("delete-fav"))
+    {
+        const removedElement = e.target.parentElement.parentElement.parentElement
+        const deleteId= removedElement.id.slice(4);
+        removedElement.remove();
+        deleteFavLS(deleteId);
+        document.getElementById(`${deleteId}`).querySelector('.fa-star').classList.remove('color3');
+    }
+}
+function deleteFavLS(deleteId)
+{
+    let favs = getFavsLS();
+    favs.forEach((fav,index)=>{
+        if(fav.id === deleteId)
+        {
+            favs.splice(index,1);
+        }
+    })
+    localStorage.setItem("favs",JSON.stringify(favs));
+}
+document.addEventListener("DOMContentLoaded",renderFavsLS);
+containerCategories.addEventListener("click",(e)=>{
+    if(e.target.classList.contains("fav-btn"))
+    {
+        e.preventDefault();
+        let favInfo=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
+        if(favInfo.classList.contains("movie"))
+        {
+            if (e.target.classList.contains("color3"))
+            {
+                e.target.classList.remove("color3")
+                containerFavs.querySelector(`.fav-${favInfo.id}`).remove()
+                deleteFavLS(favInfo.id)
+            }  
+            else{
+                e.target.classList.add("color3")
+                favInfo=
+                {
+                    imagen: favInfo.style.backgroundImage.slice(5,-2),
+                    nombre: favInfo.querySelector(".movie-title").textContent,
+                    id: favInfo.id
+                }
+                addFav(favInfo)
+                saveFavLS(favInfo)
+            }
+        }
+        else
+        {
+            favInfo=favInfo.querySelector(".movie");
+            if(e.target.children.classList.contains("color3"))
+            {
+                e.target.classList.remove("color3")
+                containerFavs.querySelector(`.fav-${favInfo.id}`).remove()
+                deleteFavLS(favInfo.id)
+            }
+            else
+            {
+                e.target.children.classList.add("color3")
+                favInfo=
+                {
+                    imagen: favInfo.style.backgroundImage.slice(5,-2),
+                    nombre: favInfo.querySelector(".movie-title").textContent,
+                    id: favInfo.id
+                }
+                addFav(favInfo)
+                saveFavLS(favInfo)
+            }
+        }
+    }
+})
+containerFavs.addEventListener("click",deleteFav);

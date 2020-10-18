@@ -187,14 +187,13 @@
       "nombre": "A.I. Rising",
       "descripcion": "Año 2048, Milutin ha emprendido un viaje a Alfa Centauri con la ayuda de Nimani, una androide con forma de mujer que, entre otras cosas, proporcionará compañía a Milutin, que la somete a una tórrida relación sexual. Harto de las funciones preestablecidas de la androide, el astronauta decide configurarla a partir de las experiencias que esta ha vivido… el resultado, sin embargo, no será el que él espera.",
       "director": "Lazar Bodroža",
-      "genero": "Ciencia Ficcion",
+      "genero": "Accion",
       "categoria": "ATP",
       "publicada": true,
-      "destacada": true,
-      "año": 2018,
+      "destacada": false,
+      "año": "2018",
       "imagen": "https://images-na.ssl-images-amazon.com/images/I/81Qupmv594L._RI_.jpg",
-      "video": "https://www.youtube.com/embed/iDdYMOiIn3Q",
-      "fav": false
+      "video": "https://www.youtube.com/embed/iDdYMOiIn3Q"
     },
     {
       "id": 16,
@@ -617,32 +616,88 @@
   ],
   "usuarios": [
     {
-      "id": 1,
       "nombre": "Antonella",
       "apellido": "Mercado",
+      "admin": false,
+      "id": 1,
       "email": "antonellamercado@gmail.com",
-      "password": "12345678"
+      "password": "12345678",
+      "favs": [
+        {
+          "imagen": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cecilia-roth-eloy-azorin-todo-sobre-mi-madre-1555343828.jpg",
+          "nombre": "Todo Sobre Mi Madre",
+          "id": "3"
+        },
+        {
+          "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/aKUByJaM2LlD2m7z1eI4XS1lU1J.jpg",
+          "nombre": "The Lie",
+          "id": "33"
+        }
+      ]
     },
     {
       "nombre": "Octavio",
       "apellido": "Saucedo",
       "email": "octa-saucedo@gmail.com",
       "password": "11111111",
-      "id": 2
+      "id": 2,
+      "favs": [],
+      "admin": false
     },
     {
       "nombre": "Lara",
-      "apellido": "Ojeda",
-      "email": "lara.ojeda@gmail.com",
+      "apellido": "Salas",
+      "admin": true,
+      "id": 3,
+      "email": "lara@gmail.com",
       "password": "12345678",
-      "id": 3
+      "favs": [
+        {
+          "imagen": "https://talenthouse-res.cloudinary.com/image/upload/c_limit,f_auto,fl_progressive,h_1280,w_1280/v1551300994/user-983649/submissions/co3snwlxk70nvxvpnqpj.jpg",
+          "nombre": "La llorona",
+          "id": "8"
+        }
+      ]
     },
     {
-      "nombre": "sds",
-      "apellido": "sasa",
-      "email": "seba_salas@hotmail.com",
+      "nombre": "seba",
+      "apellido": "salas",
+      "admin": false,
+      "id": 4,
+      "email": "seba@gmail.com",
       "password": "12345678",
-      "id": 4
+      "favs": [
+        {
+          "imagen": "https://miro.medium.com/max/2934/1*QIURFXvGPFWAv5W9FHQKpQ.jpeg",
+          "nombre": "The Unfamiliar",
+          "id": "7"
+        },
+        {
+          "imagen": "https://talenthouse-res.cloudinary.com/image/upload/c_limit,f_auto,fl_progressive,h_1280,w_1280/v1551300994/user-983649/submissions/co3snwlxk70nvxvpnqpj.jpg",
+          "nombre": "La llorona",
+          "id": "8"
+        },
+        {
+          "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/3eol8FnndIY8drMknjUnRCjYaIe.jpg",
+          "nombre": "Pledge",
+          "id": "20"
+        }
+      ]
+    },
+    {
+      "nombre": "Nico",
+      "apellido": "Estrada",
+      "admin": false,
+      "id": 5,
+      "email": "sebamercado@gmail.com",
+      "password": "12345678",
+      "favs": [
+        {
+          "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/7EKGHMsm3nv87wvlqD7HBZYgAeP.jpg",
+          "nombre": "3022",
+          "id": "24"
+        }
+      ]
     }
   ]
 }
