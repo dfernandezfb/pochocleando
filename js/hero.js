@@ -15,6 +15,12 @@ async function getPeliculas() {
     const data = await response.json();
     return data;
 }
+async function getPelicula(id) {
+    const newURL= `${URLpeliculas}/${id}`
+    const response = await fetch(newURL);
+    const data = await response.json();
+    return data;
+}
 async function buildSlides() {
     let series = await getSeries();
     let peliculas = await getPeliculas();
@@ -30,7 +36,7 @@ async function buildSlides() {
                     <div class= "d-flex align-items-center flex-column data-hero">
                     <h5 class="text title-black title titlesandbtns">${datos[i].nombre}</h5>
                     <p class="p-black text-center commontexts p-hero">${datos[i].descripcion}</p>
-                    <a href="error404.html"> <button class="btn-hero bi bi-play p-black titlesandbtns" id="btn-slide">
+                    <a href="detail.html#${datos[i].id}"> <button class="btn-hero bi bi-play p-black titlesandbtns" id="btn-slide">
                     <i class="fas fa-play"></i> REPRODUCIR </button>
                     </a>
                     </div>

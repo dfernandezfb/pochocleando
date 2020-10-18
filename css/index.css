@@ -4,9 +4,10 @@
     position: relative;
     display: inline-flex;
     justify-content: flex-end;
+    padding-top: 20px;
    }
    .lista{
-    display: none;
+    display: block;
     position: absolute;
     min-width: 160px;
     z-index: 9999;
@@ -14,7 +15,9 @@
     box-shadow: 0px 0px 5px black;
     opacity: 0.9;  
     overflow:auto;
-    top: 55px;
+    top: 70px;
+    padding: .5rem 1rem;
+    text-align: start;
 }
   .btn-user{
     outline: none;  
@@ -35,16 +38,9 @@
 
 .lista a:hover, a .btn-exit:hover{
     background-color: #010b1f;
-    color: #f0e0a0;
+   
 }
-
-.menu-user:hover .lista{
-    display: block;
-    padding: .5rem 1rem;
-}
-
 .menu-user:hover .btn-user{
-
 }
 .p-white {
     color: white;
@@ -85,8 +81,8 @@
 }
 
 .btn-hero:hover {
-    border: 2px solid #b08070;
-    color: #b08070;
+    border: 2px solid #c02020;
+    color: #c02020;
 }
 /* Hero Ro */    
 /**********************Fin Css Ro****************************/
