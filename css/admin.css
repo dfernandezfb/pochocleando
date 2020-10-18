@@ -371,8 +371,8 @@ p {
     .formulario {
         width: 100%;
         padding: 0.25em;
-        display: flex;
-        align-content: center;
+        /* display: flex;
+        align-content: center;*/
     }
     .formulario_boton {
         display: inline-block;
@@ -380,6 +380,7 @@ p {
     .formulario_mensaje {
         padding: 0.8em;
         margin: 0;
+        transform: translateY(-35%);
         text-align: center;
     }
     .formulario_mensaje_exito {

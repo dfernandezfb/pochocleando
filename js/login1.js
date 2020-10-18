@@ -20,16 +20,26 @@ function crear() {
     const bodyFormL = document.createElement('div');
     bodyFormL.innerHTML = `
  <div class="modal-body commontexts">
+ <div class="formulario_grupo" id="grupo_email">
  <label>Email</label>
  <br>
-  <input class="email formulario_input" type="email" id="emaill">
+ <div class="formulario_grupo_input">
+  <input class="email formulario_input" id="emaill">
+  <i class="formulario_validacion_estado fas fa-times-circle"></i>
+  </div>
   <div id="warning-email"></div>
+  </div>
   <br>
+ <div class="formulario_grupo" id="grupo_password">
   <label>Password</label>
   <br>
+  <div class="formulario_grupo_input">
   <input class="password formulario_input" type="password" id="passwordl">
+  <i class="formulario_validacion_estado fas fa-times-circle"></i>
+  </div>
   <div id="warning-pass"></div>
   <br>
+  </div>
   <div id="warning"></div>
 
 </div>
@@ -77,11 +87,30 @@ formToLogin.addEventListener("submit", e => {
     if (!Email.test(usuario.value)) {
         warningE += `El email no es válido <br>`
         entrarE = true
-
+        document.querySelector(`#grupo_email i`).classList.add('fa-times-circle');
+        document.getElementById(`grupo_email`).classList.add('formulario_grupo_incorrecto');
+        document.querySelector(`#grupo_email i`).classList.remove('fa-check-circle');
+        document.getElementById(`grupo_email`).classList.remove('formulario_grupo_correcto');
+    } else {
+        document.querySelector(`#grupo_email i`).classList.remove('fa-times-circle');
+        document.querySelector(`#grupo_email i`).classList.add('fa-check-circle');
+        document.getElementById(`grupo_email`).classList.remove('formulario_grupo_incorrecto');
+        document.getElementById(`grupo_email`).classList.add('formulario_grupo_correcto');
     }
+
+
     if (pass.value.length < 8) {
         warningP += `La contraseña no es válida`
+        document.querySelector(`#grupo_password i`).classList.add('fa-times-circle');
+        document.getElementById(`grupo_password`).classList.add('formulario_grupo_incorrecto');
+        document.querySelector(`#grupo_password i`).classList.remove('fa-check-circle');
+        document.getElementById(`grupo_password`).classList.remove('formulario_grupo_correcto');
         entrarP = true
+    } else {
+        document.querySelector(`#grupo_password i`).classList.remove('fa-times-circle');
+        document.querySelector(`#grupo_password i`).classList.add('fa-check-circle');
+        document.getElementById(`grupo_password`).classList.remove('formulario_grupo_incorrecto');
+        document.getElementById(`grupo_password`).classList.add('formulario_grupo_correcto');
     }
 
 
