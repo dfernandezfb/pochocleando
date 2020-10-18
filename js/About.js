@@ -1,7 +1,7 @@
 'use strict'
 const container = document.getElementById("root");
-let nombres = ['Diego Fernandez','Antonella Mercado','Romina Estrada','Sebastian Salas','Nicolas Sanchez','Florencia Ibañez','Tulio Ibañez'];
-let imagenes =['/img/Diego.jpeg','/img/Seba.jpg','/img/Nico.jpeg','/img/Romi.jpeg','/img/Anto.jpeg','/img/Tulio.jpeg']
+let nombres = ['Diego Fernandez','Antonella Mercado','Romina Estrada','Sebastian Salas','Nicolas Sanchez','Florencia Ibañez','Tulio Moya'];
+let imagenes =['/img/Diego.jpeg','/img/Seba.jpg','/img/Nico.jpeg','/img/Romi.jpeg','/img/Anto.jpeg','/img/Tulio.jpeg','/img/Flor.jpeg']
 // crear array de imagenes y probar en src
 
 
@@ -29,9 +29,9 @@ title2.innerHTML= `Dispositivos Compatibles`;
 const aboutus2= document.createElement('p');
 aboutus2.classList.add('nosotros','commontexts','color6');
 aboutus2.innerHTML= `Puedes ver Pochocleando a través de cualquier dispositivo con conexión a internet que cuente con la app de Pochocleando, 
-incluidos smart TV, consolas de juegos, reproductores multimedia, decodificadores, smartphones y tablets. <br> También puedes ver Pochocleando en tu computadora, en un navegador de internet. Para obtener información sobre los navegadores web compatibles, consulta los <a href="#"> requisitos del sistema</a>, además de nuestras recomendaciones sobre la velocidad de conexión a internet para lograr el mejor rendimiento. 
+incluidos smart TV, consolas de juegos, reproductores multimedia, decodificadores, smartphones y tablets. <br> También puedes ver Pochocleando en tu computadora, en un navegador de internet. Para obtener información sobre los navegadores web compatibles, consulta los <a class="a_about" href="#"> requisitos del sistema</a>, además de nuestras recomendaciones sobre la velocidad de conexión a internet para lograr el mejor rendimiento. 
 <br> ¿Necesitas ayuda para la configuración?
- Busca en nuestro <a href="#"> Centro de ayuda</a> el fabricante del dispositivo que estás utilizando.`;
+ Busca en nuestro <a class="a_about"  href="#"> Centro de ayuda</a> el fabricante del dispositivo que estás utilizando.`;
 
 const title3= document.createElement('h1');
 title3.classList.add('titulo','titlesandbtns');
@@ -45,9 +45,9 @@ aboutus3.innerHTML= `Somos un equipo pequeño y unido, centrado en hacer que Poc
 const card= document.createElement('div'); 
     card.innerHTML=
         `
-        <div class= "row">
+        <div class= "row row_s"  >
             <div class ="col-12 col-md-6 col-lg-4 col-xl-3 col-sm-6 mb-4 mx-auto">
-            <div class ="card">
+            <div class ="card bg-transparent ">
             <figure> <img class ="frontal" src=${imagenes[0]} />  
             <figcaption class="trasera">
             <h2 class="titlesandbtns"> ${nombres[0]} </h2>
@@ -60,7 +60,7 @@ const card= document.createElement('div');
             </div>
             
             <div class ="col-12 col-md-6 col-lg-4 col-xl-3 col-sm-6 mb-4 mx-auto">
-            <div class ="card">
+            <div class ="card bg-transparent bg-transparent ">
             <figure> <img class ="frontal" src=${imagenes[4]} />  
             <figcaption class="trasera">
             <h2 class="titlesandbtns"> ${nombres[1]} </h2>
@@ -73,7 +73,7 @@ const card= document.createElement('div');
             </div>
             
             <div class ="col-12 col-md-6 col-lg-4 col-xl-3 col-sm-6 mb-4 mx-auto">
-            <div class ="card">
+            <div class ="card bg-transparent ">
             <figure> <img class ="frontal" src=${imagenes[3]} />  
             <figcaption class="trasera">
             <h2 class="titlesandbtns"> ${nombres[2]} </h2>
@@ -86,7 +86,7 @@ const card= document.createElement('div');
             </div>
             
             <div class ="col-12 col-md-6 col-lg-4 col-xl-3 col-sm-6 mb-4 mx-auto">
-            <div class ="card">
+            <div class ="card bg-transparent ">
             <figure> <img class ="frontal" src=${imagenes[1]} />  
             <figcaption class="trasera">
             <h2 class="titlesandbtns"> ${nombres[3]} </h2>
@@ -99,7 +99,7 @@ const card= document.createElement('div');
             </div>
             
             <div class ="col-12 col-md-6 col-lg-4 col-xl-3 col-sm-6 mb-4 mx-auto">
-            <div class ="card">
+            <div class ="card bg-transparent ">
             <figure> <img class ="frontal" src=${imagenes[2]} />  
             <figcaption class="trasera">
             <h2 class="titlesandbtns"> ${nombres[4]} </h2>
@@ -112,8 +112,8 @@ const card= document.createElement('div');
             </div>
             
             <div class ="col-12 col-md-6 col-lg-4 col-xl-3 col-sm-6 mb-4 mx-auto">
-            <div class ="card">
-            <figure> <img class ="frontal" src=${imagenes[0]} />  
+            <div class ="card  bg-transparent">
+            <figure> <img class ="frontal" src=${imagenes[6]} />  
             <figcaption class="trasera">
             <h2 class="titlesandbtns"> ${nombres[5]} </h2>
             <hr>
@@ -125,7 +125,7 @@ const card= document.createElement('div');
             </div>
             
             <div class ="col-12 col-md-6 col-lg-4 col-xl-3 col-sm-6 mb-4 mx-auto">
-            <div class ="card">
+            <div class ="card bg-transparent ">
             <figure> <img class ="frontal" src=${imagenes[5]} />  
             <figcaption class="trasera">
             <h2 class="titlesandbtns"> ${nombres[6]} </h2>
@@ -136,7 +136,6 @@ const card= document.createElement('div');
             </figure>
             </div>
             </div>
-            
             
          </div>
             `
