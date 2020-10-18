@@ -18,8 +18,9 @@ const Recuperarcontraseña = document.createElement('div');
  Recuperarcontraseña.innerHTML = `
  <div class="modal-body commontexts">
   <h4>Ingrese su nombre de usuario o correo electrónico: </h4>
-<input  type="email" id="email" class="formulario_input effect" placeholder="Escriba su usuario o Correo" required>
-<p>Este Usuario no se encuentra registrado </p>
+<input  type="email" id="email" value="" class="formulario_input effect" placeholder="Escriba su usuario o Correo" required>
+<p id="Mensaje" > </p>
+<p id="Mensaje2"> </p>
 </div>
 `;
 
@@ -34,55 +35,45 @@ Modal.appendChild(HeaderModal);
 Modal.appendChild(Recuperarcontraseña);
 Modal.appendChild(footerRecuperarcontraseña);
 
-const email= document.getElementById("email");
+const email_rc= document.getElementById("email");
 const Obtenercontra = document.getElementById("botonmodal");
-Obtenercontra.addEventListener("click", getusuarios); 
-
-/* footerRecuperarcontraseña.addEventListener("click",parametros())
-function parametros(e) {  
-    alert("Verifique su casilla de correo");
-
-} */
+Obtenercontra.addEventListener("click", User); 
 
 
-function getusuarios() {
-    fetch('http://localhost:3000/usuarios')
-    .then((response)=>{
-        return response.json()
-    })
-
-.then((usuarios)=> {
-      usuarios.map(usuario => {
-          if ( email === `${usuario.email}`) {
-            
-               alert("usted esta registrado");
-              } else { 
-               alert("usted no ha sido registrado");
-              }
-            }) 
-            console.log('usuarios');
-    })
-} 
   
-
-/* 
- const URL= 'http://localhost:3000/usuarios';
-async function getUsuarios(){
-    const newURL = `${URL}`;
-    const response= await fetch(newURL)
-    const usuarios= response.json();
+async function getUsuarios (){
+    const response = await fetch("http://localhost:3000/usuarios")
+    const usuarios = await response.json()
     return usuarios
-}
-getUsuarios() 
-.then(usuario => renderEmail(usuario));
+   }
 
-function renderEmail(usuario) {
-    usuarios.map(usuario => 
-        {
-            if ( email == `${usuario.email}`) { 
-                return alert("verifique su casilla de correo ");
-            } else { 
-                return alert("usted no ha sido registrado");
-            }
-        }) 
-    } */
+  let mensaje = document.getElementById('Mensaje');
+  mensaje.classList.add("font-italic");
+  let Mensaje2= document.getElementById('Mensaje2');
+  Mensaje2.classList.add("font-italic");
+  
+  mensaje.innerHTML = ""; 
+  Mensaje2.innerHTML="";
+  function User(e,usuarios)
+  {  
+    e.preventDefault();  
+    let h=0;
+    getUsuarios()
+      .then(usuarios => {  
+          usuarios.map(usuario => {
+          if  ( usuario.email === email_rc.value ){
+              h=1;
+              console.log(email.value)
+              console.log(usuario.email)
+             mensaje.innerHTML= `Revise su correo electronico, le enviamos los pasos a seguir para modificar su contraseña` ;
+             /* Mensaje2.classList.add('check'); */ 
+             Modal.reset();
+          } 
+        })
+          if (h==0){
+                  console.log('estoy eb el else',email.value)
+                mensaje.innerHTML= `El usuario no se encuentra registrado en nuestra base de datos, por favor <a data-toggle="modal" data-target="#registerModal" href="" > cree una cuenta </a>`;
+              } 
+     })
+ }
+   

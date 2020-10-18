@@ -35,6 +35,7 @@ function crear() {
 `;
     const footerFormL = document.createElement('div');
     footerFormL.innerHTML = `<div class="modal-footer">
+    <a  class="a_recuperarcontraseña" data-toggle="modal" data-target="#modalR">Recuperar contraseña </a>
     <button type="submit" class="btn bg-color2 color3  aceptar titlesandbtns" id="loginModal">Ingresar</button>
     <button type="button" class="btn bg-color2 color3  titlesandbtns" data-dismiss="modal">Cancelar</button>
     </div>

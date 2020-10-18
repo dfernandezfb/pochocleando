@@ -9,7 +9,7 @@
 }
 
 .boton_modal:hover {
-    background-color:  #DC143C;
+    color:black;
 }
 
 .formulario_input {
@@ -24,4 +24,14 @@
   transition: all 0.5s ease; 
     border-radius: 6px;
     font-size: 1.2em;
+}
+
+.check {
+    display: none;
+    color: #F0E0A0;
+}
+
+.check_activo {
+    display: block;
+    color: #F0E0A0;
 }

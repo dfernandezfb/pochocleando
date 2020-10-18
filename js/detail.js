@@ -47,7 +47,7 @@ getmovie()
             
             const btn= document.createElement('button');
             btn.classList.add('botonD'); 
-            btn.innerHTML = `<a class="class_a_href" href="#"> <i class="fas fa-play"></i>Reproducir </a>`
+            btn.innerHTML = `<a class="class_a_href" href="error404.html"> <i class="fas fa-play"></i>Reproducir </a>`
             
             const btn1= document.createElement('button');
             btn1.classList.add('botonD'); 
