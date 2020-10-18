@@ -111,19 +111,19 @@ warn.classList.add("font-italic");
 function checkUser(usuarios) {
     let y = 0
     warn.innerHTML = ""
-    usuarios.map(user => {
-        if (usuario.value === user.email && pass.value === user.password) {
+    usuarios.map(usuarioS=> {
+        if (usuario.value === usuarioS.email && pass.value === usuarioS.password) {
 
             const user = {
-                nombre: user.nombre,
-                apellido: user.apellido,
-                admin: user.admin,
-                id:user.id,
-                email:user.email,
-                password:user.password,
-                favs:user.favs
+                nombre: usuarioS.nombre,
+                apellido: usuarioS.apellido,
+                admin: usuarioS.admin,
+                id:usuarioS.id,
+                email:usuarioS.email,
+                password:usuarioS.password,
+                favs:usuarioS.favs
             }
-            const favs = user.favs
+            const favs = usuarioS.favs
             localStorage.setItem("user", JSON.stringify(user))
             localStorage.setItem("favs", JSON.stringify(favs))
             y = 1

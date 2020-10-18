@@ -297,9 +297,9 @@ function deleteFavLS(deleteId)
 }
 document.addEventListener("DOMContentLoaded",renderFavsLS);
 containerCategories.addEventListener("click",(e)=>{
-    e.preventDefault();
     if(e.target.classList.contains("fav-btn"))
     {
+        e.preventDefault();
         let favInfo=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
         if(favInfo.classList.contains("movie"))
         {
