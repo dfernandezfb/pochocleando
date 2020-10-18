@@ -3,11 +3,6 @@
 const menuHome = document.querySelector('.menu-home');
 const menuUser = document.querySelector('.menu-user');
 
-let user = {
-    nombre: "Romina",
-    apellido: "Estrada",
-    admin: true,
-}
 
 menuUser.innerHTML = `
 <div role="button" class=" btn-user">
@@ -15,13 +10,7 @@ menuUser.innerHTML = `
 `
 const imgAvatar = document.querySelector('.avatar');
 
-saveUserOnLS(user);
-
 showUser();
-
-function saveUserOnLS(user) {
-    localStorage.setItem('user', JSON.stringify(user));
-}
 
 function showUser() {
     let user = JSON.parse(localStorage.getItem('user'));
@@ -56,5 +45,33 @@ function showLista() {
     else lista.style.visibility = "hidden";
 }
 function removeUserFromLS(user) {
+    let user = JSON.parse(localStorage.getItem('user'));
+    const favs = JSON.parse(localStorage.getItem('favs'));
+    user={
+            nombre: user.nombre,
+            apellido: user.apellido,
+            admin: user.admin,
+            id:user.id,
+            email:user.email,
+            password:user.password,
+            favs:favs
+        }
+    editUser(user.id,user)
     localStorage.removeItem('user');
+}
+
+/* ASINCRONO DE BORRADO DE FAVS */
+async function editUser(id, newData) {
+    const URL = 'http://localhost:3000/usuarios'
+    const newURL = `${URL}/${id}`;
+    const response = await fetch(newURL, {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newData)
+    });
+    const data = await response.json();
+    return data;
 }

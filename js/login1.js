@@ -19,26 +19,25 @@ function crear() {
 `;
     const bodyFormL = document.createElement('div');
     bodyFormL.innerHTML = `
- <div class="modal-body commontexts">
- <label>Email</label>
- <br>
-  <input class="email formulario_input" type="email" id="emaill">
-  <div id="warning-email"></div>
-  <br>
-  <label>Password</label>
-  <br>
-  <input class="password formulario_input" type="password" id="passwordl">
-  <div id="warning-pass"></div>
-  <br>
-  <div id="warning"></div>
-
-</div>
+    <div class="modal-body commontexts">
+    <label>Email</label>
+    <br>
+    <input class="email formulario_input" type="email" id="emaill">
+    <div id="warning-email"></div>
+    <br>
+    <label>Password</label>
+    <br>
+    <input class="password formulario_input" type="password" id="passwordl">
+    <div id="warning-pass"></div>
+    <br>
+    <div id="warning"></div>
+    </div>
 `;
     const footerFormL = document.createElement('div');
     footerFormL.innerHTML = `<div class="modal-footer">
-<button type="submit" class="btn bg-color2 color3  aceptar titlesandbtns" id="loginModal">Ingresar</button>
-<button type="button" class="btn bg-color2 color3  titlesandbtns" data-dismiss="modal">Cancelar</button>
-</div>
+    <button type="submit" class="btn bg-color2 color3  aceptar titlesandbtns" id="loginModal">Ingresar</button>
+    <button type="button" class="btn bg-color2 color3  titlesandbtns" data-dismiss="modal">Cancelar</button>
+    </div>
 `;
 
     formToLogin.appendChild(headerFormL);
@@ -115,19 +114,21 @@ function checkUser(usuarios) {
     usuarios.map(user => {
         if (usuario.value === user.email && pass.value === user.password) {
 
-            const datos = {
+            const user = {
                 nombre: user.nombre,
                 apellido: user.apellido,
-                admin: user.admin
-
-
+                admin: user.admin,
+                id:user.id,
+                email:user.email,
+                password:user.password,
+                favs:user.favs
             }
-            localStorage.setItem("datos", JSON.stringify(datos))
+            const favs = user.favs
+            localStorage.setItem("user", JSON.stringify(user))
+            localStorage.setItem("favs", JSON.stringify(favs))
             y = 1
             window.location.href = window.location.origin + "/index.html"
-
-
-        }
+    }
 
 
     })
