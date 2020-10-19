@@ -88,7 +88,7 @@
 /* landingContainer */
 
 #landingHero {
-    background-image: url(/img/Movies-background.png);
+    background-image: url(../img/Movies-background.png);
     /* background: linear-gradient(to bottom right, #c02020 0%, #0c1113 100%); */
     width: 100%;
     height: 100vh;

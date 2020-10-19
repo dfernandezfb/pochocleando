@@ -1,7 +1,7 @@
 'use strict'
 const container = document.getElementById("root");
 let nombres = ['Diego Fernandez','Antonella Mercado','Romina Estrada','Sebastian Salas','Nicolas Sanchez','Florencia Ibañez','Tulio Moya'];
-let imagenes =['/img/Diego.jpeg','/img/Seba.jpg','/img/Nico.jpeg','/img/Romi.jpeg','/img/Anto.jpeg','/img/Tulio.jpeg','/img/Flor.jpeg']
+let imagenes =['./img/Diego.jpeg','./img/Seba.jpg','./img/Nico.jpeg','./img/Romi.jpeg','./img/Anto.jpeg','./img/Tulio.jpeg','./img/Flor.jpeg']
 // crear array de imagenes y probar en src
 
 

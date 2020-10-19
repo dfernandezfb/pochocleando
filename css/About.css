@@ -31,7 +31,7 @@ body {
 	flex-wrap: wrap;
 }
 .vacio {
-	background: url(/img/cinePochocleando.jpg);
+	background: url(../img/cinePochocleando.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100vw 90vh; 
@@ -183,7 +183,7 @@ figure .trasera p {
    }
    
    .vacio {
-	   background: url(/img/cinePochocleando.jpg);
+	   background: url(../img/cinePochocleando.jpg);
 	   background-repeat: no-repeat;
 	   background-attachment: fixed;
 	   background-size: 100vw 90vh;
@@ -375,3 +375,37 @@ footer{
   .copyright-legal{
 	background-color: #181a1d;
   }
+
+.landingHeader {
+    background-color: rgba(12, 17, 19, 0.7);
+    width: 100%;
+    /* height: 10%; */
+    position: absolute;
+    /* z-index: 0; */
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:740px) {
+    .headerContainer {
+        display: flex;
+        justify-content: center;
+        min-width: 385px;
+    }
+    .landingHeader {
+        width: 90%;
+        height: 100%;
+        display: block;
+    }
+    #logoImg {
+        margin: 15%;
+    }
+    #buttonInicio {
+        width: 100%;
+        height: 50px;
+        padding-top: 0px;
+    }
+    #textLanding {
+        display: none;
+    }
+}
