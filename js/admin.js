@@ -3,16 +3,17 @@ const rootAdmin = document.querySelector(".movies-table");
 const moviesTable = document.createElement("table");
 let idSelected;
 moviesTable.classList.add("table")
+moviesTable.classList.add("table-sm");
 moviesTable.innerHTML = `
-<thead class="thead-dark">
-<tr>
+<thead class="thead-dark col-sm-5">
+<tr class="col-sm-5">
         <th scope="col">Nombre</th>
-        <th scope="col">Director</th>
-        <th scope="col">Género</th>
-        <th scope="col">Categoría</th>
-        <th scope="col">Año</th>
-        <th scope="col">Publicada</th>
-        <th scope="col">Destacada</th>
+        <th class="table-director" scope="col">Director</th>
+        <th class="table-genero" scope="col">Género</th>
+        <th class="table-categoria" scope="col">Categoría</th>
+        <th class="table-año" scope="col">Año</th>
+        <th  scope="col">Publicada</th>
+        <th  class="table-destacada" scope="col">Destacada</th>
         </tr>
         </thead>
         <tbody></tbody>
@@ -33,12 +34,12 @@ function generateTable(movies) {
         row.classList.add("color6", "row-movie")
         row.innerHTML = `
         <th scope="row">${movie.nombre}</th>
-        <td>${movie.director}</td>
-        <td>${movie.genero}</td>
-        <td>${movie.categoria}</td>
-        <td>${movie.año}</td>
-        <td>${movie.publicada}</td>
-        <td>${movie.destacada}</td>
+        <td  class="table-director">${movie.director}</td>
+        <td class="table-genero">${movie.genero}</td>
+        <td  class="table-categoria">${movie.categoria}</td>
+        <td  class="table-año">${movie.año}</td>
+        <td  >${movie.publicada}</td>
+        <td  class="table-destacada">${movie.destacada}</td>
         `;
         document.querySelector("tbody").appendChild(row);
     })
