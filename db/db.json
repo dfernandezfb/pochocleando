@@ -18,11 +18,11 @@
       "nombre": "Pulp Fiction",
       "descripcion": "Jules y Vincent, dos asesinos a sueldo con no demasiadas luces, trabajan para el gángster Marsellus Wallace. Vincent le confiesa a Jules que Marsellus le ha pedido que cuide de Mia, su atractiva mujer. Jules le recomienda prudencia porque es muy peligroso sobrepasarse con la novia del jefe. Cuando llega la hora de trabajar, ambos deben ponerse manos a la obra . Su misión: recuperar un misterioso maletín",
       "director": "Tarantino",
-      "genero": "Acción",
+      "genero": "Accion",
       "categoria": "+18",
+      "publicada": false,
       "destacada": false,
-      "publicada": true,
-      "año": 1994,
+      "año": "1994",
       "imagen": "https://c4.wallpaperflare.com/wallpaper/34/559/656/pulp-fiction-wallpaper-preview.jpg",
       "video": "https://www.youtube.com/embed/tGpTpVyI_OQ"
     },
@@ -33,9 +33,9 @@
       "director": "Almodobar",
       "genero": "Drama",
       "categoria": "+18",
-      "destacada": true,
       "publicada": true,
-      "año": 1999,
+      "destacada": false,
+      "año": "1999",
       "imagen": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cecilia-roth-eloy-azorin-todo-sobre-mi-madre-1555343828.jpg",
       "video": "https://www.youtube.com/embed/jzMRQQmHBq4"
     },
@@ -161,11 +161,11 @@
       "nombre": "Los elegidos",
       "descripcion": "Los Barret son una familia que vive en los suburbios. Lacey y Daniel (Keri Russell & Josh Hamilton) presencian una serie de extraños acontecimientos perturbadores que afectan a su familia, a su seguridad y a su tranquilidad. Cuando descubren que su familia es el objetivo de una inimaginable y terrorífica fuerza mortal, ambos tendrán que hacer todo lo que esté en sus manos para resolver este oscuro misterio.",
       "director": "Jean-Paul Chreky, Renetta G. Amador, Scott Stewart",
-      "genero": "Ciencia Ficcion",
+      "genero": "Accion",
       "categoria": "ATP",
-      "destacada": true,
       "publicada": true,
-      "año": 2013,
+      "destacada": false,
+      "año": "2013",
       "imagen": "https://i.pinimg.com/564x/33/7b/5a/337b5a044a54a7cc14d7162313d34cb0.jpg",
       "video": "https://www.youtube.com/embed/7axk1-oDckA"
     },
@@ -174,11 +174,11 @@
       "nombre": "Matrix Revolutions",
       "descripcion": "La tercera parte de “Matrix” forma junto a “Matrix Reloaded” una película dividida en dos debido a su larga duración. Matrix Revolutions tiene lugar en su mayor parte en en el mundo real, en el que Neo, Trinity y Morpheo lucharán contra el avance de las máquinas hacia la ciudad de Zion, último reducto de la raza humana.",
       "director": "James McTeigue, Lana Wachowski, Lilly Wachowski",
-      "genero": "Ciencia Ficcion",
+      "genero": "Accion",
       "categoria": "ATP",
-      "destacada": true,
       "publicada": true,
-      "año": 2003,
+      "destacada": false,
+      "año": "2003",
       "imagen": "https://i.pinimg.com/originals/f6/96/0f/f6960f943173ad56be05100bc5c6a919.png",
       "video": "https://www.youtube.com/embed/hMbexEPAOQI"
     },
@@ -187,27 +187,26 @@
       "nombre": "A.I. Rising",
       "descripcion": "Año 2048, Milutin ha emprendido un viaje a Alfa Centauri con la ayuda de Nimani, una androide con forma de mujer que, entre otras cosas, proporcionará compañía a Milutin, que la somete a una tórrida relación sexual. Harto de las funciones preestablecidas de la androide, el astronauta decide configurarla a partir de las experiencias que esta ha vivido… el resultado, sin embargo, no será el que él espera.",
       "director": "Lazar Bodroža",
-      "genero": "Ciencia Ficcion",
+      "genero": "Accion",
       "categoria": "ATP",
       "publicada": true,
-      "destacada": true,
-      "año": 2018,
+      "destacada": false,
+      "año": "2018",
       "imagen": "https://images-na.ssl-images-amazon.com/images/I/81Qupmv594L._RI_.jpg",
-      "video": "https://www.youtube.com/embed/iDdYMOiIn3Q",
-      "fav": false
+      "video": "https://www.youtube.com/embed/iDdYMOiIn3Q"
     },
     {
+      "id": 16,
       "nombre": "Bob Esponja: Un héroe fuera del agua",
       "descripcion": "La vida en Fondo de Bikini no podría ser mejor para un eterno optimista como Bob Esponja (Tom Kenny) y sus amigos: la fiel estrella de mar Patricio (Bill Fagerbakke), el sarcástico Calamardo (Rodger Bumpass), la ardilla y científica Arenita (Carolyn Lawrence) y el crustáceo capitalista, Sr. Cangrejo (Clancy Brown). Cuando alguien roba la receta ultrasecreta de las Cangreburgers, los perpetuos enemigos Bob Esponja y Plankton (Mr. Lawrence) tendrán que unir sus fuerzas en un viaje a través del tiempo y el espacio para controlar sus superpoderes internos y enfrentarse al malvado pirata Barba Burger (Antonio Banderas), quien tiene sus propios planes para esas deliciosas exquisiteces.",
       "director": "Bob Camp, Carla Rose Ponzio",
-      "genero": "DComedia",
+      "genero": "Accion",
       "categoria": "atp",
-      "anio": "2015",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
+      "año": "2015",
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/nbojNXZKLRrfbEOvvqssaiXqcdv.jpg",
-      "video": "https://www.youtube.com/embed/ISUMMHr1D3A",
-      "id": 16
+      "video": "https://www.youtube.com/embed/ISUMMHr1D3A"
     },
     {
       "nombre": "Books of Blood",
@@ -215,9 +214,9 @@
       "director": "Brannon Braga",
       "genero": "Terror",
       "categoria": "ATP",
-      "anio": "2020",
+      "año": "2020",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/bXLVZGgLgd7OwbfP6fC5GCfrxuD.jpg",
       "video": "https://www.youtube.com/embed/k-BVMDGFMkA",
       "id": 17
@@ -228,9 +227,9 @@
       "director": "Mary Agnes Donoghue",
       "genero": "Comedia",
       "categoria": "ATP",
-      "anio": "2015",
+      "año": "2015",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/Aprcrx3hwiFU9z5Ek5p6bi2yW2g.jpg",
       "video": "https://www.youtube.com/embed/d1j_etigUMo",
       "id": 18
@@ -241,9 +240,9 @@
       "director": "Jim Mickle",
       "genero": "Ciencia Ficcion",
       "categoria": "ATP",
-      "anio": "2019",
+      "año": "2019",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/nn1LVyYKASSsxEp4JCyBRYe3a27.jpg",
       "video": "https://www.youtube.com/embed/srRgqeojKyM",
       "id": 19
@@ -254,25 +253,25 @@
       "director": "Daniel Robbins",
       "genero": "Terror",
       "categoria": "+13",
-      "anio": "2019",
+      "año": "2019",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/3eol8FnndIY8drMknjUnRCjYaIe.jpg",
       "video": "https://www.youtube.com/embed/o-fFgAQl0oM",
       "id": 20
     },
     {
-      "nombre": "The Purge 2: Anarchy (12 horas para sobrevivir)",
+      "id": 21,
+      "nombre": "The Purge 2: Anarchy",
       "descripcion": "Secuela de la película The Purge. La noche de las bestias (2013). En la película original, el gobierno de Estados Unidos permite que, durante una noche, cualquier acto vandálico sea legal. De esta forma intentan reducir el número de criminales, ya que las cárceles del país se encuentran saturadas. La idea surge de la teoría de que todo ser humano tiene maldad en su interior, maldad que en algún momento saldrá a la luz. En esta situación, las personas que tienen dinero tienen más posibilidades que las pobres, ya que estas últimas no tienen los medios necesarios para defenderse de los que les quieran hacer daño. Así, una pregunta sale a la luz: ¿Cómo poder sobrevivir a los criminales sin convertirse en uno?",
       "director": "Amy Price-Francis",
       "genero": "Terror",
       "categoria": "+18",
-      "anio": "2018",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
+      "año": "2018",
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/ynDDbzVge9AzuTkeyw8JcKr58Cq.jpg",
-      "video": "https://www.youtube.com/embed/osI4Ii6a3D4",
-      "id": 21
+      "video": "https://www.youtube.com/embed/osI4Ii6a3D4"
     },
     {
       "nombre": "Yo no soy tu mami",
@@ -280,9 +279,9 @@
       "director": "Marcos Carnevale",
       "genero": "Comedia",
       "categoria": "atp",
-      "anio": "2019",
+      "año": "2019",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/hY7M9XEAcD4xY2rKbGfiHMi2kTC.jpg",
       "video": "https://www.youtube.com/embed/cJVBYkA57yc",
       "id": 22
@@ -293,9 +292,9 @@
       "director": "Chris Buck, Jennifer Lee",
       "genero": "Comedia",
       "categoria": "atp",
-      "anio": "2015",
+      "año": "2015",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://cuevana3.io/wp-content/uploads/2017/08/frozen-fever-368-poster-200x300.jpg",
       "video": "https://www.youtube.com/embed/bQRLVxZHKPs",
       "id": 23
@@ -306,25 +305,25 @@
       "director": "John Suits",
       "genero": "Ciencia Ficcion",
       "categoria": "atp",
-      "anio": "2019",
+      "año": "2019",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/7EKGHMsm3nv87wvlqD7HBZYgAeP.jpg",
       "video": "https://www.youtube.com/embed/zF3VsTjoQS0",
       "id": 24
     },
     {
+      "id": 25,
       "nombre": "El hombre invisible",
       "descripcion": "Después de que su abusivo ex novio se suicide, la ingenua viuda Cecilia comienza a reconstruir su vida para mejor. Sin embargo, su sentido de la realidad se pone en tela de juicio cuando comienza a sospechar que su ex novio en realidad no está muerto, como había pensado.",
       "director": "Leigh Whannell",
-      "genero": "Ciencia Ficcion",
+      "genero": "Accion",
       "categoria": "atp",
-      "anio": "2020",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
+      "año": "2020",
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/tRGIqrs4Z2aIZPVRcapvgGnTLnI.jpg",
-      "video": "https://www.youtube.com/embed/Yghnm_17a8w",
-      "id": 25
+      "video": "https://www.youtube.com/embed/Yghnm_17a8w"
     },
     {
       "nombre": "Time Trap",
@@ -332,9 +331,9 @@
       "director": "Ben Foster, Mark Dennis",
       "genero": "Ciencia Ficcion",
       "categoria": "atp",
-      "anio": "2017",
+      "año": "2017",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/3qIBGXM6oXOu3wBYH6QpamXdXuB.jpg",
       "video": "https://www.youtube.com/embed/LN-3naSeKno",
       "id": 26
@@ -345,9 +344,9 @@
       "director": "AT White",
       "genero": "Ciencia Ficcion",
       "categoria": "atp",
-      "anio": "2017",
+      "año": "2017",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/ellZ2dQLPVeWgd2fjf4arcZwALc.jpg",
       "video": "https://www.youtube.com/embed/4inpM9tlock",
       "id": 27
@@ -358,9 +357,9 @@
       "director": "Owen Mulligan",
       "genero": "Ciencia Ficcion",
       "categoria": "+18",
-      "anio": "2017",
+      "año": "2017",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/xW8IgkpKPICmBeLjBi4SXFu48Zb.jpg",
       "video": "https://www.youtube.com/embed/bIBi8cdclHs",
       "id": 28
@@ -371,9 +370,9 @@
       "director": "Dallas Jackson",
       "genero": "Acción",
       "categoria": "atp",
-      "anio": "2020",
+      "año": "2020",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/elZ6JCzSEvFOq4gNjNeZsnRFsvj.jpg",
       "video": "https://www.youtube.com/embed/TpWiJWRSKIQ",
       "id": 29
@@ -384,9 +383,9 @@
       "director": "Nick Powell",
       "genero": "Acción",
       "categoria": "+18",
-      "anio": "2019",
+      "año": "2019",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/v0Air5GTsfgtjsnZyji2lH6r2b8.jpg",
       "video": "https://www.youtube.com/embed/xpxT6lWQDA4",
       "id": 30
@@ -397,9 +396,9 @@
       "director": "Damien Morley, Dave Wiltshire, Paul Knight",
       "genero": "Acción",
       "categoria": "+18",
-      "anio": "2020",
+      "año": "2020",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/3RrXYB2QilQ1xQXlRIncdVXTKIU.jpg",
       "video": "https://www.youtube.com/embed/zKdbz4KNNAI",
       "id": 31
@@ -410,9 +409,9 @@
       "director": "Michael Polish",
       "genero": "Acción",
       "categoria": "atp",
-      "anio": "2020",
+      "año": "2020",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/ucktgbaMSaETUDLUBp1ubGD6aNj.jpg",
       "video": "https://www.youtube.com/embed/d61GX5VoEJc",
       "id": 32
@@ -423,9 +422,9 @@
       "director": "Veena Sud",
       "genero": "Drama",
       "categoria": "atp",
-      "anio": "2016",
+      "año": "2016",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/aKUByJaM2LlD2m7z1eI4XS1lU1J.jpg",
       "video": "https://www.youtube.com/embed/lrwhHRYDkgs",
       "id": 33
@@ -436,9 +435,9 @@
       "director": "Perry Bhandal",
       "genero": "Drama",
       "categoria": "atp",
-      "anio": "2019",
+      "año": "2019",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/ygUsgb6WSTZ4iyZJXpjswgngqBY.jpg",
       "video": "https://www.youtube.com/embed/QB69KYPOKe8",
       "id": 34
@@ -449,9 +448,9 @@
       "director": "Joe Mantello",
       "genero": "Drama",
       "categoria": "+16",
-      "anio": "2020",
+      "año": "2020",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/2D2gi13hnrXWaspWuWmdbEZ8bef.jpg",
       "video": "https://www.youtube.com/embed/862Pb9oDDAo",
       "id": 35
@@ -462,9 +461,9 @@
       "director": "Chinonye Chukwu",
       "genero": "Drama",
       "categoria": "atp",
-      "anio": "2019",
+      "año": "2019",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/c03mA6GYRqcRLgxXQpKcYWEKxRn.jpg",
       "video": "https://www.youtube.com/embed/HzUhz2XkFfE",
       "id": 36
@@ -475,12 +474,25 @@
       "director": "Bruno Gascon",
       "genero": "Drama",
       "categoria": "atp",
-      "anio": "2018",
+      "año": "2018",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/l69vmy7RaPMRKOHTE5U40unE8j.jpg",
       "video": "https://www.youtube.com/embed/IWyrDba0lDc",
       "id": 37
+    },
+    {
+      "nombre": "asdasd",
+      "descripcion": "asdasdas",
+      "director": "asdasd",
+      "genero": "Acción",
+      "categoria": "asdads",
+      "año": "asda",
+      "publicada": true,
+      "destacada": false,
+      "imagen": "asdasd",
+      "video": "asdasd",
+      "id": 38
     }
   ],
   "series": [
@@ -488,165 +500,231 @@
       "id": 1,
       "nombre": "The Last O.G",
       "descripcion": "Tras quince años en prisión, Tray queda en libertad y restablece el vínculo con su ahora adulto primo Bobby. Además, se sorprende al enterarse que su ex, Shay, no solo está casada con un hombre blanco, sino que ocultó que tuvo mellizos hace 15 años.",
-      "año": 2018,
-      "destacada": true,
-      "temporadas": 3,
-      "duracion": "30min",
-      "calificacion": 4.5,
-      "calidad": "HD",
+      "director": "Jordan Peele, John Carcieri",
       "genero": "Comedia",
-      "origen": "EEUU",
-      "imagen": "https://images.tntdrama.com/tnt/$dyna_params/https%3A%2F%2Fi.cdn.tntdrama.com%2Fassets%2Fimages%2F2019%2F04%2FLastOG-2048x1536.jpg"
+      "categoria": "ATP",
+      "destacada": true,
+      "publicada": true,
+      "año": 2018,
+      "imagen": "https://images.tntdrama.com/tnt/$dyna_params/https%3A%2F%2Fi.cdn.tntdrama.com%2Fassets%2Fimages%2F2019%2F04%2FLastOG-2048x1536.jpg",
+      "video": "https://www.youtube.com/watch?v=CtgJkBU6uGk&ab_channel=RottenTomatoesTV"
     },
     {
       "id": 2,
       "nombre": "Apache: La vida de Carlos Tevez",
       "descripcion": "El ascenso de Carlos Tevez, figura del fútbol argentino, desde una infancia problemática en medio de un barrio rodeado de pandillas y violencia, hasta su debut en Boca Juniors.",
-      "año": 2019,
-      "destacada": true,
-      "temporadas": 1,
-      "duracion": "35min",
-      "calificacion": 6,
-      "calidad": "2K",
+      "director": "Balthazar Murillo,Vanesa González,Alberto Ajaka",
       "genero": "Drama",
-      "origen": "ARG",
-      "imagen": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/08/14142213/El-Apache-La-vida-de-Carlos-Tevez-2.jpg"
+      "categoria": "ATP",
+      "destacada": true,
+      "publicada": true,
+      "año": 2019,
+      "imagen": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/08/14142213/El-Apache-La-vida-de-Carlos-Tevez-2.jpg",
+      "video": "https://www.youtube.com/watch?v=cJddE9XX2ds&ab_channel=NetflixLatinoam%C3%A9rica"
     },
     {
       "id": 3,
       "nombre": "QUIZ",
       "descripcion": "La historia de Charles Ingram, un ex militar británico que causó un gran escándalo luego de ser acusado de hacer trampa tras haber ganado el premio mayor en el programa ¿Quién quiere ser milllonario?",
-      "año": 2020,
-      "destacada": false,
-      "temporadas": 1,
-      "duracion": "46min",
-      "calificacion": 5,
-      "calidad": "1080p",
+      "director": "Stephen Frears",
       "genero": "Drama",
-      "origen": "UK",
-      "imagen": "https://miro.medium.com/max/1200/1*W8JFEYBCnW5rmw9Y1VQ54A.jpeg"
+      "categoria": "ATP",
+      "destacada": false,
+      "publicada": true,
+      "año": 2020,
+      "imagen": "https://miro.medium.com/max/1200/1*W8JFEYBCnW5rmw9Y1VQ54A.jpeg",
+      "video": "https://www.youtube.com/watch?v=K1boLn4lUjg&ab_channel=RottenTomatoesTV"
     },
     {
       "id": 4,
       "nombre": "Monzón",
       "descripcion": "Un recorrido por la vida de Carlos Monzón, campeón mundial de los pesos medianos y protagonista de uno de los primeros femicidios que sacudieron a la opinión pública argentina.",
-      "año": 2019,
-      "destacada": false,
-      "temporadas": 1,
-      "duracion": "35min",
-      "calificacion": 5.5,
-      "calidad": "4K",
+      "director": "Jesús Braceras",
       "genero": "Drama",
-      "origen": "ARG",
-      "imagen": "https://www.cuatromedios.com.ar/asset/thumbnail,1140,1140,center,center//media/cuatromedios/images/2019/06/05/2019060523150424199.jpg"
+      "categoria": "ATP",
+      "destacada": false,
+      "publicada": true,
+      "año": 2019,
+      "imagen": "https://www.cuatromedios.com.ar/asset/thumbnail,1140,1140,center,center//media/cuatromedios/images/2019/06/05/2019060523150424199.jpg",
+      "video": "https://www.youtube.com/watch?v=a9tbKuqmuPo&ab_channel=BuenaVistaInternationalLatinoam%C3%A9rica"
     },
     {
       "id": 5,
       "nombre": "La Granja de Zenón",
       "descripcion": "¡La vida en la granja nunca ha sido tan divertida, Canciones alegres e historias emocionantes son parte de cada episodio, enseñando a los niños la importancia del trabajo en equipo y fomentando su conexion con la naturaleza.",
-      "año": 2016,
-      "destacada": true,
-      "temporadas": 3,
-      "duracion": "29min",
-      "calificacion": 4.8,
-      "calidad": "HD",
+      "director": "Ruben Roberts",
       "genero": "Infantil",
-      "origen": "UK",
-      "imagen": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/07/24132616/La-granja-de-Zen%C3%B3n-portada.jpg"
+      "categoria": "ATP",
+      "destacada": false,
+      "publicada": true,
+      "año": 2016,
+      "imagen": "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2018/07/24132616/La-granja-de-Zen%C3%B3n-portada.jpg",
+      "video": "https://www.youtube.com/watch?v=yJdX9bb-LZI&ab_channel=ElReinoInfantil"
     },
     {
       "id": 6,
       "nombre": "Borgen",
       "descripcion": "Una serie que detalla las interioridades de la política danesa a través de Birgitte Nyborg, quien se convierte en la primera mujer en llegar al cargo de Primer Ministro de Dinamarca mostrando la lucha por el poder político y sus consecuencias.",
-      "año": 2010,
-      "destacada": false,
-      "temporadas": 3,
-      "duracion": "45min",
-      "calificacion": 4.8,
-      "calidad": "1080p",
+      "director": " Søren Kragh-Jacobsen, Rumle Hammerich",
       "genero": "Drama",
-      "origen": "Dinamarca",
-      "imagen": "https://media.airedesantafe.com.ar/p/0f66054000c8a60a956386ad877fd7d3/adjuntos/268/imagenes/002/145/0002145466/borgen-la-serie-politica-netflix.png"
+      "categoria": "ATP",
+      "destacada": false,
+      "publicada": true,
+      "año": 2010,
+      "imagen": "https://media.airedesantafe.com.ar/p/0f66054000c8a60a956386ad877fd7d3/adjuntos/268/imagenes/002/145/0002145466/borgen-la-serie-politica-netflix.png",
+      "video": "https://www.youtube.com/watch?v=OKduYvZ1TYo&ab_channel=Blog"
     },
     {
       "id": 7,
       "nombre": "Love",
       "descripcion": "El dulce Gus y la rebelde Mickey navegan por las aguas turbulentas de las relaciones modernas. Esta pareja deberá lidiar con el regocijo, la falta de intimidad, el compromiso, y otras cosas que ambos esperaban poder evitar en una relación.",
-      "año": 2016,
-      "destacada": false,
-      "temporadas": 3,
-      "duracion": "45min",
-      "calificacion": 4.8,
-      "calidad": "1080p",
+      "director": "Judd Apatow, Lesley Arfin y Paul Rust",
       "genero": "Drama",
-      "origen": "Dinamarca",
-      "imagen": "https://4.bp.blogspot.com/-MNwF5_UYpkw/Vv17opthgyI/AAAAAAAAMz8/ZoNcSpNf6R8lujLoJN-qeGCUokvR0uckA/s1600/love-1600x900.jpg"
+      "categoria": "ATP",
+      "destacada": false,
+      "publicada": true,
+      "año": 2016,
+      "imagen": "https://4.bp.blogspot.com/-MNwF5_UYpkw/Vv17opthgyI/AAAAAAAAMz8/ZoNcSpNf6R8lujLoJN-qeGCUokvR0uckA/s1600/love-1600x900.jpg",
+      "video": "https://www.youtube.com/watch?v=FwiU4O5Cxrc&ab_channel=moviemaniacsDE"
     },
     {
       "id": 8,
       "nombre": "Gossip Girl",
       "descripcion": "Un grupo de estudiantes privilegiados de Manhattan consiguen todo lo que se proponen. Hasta que un blogger anónimo se dedica a seguir cada paso que dan.",
-      "año": 2007,
-      "destacada": true,
-      "temporadas": 7,
-      "duracion": "40min",
-      "calificacion": 4.9,
-      "calidad": "1080p",
+      "director": "Josh Schwartz, Stephanie Savage, Mark Piznarski",
       "genero": "Drama adolescente",
-      "origen": "EEUU",
-      "imagen": "https://www.okchicas.com/wp-content/uploads/2019/07/Gossip-Girl-10.jpg"
+      "categoria": "ATP",
+      "destacada": false,
+      "publicada": true,
+      "año": 2007,
+      "imagen": "https://www.okchicas.com/wp-content/uploads/2019/07/Gossip-Girl-10.jpg",
+      "video": "https://www.youtube.com/watch?v=eCg1RN-dyQk&ab_channel=ChelseaEley"
     },
     {
       "id": 9,
       "nombre": "Breaking Bad",
       "descripcion": "Walter White un profesor de química de secundaria agobiado por problemas económicos para sostener a su familia y con un cáncer terminal, toma una decisión para ganar dinero y transforma un viejo vehículo en un laboratorio de metanfetaminas rodante.",
-      "año": 2008,
-      "destacada": true,
-      "temporadas": 5,
-      "duracion": "45min",
-      "calificacion": 4.8,
-      "calidad": "HD",
+      "director": " Rian Johnson, Vince Gilligan, Terry McDonough, Johan Renck, Michelle MacLaren, Colin Bucksey, Michael Slovis",
       "genero": "Drama",
-      "origen": "EEUU",
-      "imagen": "https://legendarykicks.mx/wp-content/uploads/2020/02/000160162hr-1170x780.jpg"
+      "categoria": "+18",
+      "destacada": false,
+      "publicada": true,
+      "año": 2008,
+      "imagen": "https://legendarykicks.mx/wp-content/uploads/2020/02/000160162hr-1170x780.jpg",
+      "video": "https://www.youtube.com/watch?v=ceqOTZnhgY8&ab_channel=KlabaYouTubeGaming"
     },
     {
       "id": 10,
       "nombre": "Osmosis",
       "descripcion": "En un futuro cercano en París, una aplicación de citas conecta a los solteros con sus almas gemelas al extraer los datos de sus cerebros, pero descifrar el amor verdadero tiene un precio.",
-      "año": 2019,
-      "destacada": false,
-      "temporadas": 1,
-      "duracion": "50min",
-      "calificacion": 6,
-      "calidad": "4K",
+      "director": "Sarah Aknine, Aude Albano, Claude Chelli",
       "genero": "Drama",
-      "elenco": "-",
-      "origen": "Francia",
-      "imagen": "https://martincid.com/wp-content/uploads/2019/03/MV5BYzVlOTQxOGMtNTlkZS00ZDJiLWJmNzQtN2NlM2UxMjdjYWE2XkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SY1000_SX1500_AL_.jpg"
+      "categoria": "ATP",
+      "destacada": false,
+      "publicada": true,
+      "año": 2019,
+      "imagen": "https://martincid.com/wp-content/uploads/2019/03/MV5BYzVlOTQxOGMtNTlkZS00ZDJiLWJmNzQtN2NlM2UxMjdjYWE2XkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SY1000_SX1500_AL_.jpg",
+      "video": "https://www.youtube.com/watch?v=Sh3Z2ViVaYU&ab_channel=NetflixLatinoam%C3%A9rica"
     }
   ],
   "usuarios": [
     {
-      "id": 1,
       "nombre": "Antonella",
       "apellido": "Mercado",
+      "admin": false,
+      "id": 1,
       "email": "antonellamercado@gmail.com",
-      "password": "12345678"
+      "password": "12345678",
+      "favs": [
+        {
+          "imagen": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cecilia-roth-eloy-azorin-todo-sobre-mi-madre-1555343828.jpg",
+          "nombre": "Todo Sobre Mi Madre",
+          "id": "3"
+        },
+        {
+          "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/aKUByJaM2LlD2m7z1eI4XS1lU1J.jpg",
+          "nombre": "The Lie",
+          "id": "33"
+        }
+      ]
     },
     {
       "nombre": "Octavio",
       "apellido": "Saucedo",
       "email": "octa-saucedo@gmail.com",
       "password": "11111111",
-      "id": 2
+      "id": 2,
+      "favs": [],
+      "admin": false
     },
     {
       "nombre": "Lara",
-      "apellido": "Ojeda",
-      "email": "lara.ojeda@gmail.com",
+      "apellido": "Salas",
+      "admin": true,
+      "id": 3,
+      "email": "lara@gmail.com",
       "password": "12345678",
-      "id": 3
+      "favs": [
+        {
+          "imagen": "https://i.pinimg.com/originals/2e/98/87/2e98872d1141c2bc5bc7adebd492a2c0.png",
+          "nombre": "Pets united",
+          "id": "11"
+        },
+        {
+          "imagen": "https://pics.filmaffinity.com/La_boda_de_Rosa-406236302-large.jpg",
+          "nombre": "La boda de rosa",
+          "id": "10"
+        }
+      ]
+    },
+    {
+      "nombre": "seba",
+      "apellido": "salas",
+      "admin": false,
+      "id": 4,
+      "email": "seba@gmail.com",
+      "password": "12345678",
+      "favs": [
+        {
+          "imagen": "https://miro.medium.com/max/2934/1*QIURFXvGPFWAv5W9FHQKpQ.jpeg",
+          "nombre": "The Unfamiliar",
+          "id": "7"
+        },
+        {
+          "imagen": "https://talenthouse-res.cloudinary.com/image/upload/c_limit,f_auto,fl_progressive,h_1280,w_1280/v1551300994/user-983649/submissions/co3snwlxk70nvxvpnqpj.jpg",
+          "nombre": "La llorona",
+          "id": "8"
+        },
+        {
+          "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/3eol8FnndIY8drMknjUnRCjYaIe.jpg",
+          "nombre": "Pledge",
+          "id": "20"
+        }
+      ]
+    },
+    {
+      "nombre": "Nico",
+      "apellido": "Estrada",
+      "admin": false,
+      "id": 5,
+      "email": "sebamercado@gmail.com",
+      "password": "12345678",
+      "favs": []
+    },
+    {
+      "nombre": "Luis",
+      "apellido": "cazzullo",
+      "admin": false,
+      "id": 6,
+      "email": "lcazzullo@gmail.com",
+      "password": "12345678",
+      "favs": [
+        {
+          "imagen": "https://cuevana3.io/wp-content/uploads/2017/08/frozen-fever-368-poster-200x300.jpg",
+          "nombre": "Frozen Fever",
+          "id": "23"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,737 @@
+/**********************Inicio Css Ro****************************/
+/* User RO */
+.menu-user{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+   }
+   .lista{
+    display: block;
+    position: absolute;
+    min-width: 160px;
+    z-index: 9999;
+    background: #010f2b;
+    box-shadow: 0px 0px 5px black;
+    opacity: 0.9;  
+    overflow:auto;
+    top: 70px;
+    padding: .5rem 1rem;
+    text-align: start;
+}
+  .btn-user{
+    outline: none;  
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+   }
+.lista a {
+    text-decoration: none;
+    display: block;
+    padding: 8px 0px 8px 0px;
+}
+.lista .option{
+    color: white;
+}
+
+.lista a:hover, a .btn-exit:hover{
+    background-color: #010b1f;
+   
+}
+.menu-user:hover .btn-user{
+}
+.p-white {
+    color: white;
+    font-size: 1vw;
+}
+.btn-exit{
+    background: none;
+    border: none;   
+}
+
+/* User Ro */
+
+/* Hero Ro */
+.data-hero{
+    background: rgba(255, 255, 255, 0.5) ; 
+    border-radius: 15px; 
+    padding: 0px 5px 15px 5px
+}
+.hero {
+    max-height: 45vw;
+}
+.title-black {
+    font-size: 5vw;
+    color: black;
+}
+.p-black {
+    color: black;
+    font-size: 1.6vw;
+    font-weight: bolder;
+}
+
+.btn-hero {
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 10px 20px;    
+    border: 2px solid black;
+    color: black;
+}
+
+.btn-hero:hover {
+    border: 2px solid #c02020;
+    color: #c02020;
+}
+/* Hero Ro */    
+/**********************Fin Css Ro****************************/
+    
+    /*<------------------------INICIO CARRUSSEL-DIEGO --------------------->*/
+    
+    .movie-card {
+        transition: transform 0.5 ease;
+    }
+    
+    .movie-card:hover {
+        transform: scale(1.3);
+    }
+    
+    .resume {
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 16rem;
+        height: 18rem;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        cursor: default;
+        font-size: 0.7rem;
+    }
+    
+    .resume:hover {
+        opacity: 1;
+    }
+    
+    .movie-title {
+        cursor: default;
+    }
+    
+    .movie {
+        width: 16rem;
+        height: 18rem;
+        margin: 10px;
+        background-size: 100% 100%;
+        box-shadow: -10px 10px rgba(12, 17, 19, 0.1), 0 15px 30px rgba(12, 17, 19, .65);
+    }
+    
+    .carrousel {
+        margin-left: 15px;
+        width: 95%;
+        height: auto;
+    }
+    
+    .movie-resume {
+        height: 9rem;
+        overflow: scroll;
+    }
+    
+    .movie-resume::-webkit-scrollbar {
+        width: 5px;
+        color: #a9bdc5;
+    }
+    
+    .movie-resume::-webkit-scrollbar-thumb {
+        background: #c02020;
+        border-radius: 10px;
+        border-right: 2px;
+    }
+    
+    .carrousel {
+        overflow: hidden;
+    }
+    
+    .carrousel-Comedia,
+    .carrousel-Terror,
+    .carrousel-Drama,
+    .carrousel-Acción,
+    .carrousel-Ficción {
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+    
+    .carrousel-Comedia::-webkit-scrollbar,
+    .carrousel-Terror::-webkit-scrollbar,
+    .carrousel-Drama::-webkit-scrollbar,
+    .carrousel-Acción::-webkit-scrollbar,
+    .carrousel-Ficción::-webkit-scrollbar {
+        display: none;
+    }
+
+    /*<------------------------FIN CARRUSSEL-DIEGO --------------------->*/
+    
+    /****************************************************************************/
+
+
+/**************************************************************************************************/
+
+
+/************************INICIO - ESTILO: FORMULARIO PARA REGISTRARSE******************************/
+
+
+/**************************************************************************************************/
+
+.fondo-body-form {
+    background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 50%), url('https://i.blogs.es/aa91a3/cine-/2560_3000.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.formulario {
+    width: 600px;
+    padding: 0;
+    margin: auto;
+}
+
+.formulario_boton {
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+    -webkit-appearance: none;
+    margin-right: auto;
+    margin-top: 0.8em;
+    text-align: center;
+}
+
+.formulario_boton:hover {
+    box-shadow: 5px 5px 10px #f0e0a0;
+}
+
+.formulario_grupo_input {
+    position: relative;
+}
+
+.formulario_input {
+    width: 100%;
+    background-image: none;
+    background: none;
+    border: 1px solid #c02020;
+    color: #f0e0a0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    transition: all 0.5s ease;
+    border-radius: 6px;
+    font-size: 0.85em;
+}
+
+.formulario_input_select {
+    width: 100%;
+    background-image: none;
+    background-color: black;
+    border: 1px solid #c02020;
+    color: #f0e0a0;
+    /* border-top: none;
+    border-left: none;
+    border-right: none;*/
+    border-radius: 0;
+    transition: all 0.5s ease;
+    border-radius: 6px;
+    font-size: 0.85em;
+}
+
+.formulario_input:focus {
+    outline: none;
+    border-color: #f0e0a0;
+}
+
+.formulario_input_error {
+    font-size: 0.7em;
+    margin-bottom: 0;
+    font-style: oblique;
+    display: none;
+}
+
+.formulario_input_error_activo {
+    display: block;
+}
+
+.formulario_validacion_estado {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.formulario_label {
+    transform: translatex(1px);
+    left: 5px;
+    color: rgba(#c02020, .10);
+    transition: all 0.25s ease;
+    backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 1rem;
+}
+
+.formulario_label_activo {
+    transform: translateY(4px);
+    font-size: 1rem;
+    color: #c02020;
+}
+
+.formulario_mensaje {
+    height: 1em;
+    line-height: 0.85em;
+    color: #c02020;
+    padding: 0 0.80em;
+    border-radius: 2px;
+    display: none;
+}
+
+.formulario_mensaje_activo {
+    display: block;
+}
+
+.formulario_mensaje p {
+    margin: 0;
+    font-style: oblique;
+}
+
+.formulario_mensaje small {
+    margin: 0;
+}
+
+.formulario_legend {
+    border: 3px solid #f0e0a0;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.fieldset {
+    border: 3px solid #c02020;
+    padding: 6px;
+    display: flex;
+    width: 600px;
+    justify-content: center;
+    align-content: center;
+}
+
+.formulario_mensaje_exito {
+    height: 0.7em;
+    color: #119200;
+    display: none;
+}
+
+.formulario_mensaje_exito_activo {
+    display: block;
+}
+
+.formulario_grupo_correcto .formulario_validacion_estado {
+    color: #1ed12d;
+    opacity: 1;
+}
+
+/*********************Medias querys*************************************/
+/*******************Inicio Còdigo RO***********************/
+@media (max-width:992px) {
+    .btn-hero{
+        padding: 1em;
+        font-size: 0.8em;
+    }
+    .hero {
+        max-height: 60vw;
+    }
+    .img-hero{
+        width: 30rem;
+        height: 40rem;
+        }
+        .p-white {
+            color: white;
+            font-size: 1.5vw
+        }
+    }
+
+@media (max-width: 768px) {
+    .data-hero{
+        padding: 20px 5px 20px 5px
+    }
+      .img-hero{
+        width: 30rem;
+        height: 30rem;
+    }
+    .hero {
+        max-height: 80vw;
+    }
+    .btn-hero{
+        padding: 1em;
+        font-size: 0.8em;
+    }
+    .p-white {
+        color: white;
+        font-size: 2vw;
+    }
+ }
+@media (max-width: 576px) {
+.img-hero{
+   width: 20rem;
+   height: 25rem;
+  }
+  .data-hero{
+    padding: 15px 5px 15px 5px
+}
+.btn-hero{
+    padding: 1em;
+    font-size: 0.6em;
+}
+.p-hero{   
+    display: none;
+}
+}
+/*******************Fin Còdigo RO***********************/
+
+
+@media (max-width: 700px) {
+    .fondo-body-form {
+        background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 50%), url('https://i.blogs.es/aa91a3/cine-/2560_3000.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .formulario {
+        width: 600px;
+        padding: 0;
+        margin: auto;
+    }
+    .formulario_boton {
+        border: 0;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .5s ease;
+        -webkit-appearance: none;
+        margin-right: auto;
+        margin-top: 0.8em;
+        text-align: center;
+    }
+    .formulario_boton:hover {
+        box-shadow: 5px 5px 10px #f0e0a0;
+    }
+    .formulario_grupo_input {
+        position: relative;
+    }
+    .formulario_input {
+        width: 100%;
+        background-image: none;
+        background: none;
+        border: 1px solid #c02020;
+        color: #f0e0a0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        transition: all 0.5s ease;
+        border-radius: 6px;
+        font-size: 0.85em;
+    }
+    .formulario_input_select {
+        width: 100%;
+        background-image: none;
+        background-color: black;
+        border: 1px solid #c02020;
+        color: #f0e0a0;
+        /* border-top: none;
+    border-left: none;
+    border-right: none;*/
+        border-radius: 0;
+        transition: all 0.5s ease;
+        border-radius: 6px;
+        font-size: 0.85em;
+    }
+    .formulario_input:focus {
+        outline: none;
+        border-color: #f0e0a0;
+    }
+    .formulario_input_error {
+        font-size: 0.7em;
+        margin-bottom: 0;
+        font-style: oblique;
+        display: none;
+    }
+    .formulario_input_error_activo {
+        display: block;
+    }
+    .formulario_validacion_estado {
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        z-index: 100;
+        font-size: 16px;
+        opacity: 0;
+    }
+    .formulario_label {
+        transform: translatex(1px);
+        left: 5px;
+        color: rgba(#c02020, .10);
+        transition: all 0.25s ease;
+        backface-visibility: hidden;
+        pointer-events: none;
+        font-size: 1rem;
+    }
+    .formulario_label_activo {
+        transform: translateY(4px);
+        font-size: 1rem;
+        color: #c02020;
+    }
+    .formulario_mensaje {
+        height: 1em;
+        line-height: 0.85em;
+        color: #c02020;
+        padding: 0 0.80em;
+        border-radius: 2px;
+        display: none;
+    }
+    .formulario_mensaje_activo {
+        display: block;
+    }
+    .formulario_mensaje p {
+        margin: 0;
+        font-style: oblique;
+    }
+    .formulario_mensaje small {
+        margin: 0;
+    }
+    .formulario_legend {
+        border: 3px solid #f0e0a0;
+        padding: 6px;
+        border-radius: 5px;
+    }
+    .fieldset {
+        border: 3px solid #c02020;
+        padding: 6px;
+        display: flex;
+        width: 600px;
+        justify-content: center;
+        align-content: center;
+    }
+    .formulario_mensaje_exito {
+        height: 0.7em;
+        color: #119200;
+        display: none;
+    }
+    .formulario_mensaje_exito_activo {
+        display: block;
+    }
+    .formulario_grupo_correcto .formulario_validacion_estado {
+        color: #1ed12d;
+        opacity: 1;
+    }
+    @media (max-width:990px) {
+        .btn-hero {
+            padding: 5px;
+            font-size: 10px;
+        }
+        .img-hero {
+            width: 13rem;
+            height: 15rem;
+        }
+    }
+    /*********************Medias querys*************************************/
+    @media (max-width: 700px) {
+        .fondo-body-form {
+            background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 50%), url('https://i.blogs.es/aa91a3/cine-/2560_3000.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .formulario {
+            width: 600px;
+            padding: 0;
+            margin: auto;
+        }
+        .formulario_boton {
+            border: 0;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .5s ease;
+            -webkit-appearance: none;
+            margin-right: auto;
+            margin-top: 0.8em;
+            text-align: center;
+        }
+        .formulario_boton:hover {
+            box-shadow: 5px 5px 10px #f0e0a0;
+        }
+        .formulario_grupo_input {
+            position: relative;
+        }
+        .formulario_input {
+            width: 100%;
+            background-image: none;
+            background: none;
+            border: 1px solid #c02020;
+            color: #f0e0a0;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+            transition: all 0.5s ease;
+            border-radius: 6px;
+            font-size: 0.85em;
+        }
+        .formulario_input_select {
+            width: 100%;
+            background-image: none;
+            background-color: black;
+            border: 1px solid #c02020;
+            color: #f0e0a0;
+            /* border-top: none;
+    border-left: none;
+    border-right: none;*/
+            border-radius: 0;
+            transition: all 0.5s ease;
+            border-radius: 6px;
+            font-size: 0.85em;
+        }
+        .formulario_input:focus {
+            outline: none;
+            border-color: #f0e0a0;
+        }
+        .formulario_input_error {
+            font-size: 0.7em;
+            margin-bottom: 0;
+            font-style: oblique;
+            display: none;
+        }
+        .formulario_input_error_activo {
+            display: block;
+        }
+        .formulario_validacion_estado {
+            position: absolute;
+            right: 10px;
+            bottom: 15px;
+            z-index: 100;
+            font-size: 16px;
+            opacity: 0;
+        }
+        .formulario_label {
+            transform: translatex(1px);
+            left: 5px;
+            color: rgba(#c02020, .10);
+            transition: all 0.25s ease;
+            backface-visibility: hidden;
+            pointer-events: none;
+            font-size: 1rem;
+        }
+        .formulario_label_activo {
+            transform: translateY(4px);
+            font-size: 1rem;
+            color: #c02020;
+        }
+        .formulario_mensaje {
+            height: 1em;
+            line-height: 0.85em;
+            color: #c02020;
+            padding: 0 0.80em;
+            border-radius: 2px;
+            display: none;
+        }
+        .formulario_mensaje_activo {
+            display: block;
+        }
+        .formulario_mensaje p {
+            margin: 0;
+            font-style: oblique;
+        }
+        .formulario_mensaje small {
+            margin: 0;
+        }
+        .formulario_legend {
+            border: 3px solid #f0e0a0;
+            padding: 6px;
+            border-radius: 5px;
+        }
+        .fieldset {
+            border: 3px solid #c02020;
+            padding: 6px;
+            display: flex;
+            width: 600px;
+            justify-content: center;
+            align-content: center;
+        }
+        .formulario_mensaje_exito {
+            height: 0.7em;
+            color: #119200;
+            display: none;
+        }
+        .formulario_mensaje_exito_activo {
+            display: block;
+        }
+        .formulario_grupo_correcto .formulario_validacion_estado {
+            color: #1ed12d;
+            opacity: 1;
+        }
+        .formulario_grupo_incorrecto .formulario_validacion_estado {
+            color: #bb2929;
+            opacity: 1;
+        }
+        .custom-control-input:checked~.custom-control-label::before {
+            color: #fff;
+            border-color: red;
+            background-color: red;
+        }
+        .img-hero {
+            width: 13rem;
+            height: 15rem;
+        }
+    }
+    /*********************Medias querys*************************************/
+    @media (max-width: 700px) {
+        .fondo-body-form {
+            background-color: #0c1113;
+            background-image: none;
+        }
+        .formulario {
+            width: 100%;
+            padding: 0.25em;
+            display: flex;
+            align-content: center;
+        }
+        .formulario_boton {
+            display: inline-block;
+        }
+        .formulario_mensaje {
+            padding: 0.8em;
+            margin: 0;
+            text-align: center;
+        }
+        .formulario_mensaje_exito {
+            padding: 0.6em;
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+
+
+/*
+    @media (min-width: 360px) {
+        .fondo-body-form {
+            background-color: #0c1113;
+            background-image: none;
+        }
+        .formulario_mensaje p {
+            font-size: 0.8em;
+        }
+    }*/
+
+
+/**************************************************************************************************/
+
+
+/************************FIN - ESTILO: FORMULARIO PARA REGISTRARSE*********************************/
+
+
+/**************************************************************************************************/
+
