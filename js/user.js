@@ -7,7 +7,7 @@ const admin = document.querySelector('#admin');
 let user = {
     nombre: "Romina",
     apellido: "Estrada",
-    admin: true,
+    admin: false,
 }
 
 menuUser.innerHTML = `
@@ -46,6 +46,7 @@ function showUser() {
 const lista = document.querySelector('.lista');
 const btnExit = document.querySelector('.btn-exit')
 const btnUser = document.querySelector('.btn-user')
+const linkAdmin = document.querySelector('.item')
 btnUser.addEventListener('click', showLista);
 btnExit.addEventListener('click', removeUserFromLS);
 
@@ -57,4 +58,5 @@ function showLista() {
 }
 function removeUserFromLS(user) {
     localStorage.removeItem('user');
+    menuHome.removeChild(admin)
 }
