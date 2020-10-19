@@ -17,7 +17,7 @@ function showUser() {
     let user = JSON.parse(localStorage.getItem('user'));
 
     if (user.admin === true) {
-        admin.innerHTML = `<a class="item" href="admin.html">ADMIN</a>`
+        admin.innerHTML = `<a class="item text-decoration-none" href="admin.html">ADMIN</a>`
         imgAvatar.src = "./img/admin.png";
     } else {
         imgAvatar.src = "./img/user2.png";
