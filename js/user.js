@@ -2,11 +2,12 @@
 
 const menuHome = document.querySelector('.menu-home');
 const menuUser = document.querySelector('.menu-user');
+const admin = document.querySelector('#admin');
 
 
 menuUser.innerHTML = `
 <div role="button" class=" btn-user">
-<img src=" " width="50" height="50" class="avatar" alt="avatar"></div>
+<img src=" " width="100%" height="100%" class="avatar" alt="avatar"></div>
 `
 const imgAvatar = document.querySelector('.avatar');
 
@@ -16,21 +17,20 @@ function showUser() {
     let user = JSON.parse(localStorage.getItem('user'));
 
     if (user.admin === true) {
-        menuHome.innerHTML += `<li class="link" id="admin"><a class="item" href="admin.html">ADMIN</a></li>`
+        admin.innerHTML = `<a class="item" href="admin.html">ADMIN</a>`
         imgAvatar.src = "./img/admin.png";
     } else {
-        imgAvatar.src = "./img/user.png";
+        imgAvatar.src = "./img/user2.png";
     }
     menuUser.innerHTML += `
-    <div class="lista commontexts p-white">
+    <div class="lista commontexts p-white" style="visibility:hidden;">
         <a class="option" href="#">${user.nombre.toUpperCase()}</a>       
         <a class="option" href="error404.html">Editar perfil <i class="pl-3 fas fa-pencil-alt"></i></a>    
         <a class="option" href="error404.html">Configuraciones</a>
         <a class="option " href="error404.html">Ayuda</a>      
         <button class="option p-white btn-exit">Cerrar sesión <i class="pl-3 fas fa-sign-out-alt"></i></button>
     </div>   
-    `
-    
+    `  
 }
 const lista = document.querySelector('.lista');
 const btnExit = document.querySelector('.btn-exit')

@@ -18,7 +18,7 @@ const Recuperarcontraseña = document.createElement('div');
  Recuperarcontraseña.innerHTML = `
  <div class="modal-body commontexts">
   <h4>Ingrese su nombre de usuario o correo electrónico: </h4>
-<input  type="email" id="email" value="" class="formulario_input effect" placeholder="Escriba su usuario o Correo" required>
+<input  type="email" id="email-rc" class="formulario_input effect" placeholder="Escriba su usuario o Correo" required>
 <p id="Mensaje" > </p>
 <p id="Mensaje2"> </p>
 </div>
@@ -35,7 +35,7 @@ Modal.appendChild(HeaderModal);
 Modal.appendChild(Recuperarcontraseña);
 Modal.appendChild(footerRecuperarcontraseña);
 
-const email_rc= document.getElementById("email");
+const email_rc= document.getElementById("email-rc");
 const Obtenercontra = document.getElementById("botonmodal");
 Obtenercontra.addEventListener("click", User); 
 

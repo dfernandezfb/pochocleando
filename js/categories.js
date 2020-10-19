@@ -274,9 +274,9 @@ function renderFavsLS()
 }
 function deleteFav(e)
 {
-    e.preventDefault();
     if(e.target.classList.contains("delete-fav"))
     {
+        e.preventDefault();
         const removedElement = e.target.parentElement.parentElement.parentElement
         const deleteId= removedElement.id.slice(4);
         removedElement.remove();

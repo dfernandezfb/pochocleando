@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/admin.css" />
     <link rel="stylesheet" href="css/allpages.css" />
-    <link rel="stylesheet" href="css/admin.css" />
 
 </head>
 
 <body>
     <!-- HEADER -->
+   
     <header class="logoContainer">
         <img class="logoHeader" src="/img/Png Logo blanco Navbar.png" alt="sLogo" width="150px">
     </header>
@@ -30,10 +30,26 @@
         </div>
         <div id="lista-busqueda"></div> -->
         <ul class="nav-links">
-            <li class="link"><a class="item" href="index.html">Home</a></li>
-            <li class="link"><a class="item" href="#">Mi lista</a></li>
-            <li class="link"><a class="item" href="admin.html">Admin</a></li>
+            <div class="menu-home">
+                <li class="link"><a class="item" href="index.html">Home</a></li>
+                <li class="link">
+                    <div class="dropdown">
+                        <button class="btn bg-color1 color6 item" style="padding-bottom:.4rem" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mi Lista
+                        </button>
+                        <div class="dropdown-menu pt-0" id="favorites-list" aria-labelledby="dropdownMenuButton" style="min-width: 300px ;">
+                        </div>
+                    </div>
+                </li>
+                <li class="link"id="admin"></li>
+            <li class="link">
+                <!-- Inicio menu-user RE -->
+                <div class="menu-user"></div>
+                <!-- Fin menu user RE-->
+            </li>
+        </div>
         </ul>
+
     </nav>
     <!-- FIN DE HEADER -->
     <!-- ADMINISTRACIÓN -->
@@ -147,6 +163,9 @@
     <!-- <script src="js/editarPelicula.js"></script> -->
     <!-- <script src="js/borrarPeliculas.js"></script> -->
     <script src="js/admin.js"></script>
+    <script src="js/favs.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/user.js"></script>
     <script src="https://kit.fontawesome.com/d4db128a0c.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
