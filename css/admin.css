@@ -388,6 +388,21 @@ p {
         margin: 0;
         text-align: center;
     }
+    .movies-table {
+        max-width: 40vh;
+    }
+    .table-director,
+    .table-categoria,
+    .table-año,
+    .table-destacada,
+    .table-genero {
+        display: none;
+    }
+    .btn-crear,
+    .btn-editar,
+    .btn-eliminar {
+        font-size: 10px;
+    }
 }
 
 
