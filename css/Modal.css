@@ -1,0 +1,37 @@
+.boton_modal {
+    display: block;
+    border-radius: 0.6em;
+    width: 100%;
+    color: #F0E0A0;
+    background: #c02020;
+    padding: 0.5em;
+    transition: .3s ease all;
+}
+
+.boton_modal:hover {
+    color:black;
+}
+
+.formulario_input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #c02020; 
+    color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  transition: all 0.5s ease; 
+    border-radius: 6px;
+    font-size: 1.2em;
+}
+
+.check {
+    display: none;
+    color: #F0E0A0;
+}
+
+.check_activo {
+    display: block;
+    color: #F0E0A0;
+}

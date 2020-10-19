@@ -4,11 +4,6 @@ const menuHome = document.querySelector('.menu-home');
 const menuUser = document.querySelector('.menu-user');
 const admin = document.querySelector('#admin');
 
-let user = {
-    nombre: "Romina",
-    apellido: "Estrada",
-    admin: true,
-}
 
 menuUser.innerHTML = `
 <div role="button" class=" btn-user">
@@ -16,13 +11,7 @@ menuUser.innerHTML = `
 `
 const imgAvatar = document.querySelector('.avatar');
 
-saveUserOnLS(user);
-
 showUser();
-
-function saveUserOnLS(user) {
-    localStorage.setItem('user', JSON.stringify(user));
-}
 
 function showUser() {
     let user = JSON.parse(localStorage.getItem('user'));
@@ -39,7 +28,7 @@ function showUser() {
         <a class="option" href="error404.html">Editar perfil <i class="pl-3 fas fa-pencil-alt"></i></a>    
         <a class="option" href="error404.html">Configuraciones</a>
         <a class="option " href="error404.html">Ayuda</a>      
-        <a class="option" href="fullPage.html"><button class="p-white btn-exit">Cerrar sesión <i class="pl-3 fas fa-sign-out-alt"></i></button></a>
+        <button class="option p-white btn-exit">Cerrar sesión <i class="pl-3 fas fa-sign-out-alt"></i></button>
     </div>   
     `  
 }
@@ -55,6 +44,36 @@ function showLista() {
     } 
     else lista.style.visibility = "hidden";
 }
-function removeUserFromLS(user) {
-    localStorage.removeItem('user');
+function removeUserFromLS(e,user) {
+    e.preventDefault();
+    user = JSON.parse(localStorage.getItem('user'));
+    const favs = JSON.parse(localStorage.getItem('favs'));
+    user={
+            nombre: user.nombre,
+            apellido: user.apellido,
+            admin: user.admin,
+            id:user.id,
+            email:user.email,
+            password:user.password,
+            favs:favs
+        }
+        editUser(user.id,user)
+    }
+
+    /* ASINCRONO DE BORRADO DE FAVS */
+async function editUser(id, newData) {
+    const URL = 'http://localhost:3000/usuarios'
+    const newURL = `${URL}/${id}`;
+    const response = await fetch(newURL, {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newData)
+    });
+    const data = await response.json();
+    localStorage.clear();
+    window.location.href = window.location.origin + "/fullPage.html"
+    return data;
 }

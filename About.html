@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="icon" href="/icon/faviconPochoclenado .ICO.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/About.css">
     <link rel="stylesheet" href="/css/allpages.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Sans+Narrow:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <body >
-    <!-------------------TULIO---------------->
+
     <header class="logoContainer">
         <img class="logoHeader" src="/img/Png Logo blanco Navbar.png" alt="sLogo" width="150px">
     </header>
@@ -27,10 +27,26 @@
         </div>
         <div id="lista-busqueda"></div> -->
         <ul class="nav-links">
-            <li class="link"><a class="item" href="index.html">Home</a></li>
-            <li class="link"><a class="item" href="#">Mi lista</a></li>
-            <li class="link"><a class="item" href="admin.html">Admin</a></li>
+            <div class="menu-home">
+                <li class="link"><a class="item" href="index.html">Home</a></li>
+                <li class="link">
+                    <div class="dropdown">
+                        <button class="btn bg-color1 color6 item" style="padding-bottom:.4rem" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mi Lista
+                        </button>
+                        <div class="dropdown-menu pt-0" id="favorites-list" aria-labelledby="dropdownMenuButton" style="min-width: 300px ;">
+                        </div>
+                    </div>
+                </li>
+                <li class="link"id="admin"></li>
+            <li class="link">
+                <!-- Inicio menu-user RE -->
+                <div class="menu-user"></div>
+                <!-- Fin menu user RE-->
+            </li>
+        </div>
         </ul>
+
     </nav>
 
     <!----------Seba-------------->
@@ -102,6 +118,9 @@
 
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 <script src="/js/About.js"></script>
+<script src="/js/favs.js"></script>
+<script src="/js/user.js"></script>
+<script src="/js/app.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

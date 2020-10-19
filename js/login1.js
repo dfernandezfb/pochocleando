@@ -20,25 +20,36 @@ function crear() {
     const bodyFormL = document.createElement('div');
     bodyFormL.innerHTML = `
  <div class="modal-body commontexts">
+ <div class="formulario_grupo" id="grupo_email">
  <label>Email</label>
  <br>
-  <input class="email formulario_input" type="email" id="emaill">
+ <div class="formulario_grupo_input">
+  <input class="email formulario_input" id="emaill">
+  <i class="formulario_validacion_estado fas fa-times-circle"></i>
+  </div>
   <div id="warning-email"></div>
+  </div>
   <br>
+ <div class="formulario_grupo" id="grupo_password">
   <label>Password</label>
   <br>
+  <div class="formulario_grupo_input">
   <input class="password formulario_input" type="password" id="passwordl">
+  <i class="formulario_validacion_estado fas fa-times-circle"></i>
+  </div>
   <div id="warning-pass"></div>
   <br>
+  </div>
   <div id="warning"></div>
 
 </div>
 `;
     const footerFormL = document.createElement('div');
     footerFormL.innerHTML = `<div class="modal-footer">
-<button type="submit" class="btn bg-color2 color3  aceptar titlesandbtns" id="loginModal">Ingresar</button>
-<button type="button" class="btn bg-color2 color3  titlesandbtns" data-dismiss="modal">Cancelar</button>
-</div>
+    <a  class="a_recuperarcontraseña" data-toggle="modal" data-target="#modalR">Recuperar contraseña </a>
+    <button type="submit" class="btn bg-color2 color3  aceptar titlesandbtns" id="loginModal">Ingresar</button>
+    <button type="button" class="btn bg-color2 color3  titlesandbtns" data-dismiss="modal">Cancelar</button>
+    </div>
 `;
 
     formToLogin.appendChild(headerFormL);
@@ -77,11 +88,30 @@ formToLogin.addEventListener("submit", e => {
     if (!Email.test(usuario.value)) {
         warningE += `El email no es válido <br>`
         entrarE = true
-
+        document.querySelector(`#grupo_email i`).classList.add('fa-times-circle');
+        document.getElementById(`grupo_email`).classList.add('formulario_grupo_incorrecto');
+        document.querySelector(`#grupo_email i`).classList.remove('fa-check-circle');
+        document.getElementById(`grupo_email`).classList.remove('formulario_grupo_correcto');
+    } else {
+        document.querySelector(`#grupo_email i`).classList.remove('fa-times-circle');
+        document.querySelector(`#grupo_email i`).classList.add('fa-check-circle');
+        document.getElementById(`grupo_email`).classList.remove('formulario_grupo_incorrecto');
+        document.getElementById(`grupo_email`).classList.add('formulario_grupo_correcto');
     }
+
+
     if (pass.value.length < 8) {
         warningP += `La contraseña no es válida`
+        document.querySelector(`#grupo_password i`).classList.add('fa-times-circle');
+        document.getElementById(`grupo_password`).classList.add('formulario_grupo_incorrecto');
+        document.querySelector(`#grupo_password i`).classList.remove('fa-check-circle');
+        document.getElementById(`grupo_password`).classList.remove('formulario_grupo_correcto');
         entrarP = true
+    } else {
+        document.querySelector(`#grupo_password i`).classList.remove('fa-times-circle');
+        document.querySelector(`#grupo_password i`).classList.add('fa-check-circle');
+        document.getElementById(`grupo_password`).classList.remove('formulario_grupo_incorrecto');
+        document.getElementById(`grupo_password`).classList.add('formulario_grupo_correcto');
     }
 
 
@@ -112,22 +142,24 @@ warn.classList.add("font-italic");
 function checkUser(usuarios) {
     let y = 0
     warn.innerHTML = ""
-    usuarios.map(user => {
-        if (usuario.value === user.email && pass.value === user.password) {
+    usuarios.map(usuarioS=> {
+        if (usuario.value === usuarioS.email && pass.value === usuarioS.password) {
 
-            const datos = {
-                nombre: user.nombre,
-                apellido: user.apellido,
-                admin: user.admin
-
-
+            const user = {
+                nombre: usuarioS.nombre,
+                apellido: usuarioS.apellido,
+                admin: usuarioS.admin,
+                id:usuarioS.id,
+                email:usuarioS.email,
+                password:usuarioS.password,
+                favs:usuarioS.favs
             }
-            localStorage.setItem("datos", JSON.stringify(datos))
+            const favs = usuarioS.favs
+            localStorage.setItem("user", JSON.stringify(user))
+            localStorage.setItem("favs", JSON.stringify(favs))
             y = 1
             window.location.href = window.location.origin + "/index.html"
-
-
-        }
+    }
 
 
     })

@@ -1,7 +1,5 @@
 'use strict'
 let container = document.getElementById("containerD");
-let video= document.getElementById("vid");
-/* let tag= document.getElementById("tag"); */
 const URL= "http://localhost:3000/peliculas";
 const id= window.location.hash.slice(1);
 
@@ -47,12 +45,12 @@ getmovie()
             
             const btn= document.createElement('button');
             btn.classList.add('botonD'); 
-            btn.innerHTML = `<a class="class_a_href" href="#"> <i class="fas fa-play"></i>Reproducir </a>`
+            btn.innerHTML = `<a href="error404.html" class="class_a_href"> <i class="fas fa-play"></i>Reproducir </a>`
             
             const btn1= document.createElement('button');
             btn1.classList.add('botonD'); 
+            btn1.innerHTML = `<a class="class_a_href"> <i class="fas fa-info-circle"></i> Comentarios </a>`
             btn1.addEventListener("click",getComments);
-            btn1.innerHTML = `<a class="class_a_href" href="#"> <i class="fas fa-info-circle"></i> Comentarios </a>`
             const btn2= document.createElement('button');
             btn2.classList.add('botonD'); 
             btn2.innerHTML = `<a class="class_a_href" href="error404.html">  <i class="fa fa-thumbs-up " ></i> </a>`
@@ -84,7 +82,7 @@ getmovie()
             container.appendChild(btn4)
             container.appendChild(btn5)
             container.appendChild(video)
-        }
+          }
 
 
         let contador=0;
@@ -113,7 +111,7 @@ getmovie()
                       </div>
                       <div class="col-8 ">
                         <div class="card-body p-1 card_s">
-                          <h5 class="card-title mb-0">${post.name}</h5>
+                          <h5 class="card-title titulo-comentario mb-0">${post.name}</h5>
                           <p class="card-text">${post.body}</p>
                           <p class="card-text"> ${post.email} </p> 
                         </div>

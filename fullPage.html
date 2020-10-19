@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/fullPage.css">
     <link rel="stylesheet" href="css/admin.css" />
     <link rel="stylesheet" href="/css/allpages.css">
+    <link rel="stylesheet" href="/css/Modal.css">
     <link rel="icon" href="/icon/faviconPochoclenado .ICO.ico">
     <script src="https://kit.fontawesome.com/612f0ced8d.js" crossorigin="anonymous"></script>
 
@@ -39,9 +40,20 @@
             </div>
         </div>
 
-        <!--Modal para registro-->
-        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!--Modal para recuperar contraseña-->
+        <div class="modal fade" class="password_modal" id="modalR" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <form id="Recmodal">    
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal para registro-->
+
+        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-full" role="document">
                 <div class="modal-content">
                     <form id="formulario" class="formulario">
                 </div>
@@ -123,7 +135,9 @@
         
     <script src="/app.js"></script> -->
     <script src="/js/login1.js"></script>
-
+     
+    <!--script modal-->
+    <script src="/js/Modal.js"></script>
     <!-- <script src="/js/admin.js"></script> -->
     <!-- <script src="js/crearPelicula.js"></script> -->
     <!-- <script src="js/editarPelicula.js"></script> -->
