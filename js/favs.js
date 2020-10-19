@@ -23,7 +23,7 @@ function renderFavsLS()
                     <img src="${fav.imagen}" class="card-img h-100" alt="...">
                 </div>
                 <div class="col-md-7">
-                    <a href="detail.html#${fav.id}" class="text-decoration-none color1"><h5 class="card-title">${fav.nombre}</h5></a>
+                    <a href="detail.html#${fav.id}" class="text-decoration-none color1"><h5 class="card-title commontexts">${fav.nombre}</h5></a>
                 </div>
                 <div class="col-md-1">
                     <h3 class="delete-fav color2 ml-2" role="button">&times</h3>

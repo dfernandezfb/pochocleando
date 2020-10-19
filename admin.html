@@ -24,13 +24,16 @@
         <div class="hamburger">
             <img id="hamb-icon" src="/img/icon pochoclenado ICO.ico" alt="logoHamb">
         </div>
-        <!-- <div class="searcher">
-            <input type="search" placeholder="Busca" class="search" id="search-bar-id">
-            <input type="image" id="btnsearch" onclick="buscar()" src="img/search.png" class="img-search">
-        </div>
-        <div id="lista-busqueda"></div> -->
         <ul class="nav-links">
             <div class="menu-home">
+                <li class="link">
+                    <div class="searcher">
+                        <div class="dropdown">
+                            <input type="text" placeholder=" Buscar" class="search" onkeyup="buscar()" id="search-bar-id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="dropdown-menu pt-0" id="lista-busqueda" aria-labelledby="search-bar-id" style="min-width: 300px ;">
+                            </div>
+                    </div>
+                </li>
                 <li class="link"><a class="item" href="index.html">Home</a></li>
                 <li class="link">
                     <div class="dropdown">
@@ -166,6 +169,7 @@
     <script src="js/favs.js"></script>
     <script src="js/app.js"></script>
     <script src="js/user.js"></script>
+    <script src="js/search-bar.js"></script>
     <script src="https://kit.fontawesome.com/d4db128a0c.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

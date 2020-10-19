@@ -18,11 +18,11 @@
       "nombre": "Pulp Fiction",
       "descripcion": "Jules y Vincent, dos asesinos a sueldo con no demasiadas luces, trabajan para el gángster Marsellus Wallace. Vincent le confiesa a Jules que Marsellus le ha pedido que cuide de Mia, su atractiva mujer. Jules le recomienda prudencia porque es muy peligroso sobrepasarse con la novia del jefe. Cuando llega la hora de trabajar, ambos deben ponerse manos a la obra . Su misión: recuperar un misterioso maletín",
       "director": "Tarantino",
-      "genero": "Acción",
+      "genero": "Accion",
       "categoria": "+18",
+      "publicada": false,
       "destacada": false,
-      "publicada": true,
-      "año": 1994,
+      "año": "1994",
       "imagen": "https://c4.wallpaperflare.com/wallpaper/34/559/656/pulp-fiction-wallpaper-preview.jpg",
       "video": "https://www.youtube.com/embed/tGpTpVyI_OQ"
     },
@@ -187,10 +187,10 @@
       "nombre": "A.I. Rising",
       "descripcion": "Año 2048, Milutin ha emprendido un viaje a Alfa Centauri con la ayuda de Nimani, una androide con forma de mujer que, entre otras cosas, proporcionará compañía a Milutin, que la somete a una tórrida relación sexual. Harto de las funciones preestablecidas de la androide, el astronauta decide configurarla a partir de las experiencias que esta ha vivido… el resultado, sin embargo, no será el que él espera.",
       "director": "Lazar Bodroža",
-      "genero": "Ciencia Ficcion",
+      "genero": "Accion",
       "categoria": "ATP",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "año": "2018",
       "imagen": "https://images-na.ssl-images-amazon.com/images/I/81Qupmv594L._RI_.jpg",
       "video": "https://www.youtube.com/embed/iDdYMOiIn3Q"
@@ -262,7 +262,7 @@
     },
     {
       "id": 21,
-      "nombre": "The Purge 2: Anarchy (12 horas para sobrevivir)",
+      "nombre": "The Purge 2: Anarchy",
       "descripcion": "Secuela de la película The Purge. La noche de las bestias (2013). En la película original, el gobierno de Estados Unidos permite que, durante una noche, cualquier acto vandálico sea legal. De esta forma intentan reducir el número de criminales, ya que las cárceles del país se encuentran saturadas. La idea surge de la teoría de que todo ser humano tiene maldad en su interior, maldad que en algún momento saldrá a la luz. En esta situación, las personas que tienen dinero tienen más posibilidades que las pobres, ya que estas últimas no tienen los medios necesarios para defenderse de los que les quieran hacer daño. Así, una pregunta sale a la luz: ¿Cómo poder sobrevivir a los criminales sin convertirse en uno?",
       "director": "Amy Price-Francis",
       "genero": "Terror",
@@ -480,6 +480,19 @@
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/l69vmy7RaPMRKOHTE5U40unE8j.jpg",
       "video": "https://www.youtube.com/embed/IWyrDba0lDc",
       "id": 37
+    },
+    {
+      "nombre": "asdasd",
+      "descripcion": "asdasdas",
+      "director": "asdasd",
+      "genero": "Acción",
+      "categoria": "asdads",
+      "año": "asda",
+      "publicada": true,
+      "destacada": false,
+      "imagen": "asdasd",
+      "video": "asdasd",
+      "id": 38
     }
   ],
   "series": [
@@ -651,7 +664,18 @@
       "id": 3,
       "email": "lara@gmail.com",
       "password": "12345678",
-      "favs": []
+      "favs": [
+        {
+          "imagen": "https://i.pinimg.com/originals/2e/98/87/2e98872d1141c2bc5bc7adebd492a2c0.png",
+          "nombre": "Pets united",
+          "id": "11"
+        },
+        {
+          "imagen": "https://pics.filmaffinity.com/La_boda_de_Rosa-406236302-large.jpg",
+          "nombre": "La boda de rosa",
+          "id": "10"
+        }
+      ]
     },
     {
       "nombre": "seba",
@@ -686,6 +710,21 @@
       "email": "sebamercado@gmail.com",
       "password": "12345678",
       "favs": []
+    },
+    {
+      "nombre": "Luis",
+      "apellido": "cazzullo",
+      "admin": false,
+      "id": 6,
+      "email": "lcazzullo@gmail.com",
+      "password": "12345678",
+      "favs": [
+        {
+          "imagen": "https://cuevana3.io/wp-content/uploads/2017/08/frozen-fever-368-poster-200x300.jpg",
+          "nombre": "Frozen Fever",
+          "id": "23"
+        }
+      ]
     }
   ]
 }

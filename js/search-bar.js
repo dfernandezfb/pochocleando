@@ -1,5 +1,5 @@
 async function getMovies(){
-    const url = "localhost:3000/peliculas";
+    const url = "http://localhost:3000/peliculas";
     const response = await fetch(url);
     const data = await response.json();
     return data;
@@ -9,24 +9,45 @@ async function getMovies(){
     return `<ul><li>${movie.nombre}</li></ul>`
 })*/
     
-let container = document.getElementById('lista-busqueda');
-    
-container.innerHTML = elements;
-  
+const listaBusqueda = document.getElementById('lista-busqueda');
+
 function buscar() {
     getMovies()
     .then(movies => {
-        let input = document.getElementById('search-bar-id');
+        if ( listaBusqueda.hasChildNodes() )
+        {
+            while ( listaBusqueda.childNodes.length != 0 )
+            {
+                listaBusqueda.removeChild( listaBusqueda.firstChild );
+            }
+        }
+        const input = document.getElementById('search-bar-id');
         let query = input.value;
+        query=query.toLowerCase();
+        console.log(query);
+        result=[];
+        for(let i=1; i<=query.length; i++)
+        {
+            let aux=query.substring(0,i)
+            result = movies.filter(movie => aux === movie.nombre.toLowerCase().substring(0,i));
+            console.log(result);
+        }
         
-        const result = movies.filter(function(movie) {
-            return query === movie.nombre;
-        })
-        
-        const searchlist = result.map(movie => {
-            return `<ul><li>${movie.nombre}</li></ul>`
+        result.map(movie => {
+            const resultadoBusqueda = document.createElement('li');
+            resultadoBusqueda.innerHTML = `
+            <div class="row no-gutters">
+            <div class="col-md-2" style="height:40px;">
+                <img src="${movie.imagen}" class="card-img w-100 h-100" alt="...">
+            </div>
+            <div class="col-md-8 ml-2">
+                <a href="detail.html#${movie.id}" class="text-decoration-none color1 commontexts"><h5 class="card-title">${movie.nombre}</h5></a>
+            </div>
+            </div>
+            <hr style="margin:1px 0px 1px 0px">
+            `;
+            console.log(resultadoBusqueda);
+            listaBusqueda.appendChild(resultadoBusqueda);
         })
     })
-    
-    container.innerHTML = searchlist;
 }
