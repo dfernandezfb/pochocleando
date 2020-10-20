@@ -121,7 +121,7 @@
     .headerContainer {
         display: flex;
         justify-content: center;
-        min-width: 385px;
+        min-width: 350px;
     }
     .landingHeader {
         width: 90%;

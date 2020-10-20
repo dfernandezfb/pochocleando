@@ -1,6 +1,6 @@
 const containerFavs = document.getElementById("favorites-list")
 const favsTitle = document.createElement("div");
-favsTitle.classList.add("titlesandbtns","dropdown-header", "text-center","bg-color1","color6","mt-0");
+favsTitle.classList.add("titlesandbtns","dropdown-header", "text-center","bg-color1","color6","mt-0", "mb-1");
 favsTitle.style.fontSize="large"
 favsTitle.innerHTML="Lista de favoritos"
 containerFavs.appendChild(favsTitle);
@@ -16,20 +16,20 @@ function renderFavsLS()
             const favorite=document.createElement("div")
             favorite.id=`fav-${fav.id}`
             favorite.style.width= "350px";
-            favorite.classList.add(`fav-${fav.id}`,"dropdown-item");
+            favorite.classList.add(`fav-${fav.id}`,"dropdown-item","pt-0");
             favorite.innerHTML=`
             <div class="row no-gutters">
-                <div class="col-md-4" style="height:100px">
+                <div class="col-md-2" style="height:65px">
                     <img src="${fav.imagen}" class="card-img h-100" alt="...">
                 </div>
-                <div class="col-md-7">
-                    <a href="detail.html#${fav.id}" class="text-decoration-none color1"><h5 class="card-title commontexts">${fav.nombre}</h5></a>
+                <div class="col-md-9 align-self-center">
+                    <a href="detail.html#${fav.id}" class="text-decoration-none color1 card-title h5 pl-2">${fav.nombre}</a>
                 </div>
-                <div class="col-md-1">
-                    <h3 class="delete-fav color2 ml-2" role="button">&times</h3>
+                <div class="col-md-1 align-self-center">
+                    <h3 class="delete-fav color2 ml-2 mb-0" role="button">&times</h3>
                 </div>
             </div>
-            <hr>
+            <hr class="mt-1 mb-0">
             `;
             containerFavs.appendChild(favorite);
         })

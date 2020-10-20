@@ -89,82 +89,89 @@
     
     /*<------------------------INICIO CARRUSSEL-DIEGO --------------------->*/
     
-    .movie-card {
-        transition: transform 0.5 ease;
+.movie-card {
+    transition: transform 0.5 ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.3);
+}
+
+.resume {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 16rem;
+    height: 18rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    cursor: default;
+    font-size: 0.7rem;
+}
+
+.resume:hover {
+    opacity: 1;
+}
+
+.movie-title {
+    cursor: default;
+}
+
+.movie {
+    width: 16rem;
+    height: 18rem;
+    margin: 10px;
+    background-size: 100% 100%;
+    box-shadow: -10px 10px rgba(12, 17, 19, 0.1), 0 15px 30px rgba(12, 17, 19, .65);
+}
+
+.carrousel {
+    margin-left: 15px;
+    width: 95%;
+    height: auto;
+}
+
+.movie-resume {
+    height: 9rem;
+    overflow: scroll;
+}
+
+.movie-resume::-webkit-scrollbar {
+    width: 5px;
+    color: #a9bdc5;
+}
+
+.movie-resume::-webkit-scrollbar-thumb {
+    background: #c02020;
+    border-radius: 10px;
+    border-right: 2px;
+}
+
+.carrousel {
+    overflow: hidden;
+}
+
+.carrousel-Comedia,
+.carrousel-Terror,
+.carrousel-Drama,
+.carrousel-Acción,
+.carrousel-Ficción {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.carrousel-Comedia::-webkit-scrollbar,
+.carrousel-Terror::-webkit-scrollbar,
+.carrousel-Drama::-webkit-scrollbar,
+.carrousel-Acción::-webkit-scrollbar,
+.carrousel-Ficción::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width:768px)
+{
+    .movie-card:hover{
+        transform:scale(1.0);
     }
-    
-    .movie-card:hover {
-        transform: scale(1.3);
-    }
-    
-    .resume {
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 16rem;
-        height: 18rem;
-        opacity: 0;
-        transition: opacity 0.5s ease;
-        cursor: default;
-        font-size: 0.7rem;
-    }
-    
-    .resume:hover {
-        opacity: 1;
-    }
-    
-    .movie-title {
-        cursor: default;
-    }
-    
-    .movie {
-        width: 16rem;
-        height: 18rem;
-        margin: 10px;
-        background-size: 100% 100%;
-        box-shadow: -10px 10px rgba(12, 17, 19, 0.1), 0 15px 30px rgba(12, 17, 19, .65);
-    }
-    
-    .carrousel {
-        margin-left: 15px;
-        width: 95%;
-        height: auto;
-    }
-    
-    .movie-resume {
-        height: 9rem;
-        overflow: scroll;
-    }
-    
-    .movie-resume::-webkit-scrollbar {
-        width: 5px;
-        color: #a9bdc5;
-    }
-    
-    .movie-resume::-webkit-scrollbar-thumb {
-        background: #c02020;
-        border-radius: 10px;
-        border-right: 2px;
-    }
-    
-    .carrousel {
-        overflow: hidden;
-    }
-    
-    .carrousel-Comedia,
-    .carrousel-Terror,
-    .carrousel-Drama,
-    .carrousel-Acción,
-    .carrousel-Ficción {
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-    }
-    
-    .carrousel-Comedia::-webkit-scrollbar,
-    .carrousel-Terror::-webkit-scrollbar,
-    .carrousel-Drama::-webkit-scrollbar,
-    .carrousel-Acción::-webkit-scrollbar,
-    .carrousel-Ficción::-webkit-scrollbar {
-        display: none;
-    }
+}
 
     /*<------------------------FIN CARRUSSEL-DIEGO --------------------->*/
     

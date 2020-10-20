@@ -7,9 +7,9 @@
       "director": "M. Night Shyamalan",
       "genero": "Drama",
       "categoria": "+13",
+      "publicada": false,
       "destacada": false,
-      "publicada": true,
-      "año": 1999,
+      "año": "1999",
       "imagen": "https://i.pinimg.com/originals/37/4e/b5/374eb515033325a18c1559528223e54b.jpg",
       "video": "https://www.youtube.com/embed/cqJFb5ggwjk"
     },
@@ -44,11 +44,11 @@
       "nombre": "Pacto de fuga",
       "descripcion": "La noche del 29 de enero de 1990, poco antes de iniciarse la reconstrucción democrática en Chile, medio centenar de presos políticos se fugaron de la cárcel pública de Santiago por un túnel que 24 militantes del Frente Patriótico Manuel Rodríguez (FPMR) habían excavado durante 18 meses, 80 metros de longitud con herramientas tan rudimentarias como cucharas, tenedores y un solo destornillador; escondiendo 55 toneladas de tierra dentro del centro penitenciario",
       "director": "David Albala",
-      "genero": "Acción",
+      "genero": "Accion",
       "categoria": "+18",
-      "destacada": false,
       "publicada": true,
-      "año": 2020,
+      "destacada": true,
+      "año": "2020",
       "imagen": "https://pics.filmaffinity.com/pacto_de_fuga-561399987-mmed.jpg",
       "video": "https://www.youtube.com/embed/qPx074pFbW8"
     },
@@ -480,19 +480,6 @@
       "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/l69vmy7RaPMRKOHTE5U40unE8j.jpg",
       "video": "https://www.youtube.com/embed/IWyrDba0lDc",
       "id": 37
-    },
-    {
-      "nombre": "asdasd",
-      "descripcion": "asdasdas",
-      "director": "asdasd",
-      "genero": "Acción",
-      "categoria": "asdads",
-      "año": "asda",
-      "publicada": true,
-      "destacada": false,
-      "imagen": "asdasd",
-      "video": "asdasd",
-      "id": 38
     }
   ],
   "series": [
@@ -674,55 +661,6 @@
           "imagen": "https://pics.filmaffinity.com/La_boda_de_Rosa-406236302-large.jpg",
           "nombre": "La boda de rosa",
           "id": "10"
-        }
-      ]
-    },
-    {
-      "nombre": "seba",
-      "apellido": "salas",
-      "admin": false,
-      "id": 4,
-      "email": "seba@gmail.com",
-      "password": "12345678",
-      "favs": [
-        {
-          "imagen": "https://miro.medium.com/max/2934/1*QIURFXvGPFWAv5W9FHQKpQ.jpeg",
-          "nombre": "The Unfamiliar",
-          "id": "7"
-        },
-        {
-          "imagen": "https://talenthouse-res.cloudinary.com/image/upload/c_limit,f_auto,fl_progressive,h_1280,w_1280/v1551300994/user-983649/submissions/co3snwlxk70nvxvpnqpj.jpg",
-          "nombre": "La llorona",
-          "id": "8"
-        },
-        {
-          "imagen": "https://image.tmdb.org/t/p/w185_and_h278_bestv2/3eol8FnndIY8drMknjUnRCjYaIe.jpg",
-          "nombre": "Pledge",
-          "id": "20"
-        }
-      ]
-    },
-    {
-      "nombre": "Nico",
-      "apellido": "Estrada",
-      "admin": false,
-      "id": 5,
-      "email": "sebamercado@gmail.com",
-      "password": "12345678",
-      "favs": []
-    },
-    {
-      "nombre": "Luis",
-      "apellido": "cazzullo",
-      "admin": false,
-      "id": 6,
-      "email": "lcazzullo@gmail.com",
-      "password": "12345678",
-      "favs": [
-        {
-          "imagen": "https://cuevana3.io/wp-content/uploads/2017/08/frozen-fever-368-poster-200x300.jpg",
-          "nombre": "Frozen Fever",
-          "id": "23"
         }
       ]
     }
