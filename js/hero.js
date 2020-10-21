@@ -27,9 +27,6 @@ async function buildSlides() {
     const contenido = series.concat(peliculas);
     const datos = contenido.filter(isOutstanding);
 
-    const id = isMovie(datos);
-
-
     for (let i = 0; i < datos.length; i++) {
         containerSlider.innerHTML += `                 
             <div class="carousel-item hero ${i === 0 ? 'active' : ''}" >
@@ -38,8 +35,8 @@ async function buildSlides() {
                     <div class= "d-flex align-items-center flex-column data-hero">
                     <h5 class="text title-black title titlesandbtns">${datos[i].nombre}</h5>
                     <p class="p-black text-center commontexts p-hero">${datos[i].descripcion}</p>
-                    <a href=""> <button class="btn-hero bi bi-play p-black titlesandbtns" id="btn-slide">
-                    <i class="fas fa-play"></i> REPRODUCIR </button></a>
+                    <a href="${datos[i].codigo ==='pls'? `detail.html#${datos[i].id}` : 'error404.html' }"> 
+                    <button class="btn-hero bi bi-play p-black titlesandbtns" id="btn-slide"><i class="fas fa-play"></i> REPRODUCIR </button></a>
                     </div>
               </div>              
             </div> `
@@ -48,13 +45,9 @@ async function buildSlides() {
              `
     }
     buildControl();
-
 }
 
 buildSlides();
-const infoHero = document.querySelector('#info-hero');
-
-
 
 function buildControl() {
     containerMain.innerHTML += `
@@ -66,22 +59,9 @@ function buildControl() {
 <span class="sr-only">Next</span></a>`
 }
 
-function isOutstanding(objeto) {
-    if (objeto.destacada === true) {
-        return objeto;
+function isOutstanding(datos) {
+    if (datos.destacada === true) {
+        return datos;
     }
 
 }
-function isMovie(objeto) {
-    const expresion = /pls[0-9]{2}$/;
-    const separador = "-";
-    for (let i = 0; i < objeto.length; i++) {
-        const code = objeto[i].codigo.split(separador);
-        objeto.splice(i, 0, { tipo: code[0], key: code[1] });
-       
-
-    }
-    console.log(objeto)
-}
-
-
