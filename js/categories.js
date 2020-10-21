@@ -78,7 +78,7 @@ function buildMovieCards(movies) {
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
-                <a href="#" class="btn text-light fav-btn"><i class="fas fa-star fa-2x fav-btn"></i></a>
+                <a href="#" class="btn text-light fav-btn"><i class="fas fa-heart fa-2x fav-btn"></i></a>
                 </div>
                 </div>
                 </div>
@@ -97,7 +97,7 @@ function buildMovieCards(movies) {
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
-                <a href="#" class="btn text-light fav-btn"><i class="fas fa-star fa-2x fav-btn"></i></a>
+                <a href="#" class="btn text-light fav-btn"><i class="fas fa-heart fa-2x fav-btn"></i></a>
                 </div>
                 </div>
                 </div>
@@ -116,7 +116,7 @@ function buildMovieCards(movies) {
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
-                <a href="#" class="btn text-light fav-btn"><i class="fas fa-star fa-2x fav-btn"></i></a>
+                <a href="#" class="btn text-light fav-btn"><i class="fas fa-heart fa-2x fav-btn"></i></a>
                 </div>
                 </div>
                 </div>
@@ -135,7 +135,7 @@ function buildMovieCards(movies) {
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
-                <a href="#" class="btn text-light fav-btn"><i class="fas fa-star fa-2x fav-btn"></i></a>
+                <a href="#" class="btn text-light fav-btn"><i class="fas fa-heart fa-2x fav-btn"></i></a>
                 </div>
                 </div>
                 </div>
@@ -154,7 +154,7 @@ function buildMovieCards(movies) {
                 <div class="d-flex justify-content-center mb-5">
                 <div>
                 <a href="detail.html#${movie.id}" class="btn text-light"><i class="far fa-play-circle fa-2x"></i></a>
-                <a href="#" class="btn text-light fav-btn"><i class="fas fa-star fa-2x fav-btn"></i></a>
+                <a href="#" class="btn text-light fav-btn"><i class="fas fa-heart fa-2x fav-btn .bg-color1"></i></a>
                 </div>
                 </div>
                 </div>
@@ -268,7 +268,7 @@ function renderFavsLS()
             <hr class="mt-1 mb-0">
             `;
             containerFavs.appendChild(favorite);
-            document.getElementById(`${fav.id}`).querySelector('.fa-star').classList.add('color3');
+            document.getElementById(`${fav.id}`).querySelector('.fa-star').classList.add('color7');
         })
     },2000);
 }
@@ -282,7 +282,7 @@ function deleteFav(e)
         const deleteId= removedElement.id.slice(4);
         removedElement.remove();
         deleteFavLS(deleteId);
-        document.getElementById(`${deleteId}`).querySelector('.fa-star').classList.remove('color3');
+        document.getElementById(`${deleteId}`).querySelector('.fa-star').classList.remove('color7');
     }
 }
 function deleteFavLS(deleteId)
@@ -304,14 +304,14 @@ containerCategories.addEventListener("click",(e)=>{
         let favInfo=e.target.parentElement.parentElement.parentElement.parentElement.parentElement;
         if(favInfo.classList.contains("movie"))
         {
-            if (e.target.classList.contains("color3"))
+            if (e.target.classList.contains("color2"))
             {
-                e.target.classList.remove("color3")
+                e.target.classList.remove("color2")
                 containerFavs.querySelector(`.fav-${favInfo.id}`).remove()
                 deleteFavLS(favInfo.id)
             }  
             else{
-                e.target.classList.add("color3")
+                e.target.classList.add("color2")
                 favInfo=
                 {
                     imagen: favInfo.style.backgroundImage.slice(5,-2),
@@ -325,15 +325,15 @@ containerCategories.addEventListener("click",(e)=>{
         else
         {
             favInfo=favInfo.querySelector(".movie");
-            if(e.target.children.classList.contains("color3"))
+            if(e.target.children.classList.contains("color2"))
             {
-                e.target.classList.remove("color3")
+                e.target.classList.remove("color2")
                 containerFavs.querySelector(`.fav-${favInfo.id}`).remove()
                 deleteFavLS(favInfo.id)
             }
             else
             {
-                e.target.children.classList.add("color3")
+                e.target.children.classList.add("color2")
                 favInfo=
                 {
                     imagen: favInfo.style.backgroundImage.slice(5,-2),

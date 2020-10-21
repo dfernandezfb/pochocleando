@@ -110,9 +110,10 @@
 
 .logo-header {
     display: block;
-    margin-left: 20px;
+    margin-left: 10px;
     padding-top: 10px;
-    width: 13%;
+    width: 40%;
+    height: 90%;
     align-items: center;
 }
 
