@@ -117,11 +117,11 @@
     padding: 10px 20px 30px 20px;
 }
 
-@media screen and (max-width:740px) {
+@media screen and (max-width:768px) {
     .headerContainer {
         display: flex;
         justify-content: center;
-        min-width: 350px;
+        min-width: 320px;
     }
     .landingHeader {
         width: 90%;
@@ -129,8 +129,9 @@
         display: block;
     }
     #logoImg {
+        display: flex;
         margin: 15%;
-        background-color: #c02020;
+        justify-content: center;
     }
     #buttonInicio {
         width: 100%;

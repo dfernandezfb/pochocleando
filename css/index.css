@@ -1,58 +1,4 @@
 /**********************Inicio Css Ro****************************/
-/* User RO */
-.menu-user{
-    position: relative;
-    display: inline-flex;
-    justify-content: flex-end;
-    padding-top: 20px;
-   }
-   .lista{
-    display: block;
-    position: absolute;
-    min-width: 160px;
-    z-index: 9999;
-    background: #010f2b;
-    box-shadow: 0px 0px 5px black;
-    opacity: 0.9;  
-    overflow:auto;
-    top: 70px;
-    padding: .5rem 1rem;
-    text-align: start;
-}
-  .btn-user{
-    outline: none;  
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    border: none;
-    cursor: pointer;
-   }
-.lista a {
-    text-decoration: none;
-    display: block;
-    padding: 8px 0px 8px 0px;
-}
-.lista .option{
-    color: white;
-}
-
-.lista a:hover, a .btn-exit:hover{
-    background-color: #010b1f;
-   
-}
-.menu-user:hover .btn-user{
-}
-.p-white {
-    color: white;
-    font-size: 1vw;
-}
-.btn-exit{
-    background: none;
-    border: none;   
-}
-
-/* User Ro */
-
 /* Hero Ro */
 .data-hero{
     background: rgba(255, 255, 255, 0.5) ; 
@@ -343,6 +289,14 @@
 
 /*********************Medias querys*************************************/
 /*******************Inicio Còdigo RO***********************/
+@media (min-width:992){
+    .lista{          
+        top: 5rem;
+    }
+    .p-white {
+        font-size: 1.5vw;
+    }
+}
 @media (max-width:992px) {
     .btn-hero{
         padding: 1em;
@@ -360,7 +314,7 @@
             font-size: 1.5vw
         }
     }
-
+    
 @media (max-width: 768px) {
     .data-hero{
         padding: 20px 5px 20px 5px
@@ -380,6 +334,11 @@
         color: white;
         font-size: 2vw;
     }
+    .lista{     
+        top: 4.5rem;
+    
+    }
+    
  }
 @media (max-width: 576px) {
 .img-hero{
@@ -396,6 +355,9 @@
 .p-hero{   
     display: none;
 }
+.menu-user{
+   display: none;
+   }
 }
 /*******************Fin Còdigo RO***********************/
 
@@ -741,4 +703,3 @@
 
 
 /**************************************************************************************************/
-

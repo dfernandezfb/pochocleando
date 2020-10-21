@@ -29,7 +29,7 @@
                     <div class="searcher">
                         <div class="dropdown">
                             <input type="text" placeholder=" Buscar" class="search" onkeyup="buscar()" id="search-bar-id" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="dropdown-menu pt-0" id="lista-busqueda" aria-labelledby="search-bar-id" style="min-width: 300px ;">
+                            <div class="dropdown-menu pt-0 responsive-favs" id="lista-busqueda" aria-labelledby="search-bar-id" style="min-width: 300px ;">
                             </div>
                     </div>
                 </li>
@@ -39,7 +39,7 @@
                         <button class="btn bg-color1 color6 item" style="padding-bottom:.4rem" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Mi Lista
                         </button>
-                        <div class="dropdown-menu pt-0" id="favorites-list" aria-labelledby="dropdownMenuButton" style="min-width: 300px ;">
+                        <div class="dropdown-menu pt-0 responsive-favs" id="favorites-list" aria-labelledby="dropdownMenuButton" style="min-width: 300px ;">
                         </div>
                     </div>
                 </li>
@@ -56,13 +56,13 @@
 </header>
     <!-- FIN DE HEADER -->
     <!-- ADMINISTRACIÓN -->
-    <div class="administracion bg-colorg w-100">
+    <div class="administracion bg-colorg w-100 main-m">
         <h2 class="p-2 pt-4 titlesandbtns color3">Administración del contenido</h2>
         <p class="mx-3 commontexts color6"> En la tabla a continuación, se muestran todos los datos almacenados en el servidor. Puede agregar contenido con el boton "Crear", o al seleccionar algun elemento de la tabla puede editarlo o borrarlo con los botonoes "Editar" y "Eliminar" respectivamente.
         </p>
         <div class="d-flex py-3">
             <!-- TABLA CON PELICULAS -->
-            <div class="movies-table col-8-5  bg-color1 p-0 ml-2"></div>
+            <div class="movies-table table-responsive col-8-5  bg-color1 p-0 ml-2"></div>
             <div class="col-3 d-flex flex-column mt-5 btns">
                 <!-- Boton para el modal Crear pelicula-->
                 <button type="button" class="btn-crear btn bg-color2 color6 p-1 my-1 titlesandbtns" data-toggle="modal" data-target="#crearPeliModal">
@@ -114,7 +114,7 @@
                         gratis, desde tu navegador web ya sea que estés desde tu tablet, smartphone, computadora y hasta tu smartTV!.</p>
                 </div>
                 <div class="col-12 col-lg-3 p-3">
-                    <h4 class="center-lg titlesandbtns">Redes Sociales</h4>
+                    <h4 class="text-center titlesandbtns">Redes Sociales</h4>
                     <div class="social-icons mt-3">
                         <a class="icon social-icon p-4 color3" href="#"><i class="fab fa-facebook "></i></a>
                         <a class="icon social-icon p-4 color3" href="#"><i class="fab fa-twitter"></i></a>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-3 p-3 mb-2">
-                    <h4 class="center-lg titlesandbtns">Contactanos</h4>
+                    <h4 class="text-center titlesandbtns">Contactanos</h4>
                     <div class="row ml-2 mr-2 commontexts">
                         <div class="col-12 col-sm-4 col-lg-12 text-center">
                             <i class="icon fas fa-map-marker-alt mt-3 mb-3 color3"></i>
