@@ -388,7 +388,7 @@ p {
         margin: 0;
         text-align: center;
     }
-    .movies-table {
+    /* .movies-table {
         max-width: 40vh;
     }
     .table-director,
@@ -397,7 +397,7 @@ p {
     .table-destacada,
     .table-genero {
         display: none;
-    }
+    } */
     .btn-crear,
     .btn-editar,
     .btn-eliminar {

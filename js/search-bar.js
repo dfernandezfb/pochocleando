@@ -5,9 +5,7 @@ async function getMovies(){
     return data;
 }
 
-/*const elements = movies.map(function(item) {
-    return `<ul><li>${movie.nombre}</li></ul>`
-})*/
+
     
 const listaBusqueda = document.getElementById('lista-busqueda');
 
@@ -24,29 +22,26 @@ function buscar() {
         const input = document.getElementById('search-bar-id');
         let query = input.value;
         query=query.toLowerCase();
-        console.log(query);
         result=[];
         for(let i=1; i<=query.length; i++)
         {
             let aux=query.substring(0,i)
             result = movies.filter(movie => aux === movie.nombre.toLowerCase().substring(0,i));
-            console.log(result);
         }
         
         result.map(movie => {
             const resultadoBusqueda = document.createElement('li');
             resultadoBusqueda.innerHTML = `
             <div class="row no-gutters">
-            <div class="col-md-2" style="height:40px;">
+            <div class="col-2" style="height:40px;">
                 <img src="${movie.imagen}" class="card-img w-100 h-100" alt="...">
             </div>
-            <div class="col-md-8 ml-2">
+            <div class="col-8 ml-2">
                 <a href="detail.html#${movie.id}" class="text-decoration-none color1 commontexts"><h5 class="card-title">${movie.nombre}</h5></a>
             </div>
             </div>
             <hr style="margin:1px 0px 1px 0px">
             `;
-            console.log(resultadoBusqueda);
             listaBusqueda.appendChild(resultadoBusqueda);
         })
     })

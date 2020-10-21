@@ -254,21 +254,21 @@ function renderFavsLS()
             favorite.style.width= "350px";
             favorite.classList.add(`fav-${fav.id}`,"dropdown-item","pt-0");
             favorite.innerHTML=`
-            <div class="row no-gutters">
-                <div class="col-md-2" style="height:65px">
+            <div class="row no-gutters responsive-favs">
+                <div class="col-2" style="height:65px">
                     <img src="${fav.imagen}" class="card-img h-100" alt="...">
                 </div>
-                <div class="col-md-9 align-self-center">
+                <div class="col-9 align-self-center">
                     <a href="detail.html#${fav.id}" class="text-decoration-none color1 card-title h5 pl-2">${fav.nombre}</a>
                 </div>
-                <div class="col-md-1 align-self-center">
+                <div class="col-1 align-self-center">
                     <h3 class="delete-fav color2 ml-2 mb-0" role="button">&times</h3>
                 </div>
             </div>
             <hr class="mt-1 mb-0">
             `;
             containerFavs.appendChild(favorite);
-            document.getElementById(`${fav.id}`).querySelector('.fa-star').classList.add('color7');
+            document.getElementById(`${fav.id}`).querySelector('.fa-heart').classList.add('color2');
         })
     },2000);
 }
@@ -282,7 +282,7 @@ function deleteFav(e)
         const deleteId= removedElement.id.slice(4);
         removedElement.remove();
         deleteFavLS(deleteId);
-        document.getElementById(`${deleteId}`).querySelector('.fa-star').classList.remove('color7');
+        document.getElementById(`${deleteId}`).querySelector('.fa-heart').classList.remove('color2');
     }
 }
 function deleteFavLS(deleteId)

@@ -3,10 +3,10 @@ const rootAdmin = document.querySelector(".movies-table");
 const moviesTable = document.createElement("table");
 let idSelected;
 moviesTable.classList.add("table")
-moviesTable.classList.add("table-sm");
+// moviesTable.classList.add("table-sm");
 moviesTable.innerHTML = `
-<thead class="thead-dark col-sm-5">
-<tr class="col-sm-5">
+<thead class="thead-dark col-5">
+<tr class="col-5">
         <th scope="col">Nombre</th>
         <th class="table-director" scope="col">Director</th>
         <th class="table-genero" scope="col">Género</th>
