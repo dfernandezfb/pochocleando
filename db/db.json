@@ -7,9 +7,8 @@
       "director": "M. Night Shyamalan",
       "genero": "Drama",
       "categoria": "+13",
-      "codigo": "pls",
-      "publicada": false,
-      "destacada": false,
+      "publicada": true,
+      "destacada": true,
       "año": "1999",
       "imagen": "https://i.pinimg.com/originals/37/4e/b5/374eb515033325a18c1559528223e54b.jpg",
       "video": "https://www.youtube.com/embed/cqJFb5ggwjk"
@@ -22,7 +21,6 @@
       "genero": "Accion",
       "categoria": "+18",
       "publicada": false,
-      "codigo": "pls",
       "destacada": false,
       "año": "1994",
       "imagen": "https://c4.wallpaperflare.com/wallpaper/34/559/656/pulp-fiction-wallpaper-preview.jpg",
@@ -35,8 +33,7 @@
       "director": "Almodobar",
       "genero": "Drama",
       "categoria": "+18",
-      "codigo": "pls",
-      "publicada": true,
+      "publicada": false,
       "destacada": false,
       "año": "1999",
       "imagen": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cecilia-roth-eloy-azorin-todo-sobre-mi-madre-1555343828.jpg",
@@ -49,9 +46,8 @@
       "director": "David Albala",
       "genero": "Accion",
       "categoria": "+18",
-      "codigo": "pls",
       "publicada": true,
-      "destacada": true,
+      "destacada": false,
       "año": "2020",
       "imagen": "https://pics.filmaffinity.com/pacto_de_fuga-561399987-mmed.jpg",
       "video": "https://www.youtube.com/embed/qPx074pFbW8"
@@ -161,10 +157,9 @@
       "director": "Javier Colinas",
       "genero": "Comedia",
       "categoria": "ATP",
-      "codigo": "pls",
+      "publicada": false,
       "destacada": false,
-      "publicada": true,
-      "año": 2020,
+      "año": "2020",
       "imagen": "https://miro.medium.com/max/713/1*CtmnkTAeEUekIWRHe0PaCA.jpeg",
       "video": "https://www.youtube.com/embed/UcUwCFSgGVQ"
     },
@@ -700,9 +695,54 @@
       "password": "12345678",
       "favs": [
         {
-          "imagen": "https://i.pinimg.com/originals/05/5c/b9/055cb903958b05ecdc1d010a8333abf1.jpg",
-          "nombre": "Ted 2",
-          "id": "9"
+          "imagen": "https://miro.medium.com/max/713/1*CtmnkTAeEUekIWRHe0PaCA.jpeg",
+          "nombre": "Se busca papá",
+          "id": "12"
+        }
+      ]
+    },
+    {
+      "nombre": "Johnny",
+      "apellido": "Guzman",
+      "admin": false,
+      "id": 4,
+      "email": "jguzman@gmail.com",
+      "password": "12345678",
+      "favs": [
+        {
+          "imagen": "https://miro.medium.com/max/713/1*CtmnkTAeEUekIWRHe0PaCA.jpeg",
+          "nombre": "Se busca papá",
+          "id": "12"
+        },
+        {
+          "imagen": "https://i.pinimg.com/originals/2e/98/87/2e98872d1141c2bc5bc7adebd492a2c0.png",
+          "nombre": "Pets united",
+          "id": "11"
+        },
+        {
+          "imagen": "https://miro.medium.com/max/2934/1*QIURFXvGPFWAv5W9FHQKpQ.jpeg",
+          "nombre": "The Unfamiliar",
+          "id": "7"
+        }
+      ]
+    },
+    {
+      "nombre": "Brenda",
+      "apellido": "Otta",
+      "admin": false,
+      "id": 5,
+      "email": "botta@gmail.com",
+      "password": "12345678",
+      "favs": [
+        {
+          "imagen": "https://i.pinimg.com/originals/2e/98/87/2e98872d1141c2bc5bc7adebd492a2c0.png",
+          "nombre": "Pets united",
+          "id": "11"
+        },
+        {
+          "imagen": "https://miro.medium.com/max/713/1*CtmnkTAeEUekIWRHe0PaCA.jpeg",
+          "nombre": "Se busca papá",
+          "id": "12"
         }
       ]
     }
